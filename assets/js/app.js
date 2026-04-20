@@ -1,7 +1,7 @@
 /* Entry module loaded by every page. */
 import "./config.js";
 import "./include.js";       // injects partials
-import "./cookie-banner.js";
+import "./consent.js";
 import "./open-now.js";
 import "./chatbot.js";
 import "./analytics.js";
