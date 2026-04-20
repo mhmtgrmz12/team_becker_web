@@ -1,7 +1,7 @@
 /* Tiny event wrapper. Only fires if consent granted for analytics.
    Plug in Plausible/Umami/GA4 in the providers map below. */
 import { CONFIG } from "./config.js";
-import { getConsent } from "./cookie-banner.js";
+import { getConsent } from "./consent.js";
 
 const providers = {
   plausible (name, props) {
