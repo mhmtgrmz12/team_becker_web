@@ -7,21 +7,90 @@
     "contact": "Kontakt",
     "faq": "FAQ"
   },
-  "cta": {
-    "whatsapp": "Per WhatsApp starten",
-    "call": "Anrufen",
-    "viewServices": "Dienstleistungen ansehen",
-    "viewPricing": "Preise ansehen",
-    "startRequest": "Anfrage starten"
+  "hero": {
+    "badge": "Offizieller Zulassungsservice",
+    "title": "Schnelle, moderne Fahrzeugzulassung in",
+    "titleHighlight": "Rheine",
+    "titleEnd": "& Kreis Steinfurt.",
+    "subtitle": "Überspringen Sie die Warteschlange. Wir kümmern uns um Zulassung, Ummeldung und Abmeldung — mit WhatsApp-Kommunikation und ohne unnötigen Papierkram.",
+    "ctaWhatsApp": "Per WhatsApp starten",
+    "ctaServices": "Dienstleistungen ansehen",
+    "location": "200 m von der Zulassungsstelle",
+    "hours": "Mo–Fr ab 07:30",
+    "response": "Antwort in Minuten"
   },
-  "labels": {
-    "serviceDetail": "Dienstleistungsdetails",
-    "officialService": "Offizieller Service",
-    "requiredDocuments": "Erforderliche Dokumente",
-    "howItWorks": "So funktioniert's",
-    "pricing": "Preise",
-    "faq": "Häufig gestellte Fragen",
+  "pillars": {
+    "fast": {
+      "title": "Schnelle Bearbeitung",
+      "desc": "Überspringen Sie die wochenlange Wartezeit auf einen Behördentermin. Wir haben täglich Prioritätswarteschlangen."
+    },
+    "trust": {
+      "title": "Vertrauenswürdige Abwicklung",
+      "desc": "Sichere Dokumentenbearbeitung mit voller Transparenz und Statusupdates per WhatsApp."
+    },
+    "local": {
+      "title": "Lokale Experten",
+      "desc": "Bestens vertraut mit den Anforderungen des Kreises Steinfurt. Wir kennen jeden Sonderfall."
+    }
+  },
+  "services": {
+    "heading": "Dienstleistungen",
+    "title": "Wählen Sie, was Sie brauchen",
+    "seeAll": "Alle Dienstleistungen ansehen →",
+    "from": "Ab",
+    "details": "Details →",
+    "popular": "Beliebt"
+  },
+  "howItWorks": {
+    "heading": "So funktioniert's",
+    "title": "Drei Schritte. Das war's.",
+    "subtitle": "Ein transparenter, verwalteter Zeitplan. Wir kümmern uns um die Reibung; Sie erhalten die Ergebnisse.",
+    "step1": {
+      "title": "Anfrage per WhatsApp einreichen",
+      "desc": "Schreiben Sie uns. Wir skizzieren sofort die spezifischen Dokumente für Ihren genauen Fahrzeugtyp und Ihre Situation."
+    },
+    "step2": {
+      "title": "Digitale Dokumentenprüfung",
+      "desc": "Senden Sie Fotos Ihrer Dokumente. Wir prüfen sie auf Vollständigkeit, um den Erfolg bei der Behörde zu garantieren."
+    },
+    "step3": {
+      "title": "Zulassung & Lieferung",
+      "desc": "Wir bearbeiten Ihren Antrag in Rheine. Gestempelte Dokumente und neue Kennzeichen innerhalb von 48 Stunden fertig — Abholung oder Kurier."
+    }
+  },
+  "trust": {
+    "title": "Lokal geliebt",
+    "desc": "Durchgehend 5-Sterne-Feedback von Fahrern in Rheine & Kreis Steinfurt. Lesen Sie ihre Worte unten.",
+    "seeReviews": "Bewertungen ansehen →"
+  },
+  "cta": {
+    "title": "Bereit, die Warteschlange zu überspringen?",
+    "subtitle": "Starten Sie Ihre Zulassung in unter 60 Sekunden. Unser Concierge-Desk steht bereit, um Ihre Dokumente zu prüfen.",
+    "whatsapp": "Per WhatsApp starten",
+    "call": "oder anrufen +49 173 322 55 70"
+  },
+  "faq": {
+    "title": "Schnelle Antworten",
+    "subtitle": "Die fünf, die wir am häufigsten hören. Die vollständige Liste finden Sie auf",
+    "faqPage": "der FAQ-Seite"
+  },
+  "location": {
+    "hours": "Öffnungszeiten",
+    "office": "Büro",
     "openNow": "Jetzt geöffnet",
+    "closedNow": "Geschlossen",
+    "evenings": "Abends (ab 18:00) und Wochenenden nach Vereinbarung.",
+    "getDirections": "Route anzeigen",
+    "call": "Anrufen",
+    "days": {
+      "Monday": "Montag",
+      "Tuesday": "Dienstag",
+      "Wednesday": "Mittwoch",
+      "Thursday": "Donnerstag",
+      "Friday": "Freitag",
+      "Saturday": "Samstag",
+      "Sunday": "Sonntag"
+    },
     "closed": "Geschlossen"
   }
 }

@@ -7,21 +7,90 @@
     "contact": "İletişim",
     "faq": "SSS"
   },
-  "cta": {
-    "whatsapp": "WhatsApp ile Başla",
-    "call": "Ara",
-    "viewServices": "Hizmetleri Gör",
-    "viewPricing": "Fiyatları Gör",
-    "startRequest": "Talep Oluştur"
+  "hero": {
+    "badge": "Resmi kayıt hizmeti",
+    "title": "Hızlı, modern araç kaydı",
+    "titleHighlight": "Rheine",
+    "titleEnd": "ve Kreis Steinfurt'ta.",
+    "subtitle": "Kuyruğu atlayın. Kayıt, yeniden kayıt ve kayıt silme işlemlerini WhatsApp üzerinden iletişimle ve gereksiz evrak işi olmadan hallederiz.",
+    "ctaWhatsApp": "WhatsApp ile Başla",
+    "ctaServices": "Hizmetleri Gör",
+    "location": "Kayıt ofisine 200 m",
+    "hours": "Pzt–Cum 07:30'dan itibaren",
+    "response": "Dakikalar içinde yanıt"
   },
-  "labels": {
-    "serviceDetail": "Hizmet Detayı",
-    "officialService": "Resmi Hizmet",
-    "requiredDocuments": "Gerekli Belgeler",
-    "howItWorks": "Nasıl Çalışır",
-    "pricing": "Fiyatlandırma",
-    "faq": "Sıkça Sorulan Sorular",
+  "pillars": {
+    "fast": {
+      "title": "Hızlı işlem",
+      "desc": "Haftalarca süren resmi randevu beklemesini atlayın. Günlük öncelikli kuyruklarımız var."
+    },
+    "trust": {
+      "title": "Güvenilir işlem",
+      "desc": "WhatsApp üzerinden tam şeffaflık ve durum güncellemeleriyle güvenli belge işleme."
+    },
+    "local": {
+      "title": "Yerel uzmanlar",
+      "desc": "Kreis Steinfurt gereksinimlerine derinden aşinayız. Her özel durumu biliyoruz."
+    }
+  },
+  "services": {
+    "heading": "Hizmetler",
+    "title": "İhtiyacınız olanı seçin",
+    "seeAll": "Tüm hizmetleri gör →",
+    "from": "Başlangıç",
+    "details": "Detaylar →",
+    "popular": "Popüler"
+  },
+  "howItWorks": {
+    "heading": "Nasıl çalışır",
+    "title": "Üç adım. Hepsi bu.",
+    "subtitle": "Şeffaf, yönetilen bir zaman çizelgesi. Sürtünmeyi biz hallederiz; siz sonuçları alırsınız.",
+    "step1": {
+      "title": "WhatsApp ile talep gönderin",
+      "desc": "Bize mesaj atın. Tam araç tipiniz ve durumunuz için gereken belgeleri hemen belirtiriz."
+    },
+    "step2": {
+      "title": "Dijital belge doğrulama",
+      "desc": "Belgelerinizin fotoğraflarını gönderin. Resmi kurumda başarıyı garanti etmek için eksiksizlik açısından denetleriz."
+    },
+    "step3": {
+      "title": "Kayıt ve teslimat",
+      "desc": "Başvurunuzu Rheine'da işleme alırız. Damgalı belgeler ve yeni plakalar 48 saat içinde hazır — teslim alma veya kurye."
+    }
+  },
+  "trust": {
+    "title": "Yerel olarak seviliyor",
+    "desc": "Rheine ve Kreis Steinfurt'taki sürücülerden sürekli 5 yıldızlı geri bildirim. Sözlerini aşağıda okuyun.",
+    "seeReviews": "Yorumları gör →"
+  },
+  "cta": {
+    "title": "Kuyruğu atlamaya hazır mısınız?",
+    "subtitle": "Kaydınızı 60 saniyenin altında başlatın. Concierge masamız belgelerinizi incelemeye hazır.",
+    "whatsapp": "WhatsApp ile Başla",
+    "call": "veya arayın +49 173 322 55 70"
+  },
+  "faq": {
+    "title": "Hızlı cevaplar",
+    "subtitle": "En çok duyduğumuz beş soru. Tam liste",
+    "faqPage": "SSS sayfasında"
+  },
+  "location": {
+    "hours": "Saatler",
+    "office": "Ofis",
     "openNow": "Şu an açık",
+    "closedNow": "Kapalı",
+    "evenings": "Akşamlar (18:00'den itibaren) ve hafta sonları randevuyla.",
+    "getDirections": "Yol tarifi al",
+    "call": "Ara",
+    "days": {
+      "Monday": "Pazartesi",
+      "Tuesday": "Salı",
+      "Wednesday": "Çarşamba",
+      "Thursday": "Perşembe",
+      "Friday": "Cuma",
+      "Saturday": "Cumartesi",
+      "Sunday": "Pazar"
+    },
     "closed": "Kapalı"
   }
 }

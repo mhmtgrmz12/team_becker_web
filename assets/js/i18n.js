@@ -49,8 +49,9 @@ export function t(key) {
 // Change language
 export async function setLanguage(lang) {
   if (!SUPPORTED_LANGS.includes(lang)) return;
-  await loadTranslations(lang);
-  document.dispatchEvent(new CustomEvent('language:changed', { detail: { lang } }));
+  localStorage.setItem('lang', lang);
+  // Reload page to apply translations everywhere
+  window.location.reload();
 }
 
 // Get current language
@@ -69,7 +70,14 @@ export async function initI18n() {
 function applyTranslations() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    el.textContent = t(key);
+    const translated = t(key);
+    
+    // Check if element has data-i18n-html attribute for HTML content
+    if (el.hasAttribute('data-i18n-html')) {
+      el.innerHTML = translated;
+    } else {
+      el.textContent = translated;
+    }
   });
 }
 

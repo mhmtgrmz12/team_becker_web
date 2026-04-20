@@ -7,21 +7,90 @@
     "contact": "Contact",
     "faq": "FAQ"
   },
-  "cta": {
-    "whatsapp": "Start via WhatsApp",
-    "call": "Call",
-    "viewServices": "View services",
-    "viewPricing": "View pricing",
-    "startRequest": "Start a request"
+  "hero": {
+    "badge": "Official registration service",
+    "title": "Fast, modern vehicle registration in",
+    "titleHighlight": "Rheine",
+    "titleEnd": "& Kreis Steinfurt.",
+    "subtitle": "Skip the queue. We handle registration, re-registration, and deregistration — with WhatsApp-first communication and zero unnecessary paperwork.",
+    "ctaWhatsApp": "Start via WhatsApp",
+    "ctaServices": "View services",
+    "location": "200 m from the registration office",
+    "hours": "Mon–Fri from 07:30",
+    "response": "Reply in minutes"
   },
-  "labels": {
-    "serviceDetail": "Service detail",
-    "officialService": "Official service",
-    "requiredDocuments": "Required documents",
-    "howItWorks": "How it works",
-    "pricing": "Pricing",
-    "faq": "Frequently asked questions",
+  "pillars": {
+    "fast": {
+      "title": "Fast processing",
+      "desc": "Skip the weeks-long wait for an authority slot. We have daily priority queues."
+    },
+    "trust": {
+      "title": "Trustworthy handling",
+      "desc": "Secure document handling with full transparency and status updates on WhatsApp."
+    },
+    "local": {
+      "title": "Local experts",
+      "desc": "Deeply familiar with Kreis Steinfurt requirements. We know every edge case."
+    }
+  },
+  "services": {
+    "heading": "Services",
+    "title": "Choose what you need",
+    "seeAll": "See all services →",
+    "from": "From",
+    "details": "Details →",
+    "popular": "Popular"
+  },
+  "howItWorks": {
+    "heading": "How it works",
+    "title": "Three steps. That's it.",
+    "subtitle": "A transparent, managed timeline. We handle the friction; you receive the results.",
+    "step1": {
+      "title": "Submit request via WhatsApp",
+      "desc": "Message us. We immediately outline the specific documents for your exact vehicle type and situation."
+    },
+    "step2": {
+      "title": "Digital document verification",
+      "desc": "Send photos of your documents. We audit them for completeness to guarantee success at the authority."
+    },
+    "step3": {
+      "title": "Registration & delivery",
+      "desc": "We process your application in Rheine. Stamped documents and new plates ready within 48 hours — pickup or courier."
+    }
+  },
+  "trust": {
+    "title": "Loved locally",
+    "desc": "Consistent 5-star feedback from drivers in Rheine & Kreis Steinfurt. Read their words below.",
+    "seeReviews": "See reviews →"
+  },
+  "cta": {
+    "title": "Ready to skip the line?",
+    "subtitle": "Initiate your registration in under 60 seconds. Our concierge desk is standing by to review your documents.",
+    "whatsapp": "Start via WhatsApp",
+    "call": "or call +49 173 322 55 70"
+  },
+  "faq": {
+    "title": "Quick answers",
+    "subtitle": "The five we hear most. The full list is on",
+    "faqPage": "the FAQ page"
+  },
+  "location": {
+    "hours": "Hours",
+    "office": "Office",
     "openNow": "Open now",
+    "closedNow": "Closed",
+    "evenings": "Evenings (from 18:00) and weekends by appointment.",
+    "getDirections": "Get directions",
+    "call": "Call",
+    "days": {
+      "Monday": "Monday",
+      "Tuesday": "Tuesday",
+      "Wednesday": "Wednesday",
+      "Thursday": "Thursday",
+      "Friday": "Friday",
+      "Saturday": "Saturday",
+      "Sunday": "Sunday"
+    },
     "closed": "Closed"
   }
 }
