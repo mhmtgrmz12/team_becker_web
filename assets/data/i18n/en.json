@@ -1,0 +1,19 @@
+{
+  "cta": {
+    "whatsapp": "Start via WhatsApp",
+    "call": "Call us",
+    "viewServices": "View services",
+    "viewPricing": "View pricing",
+    "startRequest": "Start a request"
+  },
+  "labels": {
+    "serviceDetail": "Service detail",
+    "officialService": "Official service",
+    "requiredDocuments": "Required documents",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "Frequently asked questions",
+    "openNow": "Open now",
+    "closed": "Closed"
+  }
+}

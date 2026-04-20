@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <title>Start a request — Civic Concierge</title>
+  <meta name="description" content="Build your vehicle registration request in 60 seconds. We'll open WhatsApp with everything prefilled." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://civic-concierge.de/request/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary:"#041627","primary-container":"#1a2b3c",secondary:"#545f72","secondary-container":"#d5e0f7","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","on-primary":"#ffffff",surface:"#f7f9fc","surface-container-lowest":"#ffffff","surface-container-low":"#f2f4f7","surface-container-highest":"#e0e3e6"}, fontFamily:{sans:["Inter","ui-sans-serif","system-ui"]} } } };</script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+  <div data-include="/partials/header.html"></div>
+
+  <main class="flex-1 flex justify-center items-start pt-8 pb-24 px-4 sm:px-6">
+    <div id="wizard" class="w-full max-w-3xl wz-container"></div>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/chatbot.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+
+  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module" src="/assets/js/wizard.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Civic Concierge</title>
+  <meta name="description" content="Every vehicle registration service we offer in Rheine & Kreis Steinfurt. Registration, re-registration, deregistration, license plates, express." />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://civic-concierge.de/services/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary:"#041627","primary-container":"#1a2b3c",secondary:"#545f72","secondary-container":"#d5e0f7","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","on-primary":"#ffffff",surface:"#f7f9fc","surface-container-lowest":"#ffffff","surface-container-low":"#f2f4f7","surface-container-highest":"#e0e3e6"}, fontFamily:{sans:["Inter","ui-sans-serif","system-ui"]} } } };
+  </script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans">
+  <div data-include="/partials/header.html"></div>
+
+  <main>
+    <section class="pt-14 pb-10 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">Our services</div>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)">Everything we handle for you</h1>
+        <p class="mt-4 text-lg" style="color:var(--secondary)">Five services, one concierge desk. Pick the one that matches your situation — or message us and we'll point you to the right one.</p>
+      </div>
+    </section>
+
+    <section class="py-16 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="all-services"></div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="py-16 px-6" style="background:var(--surface-container-low)">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold tracking-tight mb-8" style="color:var(--primary)">Compare at a glance</h2>
+        <div class="overflow-x-auto rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-card)">
+          <table class="w-full text-sm">
+            <thead>
+              <tr style="background:var(--surface-container-low);color:var(--primary)">
+                <th class="text-left p-4 font-bold">Service</th>
+                <th class="text-left p-4 font-bold">Service fee</th>
+                <th class="text-left p-4 font-bold">Authority fees</th>
+                <th class="text-left p-4 font-bold">Turnaround</th>
+                <th class="text-left p-4 font-bold"></th>
+              </tr>
+            </thead>
+            <tbody id="compare-body"></tbody>
+          </table>
+        </div>
+        <p class="text-xs mt-3" style="color:var(--secondary)">Authority fees are set by Kreis Steinfurt and may change.</p>
+      </div>
+    </section>
+
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:var(--primary)">Not sure which service you need?</h2>
+        <p class="mt-3 text-lg" style="color:var(--secondary)">Send us a quick message — we'll tell you in minutes.</p>
+        <a href="/request/" class="inline-flex items-center gap-2 mt-6 px-7 py-4 rounded-xl font-bold text-lg" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="services_hub">
+          <span class="msi">chat</span> Start via WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/chatbot.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+
+  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module">
+    import { loadJSON, create, onReady } from "/assets/js/utils.js";
+    onReady(async () => {
+      const svc = await loadJSON("/assets/data/services.json");
+      const box = document.getElementById("all-services");
+      svc.forEach(s => {
+        box.appendChild(create("a", { href: `/services/${s.slug}/`, class: "block p-6 rounded-2xl hover:-translate-y-0.5 transition-transform", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
+          create("div", { class: "flex items-center justify-between mb-4" }, [
+            create("div", { class: "w-12 h-12 rounded-full flex items-center justify-center", style: "background:var(--secondary-container);color:var(--primary)", html: `<span class="msi">${s.icon}</span>` }),
+            s.popular ? create("span", { class: "text-xs font-bold uppercase tracking-widest px-2 py-1 rounded-full", style: "background:rgba(111,251,190,0.2);color:var(--on-tertiary-container)" }, "Popular") : null,
+          ]),
+          create("h3", { class: "text-xl font-bold mb-1", style: "color:var(--primary)" }, s.name),
+          create("p", { class: "text-sm mb-4", style: "color:var(--secondary)" }, s.blurb),
+          create("div", { class: "flex items-center justify-between" }, [
+            create("span", { class: "font-bold", style: "color:var(--primary)" }, `From €${s.serviceFeeFrom}`),
+            create("span", { class: "text-sm font-semibold", style: "color:var(--on-tertiary-container)" }, "Details →"),
+          ]),
+        ]));
+      });
+
+      const body = document.getElementById("compare-body");
+      svc.forEach(s => {
+        const tr = document.createElement("tr");
+        tr.style.borderTop = "1px solid rgba(196,198,205,0.3)";
+        tr.innerHTML = `
+          <td class="p-4 font-semibold" style="color:var(--primary)">${s.name}</td>
+          <td class="p-4" style="color:var(--secondary)">From €${s.serviceFeeFrom}</td>
+          <td class="p-4" style="color:var(--secondary)">${s.authorityFeeHint}</td>
+          <td class="p-4" style="color:var(--secondary)">${s.turnaround}</td>
+          <td class="p-4 text-right"><a href="/services/${s.slug}/" class="font-semibold" style="color:var(--on-tertiary-container)">View →</a></td>`;
+        body.appendChild(tr);
+      });
+    });
+  </script>
+</body>
+</html>

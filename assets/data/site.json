@@ -1,0 +1,30 @@
+{
+  "brand": "Civic Concierge",
+  "legalName": "Team Becker — Civic Concierge",
+  "tagline": "Fast, Modern Vehicle Registration in Rheine & Kreis Steinfurt",
+  "phone": "+49 173 322 55 70",
+  "phoneDial": "+491733225570",
+  "whatsapp": "491733225570",
+  "email": "info@civic-concierge.de",
+  "address": {
+    "street": "Bayernstraße 90",
+    "postcode": "48429",
+    "city": "Rheine",
+    "country": "Germany"
+  },
+  "hours": {
+    "mon": ["07:30-12:00", "13:30-17:00"],
+    "tue": ["07:30-12:00", "13:30-15:30"],
+    "wed": ["07:30-12:00"],
+    "thu": ["07:30-12:00", "13:30-15:30"],
+    "fri": ["07:30-12:00"],
+    "sat": [],
+    "sun": []
+  },
+  "hoursNote": "Evenings (from 18:00) and weekends by appointment.",
+  "social": {
+    "whatsapp": "https://wa.me/491733225570",
+    "google": "https://g.page/",
+    "instagram": ""
+  }
+}

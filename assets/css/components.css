@@ -1,0 +1,145 @@
+/* Civic Concierge — Component styles (used with Tailwind utilities) */
+
+/* --- Chatbot widget --- */
+.cb-launcher {
+  position: fixed; right: 20px; bottom: 96px; z-index: 60;
+  width: 60px; height: 60px; border-radius: 9999px;
+  background: var(--primary); color: var(--on-primary);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-dark); cursor: pointer;
+  border: none; transition: transform 200ms ease, background 200ms ease;
+}
+.cb-launcher:hover { transform: translateY(-2px); }
+@media (min-width: 768px) {
+  .cb-launcher { bottom: 24px; }
+}
+
+.cb-panel {
+  position: fixed; right: 20px; bottom: 170px; z-index: 61;
+  width: min(380px, calc(100vw - 40px));
+  height: min(560px, calc(100vh - 200px));
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-dark);
+  display: flex; flex-direction: column; overflow: hidden;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0; pointer-events: none;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+.cb-panel.open { transform: translateY(0) scale(1); opacity: 1; pointer-events: auto; }
+@media (min-width: 768px) { .cb-panel { bottom: 100px; } }
+
+.cb-header {
+  background: var(--primary); color: var(--on-primary);
+  padding: 14px 16px; display: flex; align-items: center; gap: 10px;
+}
+.cb-header .avatar {
+  width: 34px; height: 34px; border-radius: 9999px;
+  background: var(--tertiary-fixed); color: var(--on-tertiary-fixed);
+  display: flex; align-items: center; justify-content: center; font-weight: 700;
+}
+.cb-header .title { font-weight: 700; font-size: 0.95rem; }
+.cb-header .subtitle { font-size: 0.75rem; opacity: 0.75; }
+.cb-header .close {
+  margin-left: auto; background: transparent; color: inherit;
+  border: none; cursor: pointer; padding: 6px;
+  border-radius: var(--radius-sm);
+}
+.cb-header .close:hover { background: rgba(255,255,255,0.1); }
+
+.cb-messages {
+  flex: 1; padding: 16px; overflow-y: auto;
+  background: var(--surface-container-low);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.cb-msg {
+  max-width: 82%; padding: 10px 14px; border-radius: var(--radius-md);
+  font-size: 0.9rem; line-height: 1.5;
+}
+.cb-msg.bot { background: var(--surface-container-lowest); color: var(--on-surface); align-self: flex-start; box-shadow: var(--shadow-soft); }
+.cb-msg.user { background: var(--primary); color: var(--on-primary); align-self: flex-end; }
+.cb-msg.system { align-self: center; font-size: 0.75rem; color: var(--secondary); background: transparent; }
+
+.cb-quick {
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 10px;
+}
+.cb-quick button {
+  background: var(--surface-container-lowest);
+  color: var(--primary); border: 1px solid rgba(196,198,205,0.2);
+  padding: 6px 12px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; transition: background 150ms ease;
+}
+.cb-quick button:hover { background: var(--secondary-container); }
+
+.cb-input {
+  display: flex; gap: 8px; padding: 12px;
+  background: var(--surface-container-lowest); border-top: 1px solid rgba(196,198,205,0.2);
+}
+.cb-input input {
+  flex: 1; border: none; background: var(--surface-container-low);
+  padding: 10px 14px; border-radius: var(--radius-md);
+  font-family: inherit; font-size: 0.9rem; color: var(--on-surface);
+}
+.cb-input button {
+  background: var(--tertiary-fixed); color: var(--on-tertiary-fixed);
+  border: none; padding: 0 14px; border-radius: var(--radius-md);
+  font-weight: 700; cursor: pointer; display: flex; align-items: center;
+}
+.cb-input button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.cb-typing { display: inline-flex; gap: 4px; padding: 8px 12px; }
+.cb-typing span { width: 6px; height: 6px; border-radius: 9999px; background: var(--secondary); opacity: 0.5; animation: cbBlink 1.2s infinite; }
+.cb-typing span:nth-child(2) { animation-delay: 0.2s; }
+.cb-typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes cbBlink { 0%, 60%, 100% { opacity: 0.25; } 30% { opacity: 1; } }
+
+/* --- Wizard --- */
+.wz-container {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 48px -12px rgba(25,28,30,0.05);
+  overflow: hidden;
+}
+.wz-progress-bar {
+  background: var(--surface-container-low);
+  padding: 20px 28px;
+}
+.wz-step-dot {
+  width: 32px; height: 32px; border-radius: 9999px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.85rem; margin-bottom: 8px;
+}
+.wz-step-dot.done { background: var(--tertiary-fixed); color: var(--on-tertiary-fixed); }
+.wz-step-dot.active { background: var(--primary); color: var(--on-primary); }
+.wz-step-dot.pending { background: var(--surface-container-highest); color: var(--on-surface); }
+.wz-step-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.wz-step-connector { flex: 1; height: 4px; border-radius: 9999px; margin: 0 12px; background: var(--surface-variant); align-self: center; transform: translateY(-10px); }
+.wz-step-connector.done { background: linear-gradient(to right, var(--tertiary-fixed), var(--surface-variant)); }
+
+.wz-option {
+  background: var(--surface-container-low);
+  padding: 20px; border-radius: var(--radius-md);
+  border: 2px solid transparent; cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  display: block; height: 100%;
+}
+.wz-option:hover { background: var(--surface-container-highest); }
+.wz-option.selected {
+  background: var(--surface-container-lowest);
+  border-color: var(--tertiary-fixed);
+  box-shadow: 0 8px 16px -4px rgba(0,82,54,0.08);
+}
+
+/* --- Cookie banner --- */
+.cb-consent {
+  position: fixed; left: 12px; right: 12px; bottom: 12px;
+  z-index: 70; background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl); padding: 18px;
+  box-shadow: var(--shadow-dark);
+  display: none;
+}
+.cb-consent.show { display: block; }
+@media (min-width: 768px) {
+  .cb-consent { left: auto; right: 24px; bottom: 24px; max-width: 420px; }
+}

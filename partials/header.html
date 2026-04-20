@@ -1,0 +1,31 @@
+<header class="glass-panel sticky top-0 z-40 w-full" style="box-shadow:0 1px 0 rgba(196,198,205,0.3)">
+  <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+    <a href="/" class="text-xl font-bold tracking-tighter" style="color:var(--primary)">Civic Concierge</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="/services/" style="color:var(--secondary)">Services</a>
+      <a href="/pricing/" style="color:var(--secondary)">Pricing</a>
+      <a href="/documents/" style="color:var(--secondary)">Documents</a>
+      <a href="/how-it-works/" style="color:var(--secondary)">How it works</a>
+      <a href="/contact/" style="color:var(--secondary)">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+491733225570" class="text-sm font-semibold px-4 py-2 rounded-xl" style="color:var(--primary)" data-track="click_call_cta" data-track-location="header">
+        Call
+      </a>
+      <a href="https://wa.me/491733225570?text=Hello%20Civic%20Concierge%2C%20I%27d%20like%20to%20start%20a%20request." target="_blank" rel="noopener" class="text-sm font-bold px-5 py-2.5 rounded-xl" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="header">
+        WhatsApp
+      </a>
+    </div>
+    <button class="md:hidden p-2 rounded-lg" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <span class="msi" style="color:var(--primary)">menu</span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+    <a href="/services/" class="block py-2" style="color:var(--primary)">Services</a>
+    <a href="/pricing/" class="block py-2" style="color:var(--primary)">Pricing</a>
+    <a href="/documents/" class="block py-2" style="color:var(--primary)">Documents</a>
+    <a href="/how-it-works/" class="block py-2" style="color:var(--primary)">How it works</a>
+    <a href="/contact/" class="block py-2" style="color:var(--primary)">Contact</a>
+    <a href="/faq/" class="block py-2" style="color:var(--primary)">FAQ</a>
+  </div>
+</header>

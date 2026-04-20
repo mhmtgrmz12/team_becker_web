@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — Civic Concierge</title>
+  <meta name="robots" content="noindex,follow" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary:"#041627","primary-container":"#1a2b3c",secondary:"#545f72","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","on-primary":"#ffffff",surface:"#f7f9fc","surface-container-lowest":"#ffffff"}, fontFamily:{sans:["Inter","ui-sans-serif","system-ui"]} } } };</script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans">
+  <div data-include="/partials/header.html"></div>
+  <main class="px-6 py-24">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">404</div>
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight" style="color:var(--primary)">Off-road</h1>
+      <p class="mt-5 text-lg" style="color:var(--secondary)">We couldn't find that page. It may have been deregistered, moved, or never existed.</p>
+      <div class="mt-8 flex flex-wrap gap-3 justify-center">
+        <a href="/" class="px-6 py-3 rounded-xl font-bold" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)">Back to home</a>
+        <a href="/services/" class="px-6 py-3 rounded-xl font-bold" style="background:var(--surface-container-low);color:var(--primary)">Browse services</a>
+        <a href="/contact/" class="px-6 py-3 rounded-xl font-bold" style="background:var(--surface-container-low);color:var(--primary)">Contact us</a>
+      </div>
+    </div>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>

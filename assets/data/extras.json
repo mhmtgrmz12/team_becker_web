@@ -1,0 +1,44 @@
+[
+  {
+    "id": "wunschkennzeichen",
+    "name": "Custom plates (Wunschkennzeichen)",
+    "icon": "star",
+    "description": "Choose your preferred letter & number combination. Reservation is free; the combination fee is ~€10.20.",
+    "priceFrom": 10
+  },
+  {
+    "id": "plate_stamping",
+    "name": "Plate stamping",
+    "icon": "stamp",
+    "description": "We stamp your new plates in-house while you wait.",
+    "priceFrom": 18
+  },
+  {
+    "id": "express",
+    "name": "Express handling",
+    "icon": "bolt",
+    "description": "Same-day processing when possible. Subject to authority capacity.",
+    "priceFrom": 30
+  },
+  {
+    "id": "courier",
+    "name": "Courier pickup/delivery",
+    "icon": "local_shipping",
+    "description": "We pick up your documents and deliver your plates to your door in Rheine.",
+    "priceFrom": 25
+  },
+  {
+    "id": "foreign_vehicle",
+    "name": "Foreign vehicle import",
+    "icon": "public",
+    "description": "Imported from the EU or abroad? We help with COC, Vollgutachten, and customs docs.",
+    "priceFrom": 49
+  },
+  {
+    "id": "fleet",
+    "name": "Fleet / business account",
+    "icon": "business_center",
+    "description": "Invoice-based handling for multiple vehicles with a named account manager.",
+    "priceFrom": 0
+  }
+]

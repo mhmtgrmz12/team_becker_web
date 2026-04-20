@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <title>Imprint — Civic Concierge</title>
+  <meta name="description" content="Legal information (Impressum) for Civic Concierge, Rheine." />
+  <link rel="canonical" href="https://civic-concierge.de/legal/imprint/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary:"#041627","primary-container":"#1a2b3c",secondary:"#545f72","secondary-container":"#d5e0f7","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","on-primary":"#ffffff",surface:"#f7f9fc","surface-container-lowest":"#ffffff","surface-container-low":"#f2f4f7","surface-container-highest":"#e0e3e6"}, fontFamily:{sans:["Inter","ui-sans-serif","system-ui"]} } } };</script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans" data-legal="imprint">
+  <div data-include="/partials/header.html"></div>
+
+  <main>
+    <section class="pt-14 pb-10 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">Legal</div>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight" style="color:var(--primary)" data-legal-title>Imprint</h1>
+        <p class="mt-3 text-sm" style="color:var(--secondary)">Last updated: <span data-legal-updated></span></p>
+      </div>
+    </section>
+
+    <section class="pb-24 px-6">
+      <div class="max-w-3xl mx-auto space-y-6" id="legal-body"></div>
+    </section>
+
+    <section class="py-12 px-6" style="background:var(--surface-container-low)">
+      <div class="max-w-3xl mx-auto text-sm flex flex-wrap gap-4" style="color:var(--secondary)">
+        <a href="/legal/imprint/" style="color:var(--primary)" class="font-semibold">Imprint</a>
+        <a href="/legal/privacy/" style="color:var(--primary)" class="font-semibold">Privacy</a>
+        <a href="/legal/terms/" style="color:var(--primary)" class="font-semibold">Terms</a>
+        <a href="/legal/cookies/" style="color:var(--primary)" class="font-semibold">Cookies</a>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/chatbot.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+
+  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module">
+    import { loadJSON, onReady } from "/assets/js/utils.js";
+    onReady(async () => {
+      const key = document.body.dataset.legal;
+      const data = await loadJSON("/assets/data/legal.json");
+      const block = data[key];
+      if (!block) return;
+      document.querySelectorAll("[data-legal-title]").forEach(n => n.textContent = block.title);
+      document.querySelectorAll("[data-legal-updated]").forEach(n => n.textContent = data.lastUpdated || "");
+      const body = document.getElementById("legal-body");
+      block.sections.forEach(sec => {
+        const el = document.createElement("article");
+        el.className = "p-6 rounded-2xl";
+        el.style.cssText = "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)";
+        const h = document.createElement("h2");
+        h.className = "text-xl font-bold mb-2";
+        h.style.color = "var(--primary)";
+        h.textContent = sec.heading;
+        const p = document.createElement("p");
+        p.style.cssText = "color:var(--secondary);white-space:pre-line";
+        p.textContent = sec.body;
+        el.appendChild(h); el.appendChild(p);
+        body.appendChild(el);
+      });
+    });
+  </script>
+</body>
+</html>

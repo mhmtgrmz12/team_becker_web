@@ -1,0 +1,26 @@
+{
+  "rows": [
+    { "service": "Vehicle Registration", "serviceFee": 29, "authorityFeeHint": "€28–€40", "totalHint": "from €57", "slug": "registration" },
+    { "service": "Re-registration", "serviceFee": 35, "authorityFeeHint": "€15–€30", "totalHint": "from €50", "slug": "re-registration" },
+    { "service": "Deregistration", "serviceFee": 19, "authorityFeeHint": "€10–€20", "totalHint": "from €29", "slug": "deregistration" },
+    { "service": "License Plate Service", "serviceFee": 29, "authorityFeeHint": "€10–€15 + plates", "totalHint": "from €57", "slug": "license-plate" },
+    { "service": "Express", "serviceFee": 59, "authorityFeeHint": "Varies", "totalHint": "from €89", "slug": "express" }
+  ],
+  "extras": [
+    { "label": "Custom plates (Wunschkennzeichen)", "price": "~€10.20 authority fee" },
+    { "label": "Plate stamping (in-house)", "price": "€18" },
+    { "label": "Courier pickup/delivery", "price": "€25 within Rheine" }
+  ],
+  "included": [
+    "Digital document pre-verification",
+    "Priority processing at the Steinfurt / Rheine authority",
+    "Status updates via WhatsApp",
+    "Clean, stamped paperwork handed back to you"
+  ],
+  "notIncluded": [
+    "Authority fees set by Kreis Steinfurt (paid to the authority)",
+    "Motor vehicle tax (charged by the customs/tax office)",
+    "Insurance premium"
+  ],
+  "note": "Authority fees are set by Kreis Steinfurt and may change. The prices above are for standard passenger vehicles."
+}

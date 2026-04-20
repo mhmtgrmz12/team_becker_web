@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#041627"/>
+      <stop offset="100%" stop-color="#1a2b3c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1000" cy="120" r="220" fill="#6ffbbe" opacity="0.12"/>
+  <circle cx="160" cy="520" r="180" fill="#6ffbbe" opacity="0.08"/>
+  <text x="80" y="220" font-family="Inter, sans-serif" font-weight="900" font-size="84" fill="#ffffff">Civic Concierge</text>
+  <text x="80" y="310" font-family="Inter, sans-serif" font-weight="600" font-size="40" fill="#6ffbbe">Vehicle registration, handled.</text>
+  <text x="80" y="420" font-family="Inter, sans-serif" font-weight="400" font-size="28" fill="#d5e0f7">Rheine · Kreis Steinfurt · WhatsApp-first · 24–48 h turnaround</text>
+  <rect x="80" y="470" width="280" height="70" rx="14" fill="#6ffbbe"/>
+  <text x="220" y="516" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="26" fill="#002113">Start on WhatsApp →</text>
+</svg>

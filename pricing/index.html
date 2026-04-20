@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Civic Concierge</title>
+  <meta name="description" content="Transparent pricing for all vehicle registration services in Rheine. Service fee plus authority fees, no surprises." />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://civic-concierge.de/pricing/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary:"#041627","primary-container":"#1a2b3c",secondary:"#545f72","secondary-container":"#d5e0f7","tertiary-fixed":"#6ffbbe","on-tertiary-fixed":"#002113","on-primary":"#ffffff",surface:"#f7f9fc","surface-container-lowest":"#ffffff","surface-container-low":"#f2f4f7","surface-container-highest":"#e0e3e6"}, fontFamily:{sans:["Inter","ui-sans-serif","system-ui"]} } } };</script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans">
+  <div data-include="/partials/header.html"></div>
+
+  <main>
+    <section class="pt-14 pb-10 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">Pricing</div>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)">Honest numbers, no surprises</h1>
+        <p class="mt-4 text-lg" style="color:var(--secondary)">Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and shown separately.</p>
+      </div>
+    </section>
+
+    <section class="py-10 px-6">
+      <div class="max-w-5xl mx-auto rounded-2xl overflow-hidden" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-card)">
+        <table class="w-full text-sm">
+          <thead>
+            <tr style="background:var(--surface-container-low);color:var(--primary)">
+              <th class="text-left p-4 font-bold">Service</th>
+              <th class="text-left p-4 font-bold">Service fee</th>
+              <th class="text-left p-4 font-bold">Authority fees</th>
+              <th class="text-left p-4 font-bold">Total from</th>
+              <th class="text-left p-4 font-bold"></th>
+            </tr>
+          </thead>
+          <tbody id="pricing-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="py-14 px-6" style="background:var(--surface-container-low)">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-card)">
+          <h2 class="text-2xl font-bold mb-4" style="color:var(--primary)">What's included</h2>
+          <ul class="space-y-2 text-sm" style="color:var(--secondary)" id="included-list"></ul>
+        </div>
+        <div class="p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-card)">
+          <h2 class="text-2xl font-bold mb-4" style="color:var(--primary)">Not included</h2>
+          <ul class="space-y-2 text-sm" style="color:var(--secondary)" id="excluded-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6" style="color:var(--primary)">Optional extras</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="extras-list"></div>
+        <p class="text-xs mt-4" style="color:var(--secondary)" id="pricing-note"></p>
+      </div>
+    </section>
+
+    <section class="py-16 px-6" style="background:var(--surface-container-low)">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)">Still not sure?</h2>
+        <p class="mt-3" style="color:var(--secondary)">Message us with your plate and situation — we'll send back an exact quote.</p>
+        <a href="/request/" class="inline-flex items-center gap-2 mt-6 px-7 py-4 rounded-xl font-bold" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)">
+          <span class="msi">chat</span> Get an exact quote
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/chatbot.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+
+  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module">
+    import { loadJSON, onReady } from "/assets/js/utils.js";
+    onReady(async () => {
+      const p = await loadJSON("/assets/data/pricing.json");
+      const body = document.getElementById("pricing-body");
+      p.rows.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.style.borderTop = "1px solid rgba(196,198,205,0.3)";
+        tr.innerHTML = `
+          <td class="p-4 font-semibold" style="color:var(--primary)">${r.service}</td>
+          <td class="p-4" style="color:var(--secondary)">from €${r.serviceFee}</td>
+          <td class="p-4" style="color:var(--secondary)">${r.authorityFeeHint}</td>
+          <td class="p-4 font-bold" style="color:var(--on-tertiary-container)">${r.totalHint}</td>
+          <td class="p-4 text-right"><a href="/services/${r.slug}/" class="font-semibold" style="color:var(--on-tertiary-container)">Details →</a></td>`;
+        body.appendChild(tr);
+      });
+      document.getElementById("included-list").innerHTML = p.included.map(x => `<li class="flex gap-2"><span class="msi" style="color:var(--tertiary-fixed-dim)">check_circle</span><span>${x}</span></li>`).join("");
+      document.getElementById("excluded-list").innerHTML = p.notIncluded.map(x => `<li class="flex gap-2"><span class="msi" style="color:var(--outline)">cancel</span><span>${x}</span></li>`).join("");
+      document.getElementById("extras-list").innerHTML = p.extras.map(x => `<div class="p-5 rounded-xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-soft)"><div class="font-bold mb-1" style="color:var(--primary)">${x.label}</div><div class="text-sm" style="color:var(--on-tertiary-container)">${x.price}</div></div>`).join("");
+      document.getElementById("pricing-note").textContent = p.note || "";
+    });
+  </script>
+</body>
+</html>

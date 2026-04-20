@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /chatbot/
+Disallow: /request/
+
+Sitemap: https://civic-concierge.de/sitemap.xml

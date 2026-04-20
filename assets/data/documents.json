@@ -1,0 +1,58 @@
+[
+  {
+    "id": "id_card",
+    "title": "ID Card or Passport",
+    "icon": "badge",
+    "description": "Original valid German ID or passport (with current address registration if applicable)."
+  },
+  {
+    "id": "evb",
+    "title": "eVB Number",
+    "icon": "123",
+    "description": "Electronic insurance confirmation — a 7-character code from your insurer."
+  },
+  {
+    "id": "sepa",
+    "title": "SEPA Mandate",
+    "icon": "account_balance",
+    "description": "Signed direct debit mandate for the motor vehicle tax.",
+    "formUrl": "/assets/forms/sepa-mandate.pdf"
+  },
+  {
+    "id": "zb1",
+    "title": "Zulassungsbescheinigung I",
+    "icon": "credit_card",
+    "description": "The vehicle registration certificate (old 'Fahrzeugschein')."
+  },
+  {
+    "id": "zb2",
+    "title": "Zulassungsbescheinigung II",
+    "icon": "description",
+    "description": "The vehicle title certificate proving ownership (old 'Fahrzeugbrief')."
+  },
+  {
+    "id": "hu_report",
+    "title": "HU / AU report",
+    "icon": "fact_check",
+    "description": "Valid technical inspection (TÜV/Dekra). Required for used vehicles."
+  },
+  {
+    "id": "plate_return",
+    "title": "Old license plates",
+    "icon": "vpn_key",
+    "description": "Bring the original plates for deregistration — they'll be invalidated on the spot."
+  },
+  {
+    "id": "reservation_code",
+    "title": "Plate reservation code",
+    "icon": "confirmation_number",
+    "description": "If you've pre-reserved a Wunschkennzeichen online, bring the PIN/confirmation."
+  },
+  {
+    "id": "power_of_attorney",
+    "title": "Power of attorney",
+    "icon": "assignment",
+    "description": "Signed authorisation so we can act on your behalf at the authority.",
+    "formUrl": "/assets/forms/power-of-attorney.pdf"
+  }
+]

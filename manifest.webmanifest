@@ -1,0 +1,20 @@
+{
+  "name": "Civic Concierge — Rheine Vehicle Registration",
+  "short_name": "Civic Concierge",
+  "description": "Fast, WhatsApp-first vehicle registration in Rheine & Kreis Steinfurt.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#041627",
+  "lang": "en",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Start a request", "short_name": "Request", "url": "/request/" },
+    { "name": "FAQ", "url": "/faq/" },
+    { "name": "Contact", "url": "/contact/" }
+  ]
+}

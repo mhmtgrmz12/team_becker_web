@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deregistration — Civic Concierge</title>
+  <meta name="description" content="Take a vehicle off the road permanently or temporarily in Rheine — without queuing at the authority." />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="canonical" href="https://civic-concierge.de/services/deregistration/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary:"#041627", "primary-container":"#1a2b3c", secondary:"#545f72", "secondary-container":"#d5e0f7", "tertiary-fixed":"#6ffbbe", "tertiary-fixed-dim":"#4edea3", "on-tertiary-fixed":"#002113", "on-primary":"#ffffff", surface:"#f7f9fc", "surface-container-lowest":"#ffffff", "surface-container-low":"#f2f4f7", "surface-container-highest":"#e0e3e6", "outline-variant":"#c4c6cd" }, fontFamily: { sans:["Inter","ui-sans-serif","system-ui"] } } } };
+  </script>
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans" data-service-id="deregistration">
+  <div data-include="/partials/header.html"></div>
+
+  <main>
+    <nav class="max-w-7xl mx-auto px-6 pt-8 text-sm" style="color:var(--secondary)">
+      <a href="/" style="color:var(--secondary)">Home</a> ·
+      <a href="/services/" style="color:var(--secondary)">Services</a> ·
+      <span style="color:var(--primary)" class="font-semibold" data-breadcrumb></span>
+    </nav>
+
+    <section class="pt-10 pb-20 md:pb-24 px-6" id="svc-hero"></section>
+
+    <section class="py-24 px-6 rounded-t-[3rem]" style="background:var(--surface-container-low)">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-12">
+          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)">Required documents</div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--primary)">What to bring</h2>
+          <p style="color:var(--secondary)">Gather these essentials. We verify them digitally before you hand them over, so there are zero surprises at the office.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="svc-docs"></div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)">Optional extras</div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--primary)">Make your life easier</h2>
+          <p style="color:var(--secondary)">Add any of these to your request — skip entirely if you don't need them.</p>
+        </div>
+        <div class="space-y-3" id="svc-extras"></div>
+      </div>
+    </section>
+
+    <section class="py-20 px-6" style="background:var(--surface-container-low)">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div id="svc-pricing"></div>
+        <div class="rounded-[2rem] p-10 md:p-14 text-white relative overflow-hidden flex flex-col justify-center" style="background:linear-gradient(135deg, var(--primary), var(--primary-container));box-shadow:var(--shadow-dark)">
+          <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-50" style="background:rgba(255,255,255,0.08);filter:blur(60px)"></div>
+          <div class="relative z-10">
+            <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">Ready to skip the line?</h3>
+            <p class="text-lg mb-8 opacity-90" style="color:var(--inverse-primary)">Initiate this service securely. Our team will review your documents within minutes during office hours.</p>
+            <a href="/request/?service=deregistration" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-lg" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="service_pricing_block">
+              Start via WhatsApp <span class="msi">chat</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:var(--primary)">Questions for this service</h2>
+        </div>
+        <div class="space-y-3" id="svc-faq"></div>
+      </div>
+    </section>
+
+    <section class="py-16 px-6" style="background:var(--surface-container-low)">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6" style="color:var(--primary)">Related services</h2>
+        <div id="svc-related" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/chatbot.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+
+  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module" src="/assets/js/service-detail.js"></script>
+  <script type="module">
+    // set breadcrumb name
+    import { loadJSON, onReady } from "/assets/js/utils.js";
+    onReady(async () => {
+      const id = document.body.dataset.serviceId;
+      const svc = (await loadJSON("/assets/data/services.json")).find(s => s.id === id);
+      document.querySelectorAll("[data-breadcrumb]").forEach(n => n.textContent = svc?.name || "");
+    });
+  </script>
+</body>
+</html>

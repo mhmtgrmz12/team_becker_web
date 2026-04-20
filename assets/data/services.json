@@ -1,0 +1,73 @@
+[
+  {
+    "id": "registration",
+    "slug": "registration",
+    "name": "Vehicle Registration",
+    "shortName": "Registration",
+    "icon": "directions_car",
+    "blurb": "Register a new, imported, or freshly purchased vehicle without waiting for an authority appointment.",
+    "serviceFeeFrom": 29,
+    "currency": "EUR",
+    "authorityFeeHint": "€28–€40 typical",
+    "turnaround": "24–48 h",
+    "popular": true,
+    "requiredDocumentIds": ["id_card", "evb", "sepa", "zb2", "hu_report"],
+    "extraIds": ["wunschkennzeichen", "plate_stamping", "courier", "express"]
+  },
+  {
+    "id": "re-registration",
+    "slug": "re-registration",
+    "name": "Re-registration",
+    "shortName": "Re-registration",
+    "icon": "swap_horiz",
+    "blurb": "Change of owner, change of address, or moving your vehicle between districts — handled in one visit.",
+    "serviceFeeFrom": 35,
+    "currency": "EUR",
+    "authorityFeeHint": "€15–€30 typical",
+    "turnaround": "24 h",
+    "requiredDocumentIds": ["id_card", "evb", "sepa", "zb1", "zb2"],
+    "extraIds": ["wunschkennzeichen", "plate_stamping", "courier", "express"]
+  },
+  {
+    "id": "deregistration",
+    "slug": "deregistration",
+    "name": "Deregistration",
+    "shortName": "Deregistration",
+    "icon": "description",
+    "blurb": "Take a vehicle off the road permanently or temporarily — without queuing at the authority.",
+    "serviceFeeFrom": 19,
+    "currency": "EUR",
+    "authorityFeeHint": "€10–€20 typical",
+    "turnaround": "Same day",
+    "requiredDocumentIds": ["id_card", "zb1", "plate_return"],
+    "extraIds": ["courier", "express"]
+  },
+  {
+    "id": "license-plate",
+    "slug": "license-plate",
+    "name": "License Plate Service",
+    "shortName": "License Plates",
+    "icon": "vpn_key",
+    "blurb": "Plate stamping, Wunschkennzeichen (custom plates), and delivery — in-house workshop.",
+    "serviceFeeFrom": 29,
+    "currency": "EUR",
+    "authorityFeeHint": "€10–€15 plus plate cost",
+    "turnaround": "Same day",
+    "requiredDocumentIds": ["reservation_code"],
+    "extraIds": ["wunschkennzeichen", "plate_stamping", "courier"]
+  },
+  {
+    "id": "express",
+    "slug": "express",
+    "name": "Express Service",
+    "shortName": "Express",
+    "icon": "bolt",
+    "blurb": "Same-day handling when you absolutely cannot wait. Available Mon–Fri, subject to authority capacity.",
+    "serviceFeeFrom": 59,
+    "currency": "EUR",
+    "authorityFeeHint": "Varies by service",
+    "turnaround": "Same day",
+    "requiredDocumentIds": ["id_card", "evb", "sepa", "zb2"],
+    "extraIds": ["courier", "wunschkennzeichen"]
+  }
+]
