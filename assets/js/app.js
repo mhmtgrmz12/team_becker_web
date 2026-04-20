@@ -2,6 +2,7 @@
 import "./config.js";
 import "./include.js";       // injects partials
 import { initI18n } from "./i18n.js";
+import "./language-switcher.js";
 import "./consent.js";
 import "./open-now.js";
 import "./chatbot.js";
