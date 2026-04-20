@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "services": "الخدمات",
+    "pricing": "الأسعار",
+    "documents": "المستندات",
+    "howItWorks": "كيف يعمل",
+    "contact": "اتصل بنا",
+    "faq": "الأسئلة الشائعة"
+  },
+  "cta": {
+    "whatsapp": "ابدأ عبر واتساب",
+    "call": "اتصل",
+    "viewServices": "عرض الخدمات",
+    "viewPricing": "عرض الأسعار",
+    "startRequest": "بدء طلب"
+  },
+  "labels": {
+    "serviceDetail": "تفاصيل الخدمة",
+    "officialService": "خدمة رسمية",
+    "requiredDocuments": "المستندات المطلوبة",
+    "howItWorks": "كيف يعمل",
+    "pricing": "الأسعار",
+    "faq": "الأسئلة المتكررة",
+    "openNow": "مفتوح الآن",
+    "closed": "مغلق"
+  }
+}

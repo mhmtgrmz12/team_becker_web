@@ -1,7 +1,15 @@
 {
+  "nav": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "documents": "Documents",
+    "howItWorks": "How it works",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
   "cta": {
     "whatsapp": "Start via WhatsApp",
-    "call": "Call us",
+    "call": "Call",
     "viewServices": "View services",
     "viewPricing": "View pricing",
     "startRequest": "Start a request"

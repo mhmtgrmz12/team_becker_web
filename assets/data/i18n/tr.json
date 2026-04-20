@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "services": "Hizmetler",
+    "pricing": "Fiyatlandırma",
+    "documents": "Belgeler",
+    "howItWorks": "Nasıl Çalışır",
+    "contact": "İletişim",
+    "faq": "SSS"
+  },
+  "cta": {
+    "whatsapp": "WhatsApp ile Başla",
+    "call": "Ara",
+    "viewServices": "Hizmetleri Gör",
+    "viewPricing": "Fiyatları Gör",
+    "startRequest": "Talep Oluştur"
+  },
+  "labels": {
+    "serviceDetail": "Hizmet Detayı",
+    "officialService": "Resmi Hizmet",
+    "requiredDocuments": "Gerekli Belgeler",
+    "howItWorks": "Nasıl Çalışır",
+    "pricing": "Fiyatlandırma",
+    "faq": "Sıkça Sorulan Sorular",
+    "openNow": "Şu an açık",
+    "closed": "Kapalı"
+  }
+}

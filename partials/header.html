@@ -2,17 +2,29 @@
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
     <a href="/" class="text-xl font-bold tracking-tighter" style="color:var(--primary)">Civic Concierge</a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="/services/" style="color:var(--secondary)">Services</a>
-      <a href="/pricing/" style="color:var(--secondary)">Pricing</a>
-      <a href="/documents/" style="color:var(--secondary)">Documents</a>
-      <a href="/how-it-works/" style="color:var(--secondary)">How it works</a>
-      <a href="/contact/" style="color:var(--secondary)">Contact</a>
+      <a href="/services/" data-i18n="nav.services" style="color:var(--secondary)">Services</a>
+      <a href="/pricing/" data-i18n="nav.pricing" style="color:var(--secondary)">Pricing</a>
+      <a href="/documents/" data-i18n="nav.documents" style="color:var(--secondary)">Documents</a>
+      <a href="/how-it-works/" data-i18n="nav.howItWorks" style="color:var(--secondary)">How it works</a>
+      <a href="/contact/" data-i18n="nav.contact" style="color:var(--secondary)">Contact</a>
     </nav>
     <div class="hidden md:flex items-center gap-3">
-      <a href="tel:+491733225570" class="text-sm font-semibold px-4 py-2 rounded-xl" style="color:var(--primary)" data-track="click_call_cta" data-track-location="header">
+      <div class="relative language-switcher">
+        <button id="lang-btn" class="text-sm font-semibold px-3 py-2 rounded-xl flex items-center gap-1" style="color:var(--primary)" aria-label="Change language">
+          <span class="msi" style="font-size:18px">language</span>
+          <span id="current-lang">EN</span>
+        </button>
+        <div id="lang-menu" class="hidden absolute right-0 mt-2 py-2 w-32 rounded-xl shadow-lg" style="background:var(--surface-container-lowest);border:1px solid var(--outline-variant)">
+          <button data-lang="en" class="lang-option w-full text-left px-4 py-2 text-sm hover:bg-opacity-50" style="color:var(--primary)">English</button>
+          <button data-lang="de" class="lang-option w-full text-left px-4 py-2 text-sm hover:bg-opacity-50" style="color:var(--primary)">Deutsch</button>
+          <button data-lang="tr" class="lang-option w-full text-left px-4 py-2 text-sm hover:bg-opacity-50" style="color:var(--primary)">Türkçe</button>
+          <button data-lang="ar" class="lang-option w-full text-left px-4 py-2 text-sm hover:bg-opacity-50" style="color:var(--primary)">العربية</button>
+        </div>
+      </div>
+      <a href="tel:+491733225570" class="text-sm font-semibold px-4 py-2 rounded-xl" data-i18n="cta.call" style="color:var(--primary)" data-track="click_call_cta" data-track-location="header">
         Call
       </a>
-      <a href="https://wa.me/491733225570?text=Hello%20Civic%20Concierge%2C%20I%27d%20like%20to%20start%20a%20request." target="_blank" rel="noopener" class="text-sm font-bold px-5 py-2.5 rounded-xl" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="header">
+      <a href="https://wa.me/491733225570?text=Hello%20Civic%20Concierge%2C%20I%27d%20like%20to%20start%20a%20request." target="_blank" rel="noopener" class="text-sm font-bold px-5 py-2.5 rounded-xl" data-i18n="cta.whatsapp" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="header">
         WhatsApp
       </a>
     </div>
@@ -21,11 +33,59 @@
     </button>
   </div>
   <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
-    <a href="/services/" class="block py-2" style="color:var(--primary)">Services</a>
-    <a href="/pricing/" class="block py-2" style="color:var(--primary)">Pricing</a>
-    <a href="/documents/" class="block py-2" style="color:var(--primary)">Documents</a>
-    <a href="/how-it-works/" class="block py-2" style="color:var(--primary)">How it works</a>
-    <a href="/contact/" class="block py-2" style="color:var(--primary)">Contact</a>
-    <a href="/faq/" class="block py-2" style="color:var(--primary)">FAQ</a>
+    <a href="/services/" data-i18n="nav.services" class="block py-2" style="color:var(--primary)">Services</a>
+    <a href="/pricing/" data-i18n="nav.pricing" class="block py-2" style="color:var(--primary)">Pricing</a>
+    <a href="/documents/" data-i18n="nav.documents" class="block py-2" style="color:var(--primary)">Documents</a>
+    <a href="/how-it-works/" data-i18n="nav.howItWorks" class="block py-2" style="color:var(--primary)">How it works</a>
+    <a href="/contact/" data-i18n="nav.contact" class="block py-2" style="color:var(--primary)">Contact</a>
+    <a href="/faq/" data-i18n="nav.faq" class="block py-2" style="color:var(--primary)">FAQ</a>
+    <div class="mt-4 pt-4 border-t" style="border-color:var(--outline-variant)">
+      <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)">Language</div>
+      <div class="flex gap-2">
+        <button data-lang="en" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)">EN</button>
+        <button data-lang="de" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)">DE</button>
+        <button data-lang="tr" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)">TR</button>
+        <button data-lang="ar" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)">AR</button>
+      </div>
+    </div>
   </div>
 </header>
+
+<script type="module">
+  import { setLanguage, getCurrentLanguage } from '/assets/js/i18n.js';
+  
+  // Toggle language menu
+  document.getElementById('lang-btn')?.addEventListener('click', () => {
+    document.getElementById('lang-menu').classList.toggle('hidden');
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('lang-menu');
+    const btn = document.getElementById('lang-btn');
+    if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+  
+  // Language selection
+  document.querySelectorAll('.lang-option, .lang-option-mobile').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const lang = btn.getAttribute('data-lang');
+      await setLanguage(lang);
+      document.getElementById('lang-menu')?.classList.add('hidden');
+      updateCurrentLangDisplay();
+    });
+  });
+  
+  // Update current language display
+  function updateCurrentLangDisplay() {
+    const lang = getCurrentLanguage().toUpperCase();
+    const display = document.getElementById('current-lang');
+    if (display) display.textContent = lang;
+  }
+  
+  // Initialize on load
+  document.addEventListener('partials:ready', updateCurrentLangDisplay);
+</script>
+

@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "services": "Dienstleistungen",
+    "pricing": "Preise",
+    "documents": "Dokumente",
+    "howItWorks": "So funktioniert's",
+    "contact": "Kontakt",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "whatsapp": "Per WhatsApp starten",
+    "call": "Anrufen",
+    "viewServices": "Dienstleistungen ansehen",
+    "viewPricing": "Preise ansehen",
+    "startRequest": "Anfrage starten"
+  },
+  "labels": {
+    "serviceDetail": "Dienstleistungsdetails",
+    "officialService": "Offizieller Service",
+    "requiredDocuments": "Erforderliche Dokumente",
+    "howItWorks": "So funktioniert's",
+    "pricing": "Preise",
+    "faq": "Häufig gestellte Fragen",
+    "openNow": "Jetzt geöffnet",
+    "closed": "Geschlossen"
+  }
+}
