@@ -1,20 +1,19 @@
 <header class="glass-panel sticky top-0 z-40 w-full" style="box-shadow:0 1px 0 rgba(196,198,205,0.3)">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-    <a href="/" class="flex items-center gap-3">
-      <img src="/assets/img/about/bigLogo.jpeg" alt="Civic Concierge" class="h-10 w-auto rounded-lg" />
-      <span class="text-xl font-bold tracking-tighter hidden sm:inline" style="color:var(--primary)" data-i18n-skip>Civic Concierge</span>
+    <a href="/" class="flex items-center">
+      <img src="/assets/img/about/bigLogo.jpeg" alt="Civic Concierge" class="h-8 xl:h-10 w-auto rounded-lg" />
     </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="/services/" data-i18n="nav.services" style="color:var(--secondary)">Services</a>
-      <a href="/pricing/" data-i18n="nav.pricing" style="color:var(--secondary)">Pricing</a>
-      <a href="/documents/" data-i18n="nav.documents" style="color:var(--secondary)">Documents</a>
-      <a href="/how-it-works/" data-i18n="nav.howItWorks" style="color:var(--secondary)">How it works</a>
-      <a href="/about/" data-i18n="nav.about" style="color:var(--secondary)">About</a>
-      <a href="/contact/" data-i18n="nav.contact" style="color:var(--secondary)">Contact</a>
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-[13px] xl:text-sm font-medium">
+      <a href="/services/" data-i18n="nav.services" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Services</a>
+      <a href="/pricing/" data-i18n="nav.pricing" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Pricing</a>
+      <a href="/documents/" data-i18n="nav.documents" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Documents</a>
+      <a href="/how-it-works/" data-i18n="nav.howItWorks" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">How it works</a>
+      <a href="/about/" data-i18n="nav.about" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">About</a>
+      <a href="/contact/" data-i18n="nav.contact" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-3">
+    <div class="hidden lg:flex items-center gap-2 xl:gap-3">
       <div class="relative language-switcher">
-        <button id="lang-btn" class="text-sm font-semibold px-3 py-2 rounded-xl flex items-center gap-1" style="color:var(--primary)" aria-label="Change language" data-i18n-attr="aria-label:nav.changeLanguage" onclick="document.getElementById('lang-menu').classList.toggle('hidden')">
+        <button id="lang-btn" class="text-xs xl:text-sm font-semibold px-2 xl:px-3 py-2 rounded-xl flex items-center gap-1" style="color:var(--primary)" aria-label="Change language" data-i18n-attr="aria-label:nav.changeLanguage" onclick="document.getElementById('lang-menu').classList.toggle('hidden')">
           <span class="msi" style="font-size:18px">language</span>
           <span id="current-lang">EN</span>
         </button>
@@ -25,18 +24,18 @@
           <button data-lang="ar" class="lang-option w-full text-left px-4 py-2 text-sm hover:bg-opacity-50" style="color:var(--primary)" data-i18n-skip>العربية</button>
         </div>
       </div>
-      <a href="tel:+491733225570" class="text-sm font-semibold px-4 py-2 rounded-xl" data-i18n="cta.call" style="color:var(--primary)" data-track="click_call_cta" data-track-location="header">
+      <a href="tel:+491733225570" class="text-xs xl:text-sm font-semibold px-3 xl:px-4 py-2 rounded-xl whitespace-nowrap" data-i18n="cta.call" style="color:var(--primary)" data-track="click_call_cta" data-track-location="header">
         Call
       </a>
-      <a href="https://wa.me/491733225570?text=Hello%20Civic%20Concierge%2C%20I%27d%20like%20to%20start%20a%20request." target="_blank" rel="noopener" class="text-sm font-bold px-5 py-2.5 rounded-xl" data-i18n="cta.whatsapp" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="header">
+      <a href="https://wa.me/491733225570?text=Hello%20Civic%20Concierge%2C%20I%27d%20like%20to%20start%20a%20request." target="_blank" rel="noopener" class="text-xs xl:text-sm font-bold px-4 xl:px-5 py-2.5 rounded-xl whitespace-nowrap" data-i18n="cta.whatsapp" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="header">
         WhatsApp
       </a>
     </div>
-    <button class="md:hidden p-2 rounded-lg" aria-label="Open menu" data-i18n-attr="aria-label:nav.openMenu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+    <button class="lg:hidden p-2 rounded-lg" aria-label="Open menu" data-i18n-attr="aria-label:nav.openMenu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
       <span class="msi" style="color:var(--primary)">menu</span>
     </button>
   </div>
-  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+  <div id="mobile-menu" class="lg:hidden hidden px-6 pb-4">
     <a href="/services/" data-i18n="nav.services" class="block py-2" style="color:var(--primary)">Services</a>
     <a href="/pricing/" data-i18n="nav.pricing" class="block py-2" style="color:var(--primary)">Pricing</a>
     <a href="/documents/" data-i18n="nav.documents" class="block py-2" style="color:var(--primary)">Documents</a>
