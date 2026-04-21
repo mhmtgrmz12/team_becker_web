@@ -7,6 +7,7 @@
     "pricing": "Fiyatlandırma",
     "documents": "Belgeler",
     "howItWorks": "Nasıl Çalışır",
+    "about": "Hakkımızda",
     "contact": "İletişim",
     "faq": "SSS",
     "openMenu": "Menüyü aç",
@@ -464,6 +465,55 @@
       "reRegistration": "Ummeldung",
       "deregistration": "Abmeldung",
       "licensePlates": "Plakalar"
+    }
+  },
+  "aboutPage": {
+    "eyebrow": "Hakkımızda",
+    "title": "Biz kimiz",
+    "subtitle": "Rheine ve Kreis Steinfurt'ta araç kaydı için güvenilir ortağınız.",
+    "intro": {
+      "text": "On yılı aşkın süredir yerel toplumda sağlam bir şekilde kök saldık – ve son beş yıldır araç kayıt hizmetleri ve DEKRA sertifikalı plaka damgalama konusunda aktif olarak faaliyet gösteriyoruz. Arabalara olan tutkuyla başlayan şey, kapsamlı destekle modern ve güvenilir bir araç kayıt hizmetine dönüştü."
+    },
+    "experience": {
+      "title": "Gerçek deneyim üzerine kurulu",
+      "text": "Deneyimimiz tesadüf değil: Yaklaşık 80 aracı özel olarak alıp satarak, araçlarla ilgili tüm süreçler, zorluklar ve detaylar hakkında derin bir anlayış geliştirdik. Bu bilgiyi işimize dahil ettik – müşterilerimiz için işleri olabildiğince kolaylaştırma hedefiyle."
+    },
+    "services": {
+      "title": "Neler sunuyoruz",
+      "text": "Bugün standart araç kaydından çok daha fazlasını sunuyoruz:",
+      "items": {
+        "0": "Tüm kayıt işlemlerini hallediyoruz – ilk kayıttan, kayıt silmeye, yeniden kayda ve mülkiyet değişikliklerine kadar.",
+        "1": "Araba, motosiklet, karavan veya özel araç olsun – bizimle en iyi ellerde olursunuz.",
+        "2": "Online kayıt silme de standart hizmetimizin bir parçasıdır.",
+        "3": "Teknik değişikliklerle ilgileniyoruz ve müşterilerimizi araç muayene randevularına güvenilir bir şekilde eşlik ediyoruz.",
+        "4": "Her şeyi önceden hazırlıyoruz, böylece hiçbir şey için endişelenmenize gerek kalmıyor – hızlı, kolay ve profesyonel."
+      }
+    },
+    "team": {
+      "title": "Ekibimiz",
+      "text": "Şirketimiz Rheine'den üç kadın tarafından destekleniyor: kendini adamış, yetkin ve güçlü bir ağ ve araç kayıt ofisiyle doğrudan bağlantıları olan. Neyin önemli olduğunu biliyoruz – ve ihtiyaçlarınız için tutkuyla çalışıyoruz."
+    },
+    "promise": {
+      "title": "Sözümüz",
+      "text": "Maksimum hizmet, minimum bekleme süresi – ve parmağınızı bile kıpırdatmak zorunda kalmama huzuru."
+    },
+    "stats": {
+      "0": {
+        "value": "10+",
+        "label": "Toplulukta yıl"
+      },
+      "1": {
+        "value": "5+",
+        "label": "Kayıt hizmetlerinde yıl"
+      },
+      "2": {
+        "value": "80+",
+        "label": "Kişisel olarak işlenen araç"
+      },
+      "3": {
+        "value": "3",
+        "label": "Kendini adamış ekip üyesi"
+      }
     }
   },
   "footer": {

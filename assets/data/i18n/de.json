@@ -7,6 +7,7 @@
     "pricing": "Preise",
     "documents": "Dokumente",
     "howItWorks": "So funktioniert's",
+    "about": "Über uns",
     "contact": "Kontakt",
     "faq": "FAQ",
     "openMenu": "Menü öffnen",
@@ -464,6 +465,55 @@
       "reRegistration": "Ummeldung",
       "deregistration": "Abmeldung",
       "licensePlates": "Kennzeichen"
+    }
+  },
+  "aboutPage": {
+    "eyebrow": "Über uns",
+    "title": "Wer wir sind",
+    "subtitle": "Ihr vertrauenswürdiger Partner für Fahrzeugzulassung in Rheine & Kreis Steinfurt.",
+    "intro": {
+      "text": "Seit über zehn Jahren sind wir fest in der lokalen Gemeinschaft verwurzelt – und seit fünf Jahren sind wir auch aktiv im Bereich Fahrzeugzulassung und DEKRA-zertifizierter Kennzeichenprägung tätig. Was als Leidenschaft für Autos begann, hat sich zu einem modernen, zuverlässigen Zulassungsservice mit umfassender Betreuung entwickelt."
+    },
+    "experience": {
+      "title": "Auf echter Erfahrung aufgebaut",
+      "text": "Unsere Erfahrung ist kein Zufall: Durch den privaten Kauf und Verkauf von rund 80 Fahrzeugen haben wir ein tiefes Verständnis für alle Prozesse, Herausforderungen und Details rund um Fahrzeuge entwickelt. Dieses Wissen haben wir in unser Geschäft eingebracht – mit dem Ziel, es unseren Kunden so einfach wie möglich zu machen."
+    },
+    "services": {
+      "title": "Was wir anbieten",
+      "text": "Heute bieten wir viel mehr als nur Standard-Fahrzeugzulassung:",
+      "items": {
+        "0": "Wir kümmern uns um alle Zulassungsangelegenheiten – von der Erstzulassung über Abmeldung und Ummeldung bis hin zu Halterwechseln.",
+        "1": "Ob Auto, Motorrad, Wohnmobil oder Spezialfahrzeug – bei uns sind Sie in den besten Händen.",
+        "2": "Online-Abmeldung gehört ebenfalls zu unserem Standardservice.",
+        "3": "Wir kümmern uns um technische Änderungen und begleiten unsere Kunden zuverlässig zu ihren Fahrzeugprüfungsterminen.",
+        "4": "Wir bereiten alles im Voraus vor, damit Sie sich um nichts kümmern müssen – schnell, einfach und professionell."
+      }
+    },
+    "team": {
+      "title": "Unser Team",
+      "text": "Unser Unternehmen wird von drei Frauen aus Rheine getragen: engagiert, kompetent und mit einem starken Netzwerk und direkten Verbindungen zur Zulassungsstelle. Wir wissen, worauf es ankommt – und setzen uns leidenschaftlich für Ihre Bedürfnisse ein."
+    },
+    "promise": {
+      "title": "Unser Versprechen",
+      "text": "Maximaler Service, minimale Wartezeit – und die Gewissheit, keinen Finger rühren zu müssen."
+    },
+    "stats": {
+      "0": {
+        "value": "10+",
+        "label": "Jahre in der Gemeinschaft"
+      },
+      "1": {
+        "value": "5+",
+        "label": "Jahre im Zulassungsservice"
+      },
+      "2": {
+        "value": "80+",
+        "label": "Persönlich bearbeitete Fahrzeuge"
+      },
+      "3": {
+        "value": "3",
+        "label": "Engagierte Teammitglieder"
+      }
     }
   },
   "footer": {

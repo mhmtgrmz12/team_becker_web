@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Civic Concierge</title>
+  <meta name="description" content="Learn about Civic Concierge — your trusted vehicle registration service in Rheine & Kreis Steinfurt." />
+  <meta name="theme-color" content="#041627" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://civic-concierge.de/about/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us — Civic Concierge" />
+  <meta property="og:description" content="Your trusted vehicle registration service in Rheine & Kreis Steinfurt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://civic-concierge.de/about/" />
+
+  <!-- Fonts + icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          primary: "#041627", "primary-container": "#1a2b3c",
+          secondary: "#545f72", "secondary-container": "#d5e0f7",
+          tertiary: "#001a0f", "tertiary-fixed": "#6ffbbe", "tertiary-fixed-dim": "#4edea3",
+          "on-tertiary-fixed": "#002113", "on-primary": "#ffffff",
+          surface: "#f7f9fc", "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f2f4f7", "surface-container": "#eceef1",
+          "surface-container-high": "#e6e8eb", "surface-container-highest": "#e0e3e6",
+          "outline-variant": "#c4c6cd", "on-surface": "#191c1e"
+        },
+        fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] }
+      } }
+    };
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+</head>
+<body class="font-sans">
+  <div data-include="/partials/header.html"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="pt-14 pb-10 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)" data-i18n="aboutPage.eyebrow">About us</div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="aboutPage.title">Who we are</h1>
+            <p class="mt-4 text-lg" style="color:var(--secondary)" data-i18n="aboutPage.subtitle">Your trusted partner for vehicle registration in Rheine & Kreis Steinfurt.</p>
+          </div>
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden" style="box-shadow:var(--shadow-card)">
+              <img src="/assets/img/about/office.jpeg" alt="Our office" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Intro -->
+        <div class="mb-16">
+          <p class="text-xl leading-relaxed" style="color:var(--on-surface)" id="about-intro"></p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        </div>
+
+        <!-- Experience -->
+        <div class="mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="p-8 rounded-2xl" style="background:var(--surface-container-low)">
+              <h2 class="text-3xl font-bold mb-4" style="color:var(--primary)" id="experience-title"></h2>
+              <p class="text-lg leading-relaxed" style="color:var(--secondary)" id="experience-text"></p>
+            </div>
+            <div class="rounded-2xl overflow-hidden" style="box-shadow:var(--shadow-card)">
+              <img src="/assets/img/about/bigLogo.jpeg" alt="Civic Concierge Logo" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold mb-4" style="color:var(--primary)" id="services-title"></h2>
+          <p class="text-lg leading-relaxed mb-6" style="color:var(--secondary)" id="services-text"></p>
+          <ul class="space-y-3" id="services-list"></ul>
+        </div>
+
+        <!-- Team -->
+        <div class="mb-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="rounded-2xl overflow-hidden" style="box-shadow:var(--shadow-card)">
+              <img src="/assets/img/about/out.jpeg" alt="Team outside office" class="w-full h-auto" />
+            </div>
+            <div class="rounded-2xl overflow-hidden" style="box-shadow:var(--shadow-card)">
+              <img src="/assets/img/about/dog.jpeg" alt="Office atmosphere" class="w-full h-auto" />
+            </div>
+          </div>
+          <div class="p-8 rounded-2xl text-center" style="background:var(--surface-container-lowest);border:1px solid var(--outline-variant)">
+            <p class="text-lg leading-relaxed" style="color:var(--on-surface)" id="team-text"></p>
+          </div>
+        </div>
+
+        <!-- Promise -->
+        <div class="text-center p-10 rounded-2xl" style="background:var(--surface-container-low)">
+          <h2 class="text-3xl font-bold mb-4" style="color:var(--primary)" id="promise-title"></h2>
+          <p class="text-xl leading-relaxed" style="color:var(--secondary)" id="promise-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6">
+      <div class="max-w-6xl mx-auto rounded-[2rem] p-10 md:p-16 text-white relative overflow-hidden" style="background:linear-gradient(135deg, var(--primary), var(--primary-container))">
+        <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-50" style="background:rgba(255,255,255,0.08);filter:blur(60px)"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full opacity-50" style="background:rgba(111,251,190,0.1);filter:blur(80px)"></div>
+        <div class="relative z-10 text-center">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4" data-i18n="cta.title">Ready to skip the line?</h2>
+          <p class="text-lg opacity-90 max-w-xl mx-auto mb-8" style="color:var(--inverse-primary)" data-i18n="cta.subtitle">Initiate your registration in under 60 seconds. Our concierge desk is standing by to review your documents.</p>
+          <a href="/request/" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-lg" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="about_cta">
+            <span class="msi">chat</span> <span data-i18n="hero.ctaWhatsApp">Start via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+  <div data-include="/partials/bottom-nav.html"></div>
+  <div data-include="/partials/chatbot.html"></div>
+  <div data-include="/partials/cookie-banner.html"></div>
+
+  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module">
+    import { loadJSON, create, onReady } from "/assets/js/utils.js";
+
+    function T (key, fallback) {
+      const fn = window.CCI18n && window.CCI18n.t;
+      if (typeof fn === "function") {
+        const v = fn(key);
+        if (v && v !== key) return v;
+      }
+      return fallback;
+    }
+
+    let _about = null;
+    async function renderAbout () {
+      if (!_about) {
+        _about = await loadJSON("/assets/data/about.json");
+      }
+      
+      // Intro
+      const introEl = document.getElementById("about-intro");
+      if (introEl) {
+        introEl.textContent = T("aboutPage.intro.text", _about.intro.text);
+      }
+
+      // Stats
+      const statsContainer = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4');
+      if (statsContainer && _about.stats) {
+        // Clear existing stats first
+        const existingStats = statsContainer.querySelectorAll('.text-center.p-6');
+        existingStats.forEach(el => el.remove());
+        
+        _about.stats.forEach((stat, idx) => {
+          const statEl = create("div", { class: "text-center p-6 rounded-2xl", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
+            create("div", { class: "text-4xl font-bold mb-2", style: "color:var(--on-tertiary-container)" }, T(`aboutPage.stats.${idx}.value`, stat.value)),
+            create("div", { class: "text-sm", style: "color:var(--secondary)" }, T(`aboutPage.stats.${idx}.label`, stat.label))
+          ]);
+          statsContainer.appendChild(statEl);
+        });
+      }
+
+      // Experience
+      const expTitle = document.getElementById("experience-title");
+      const expText = document.getElementById("experience-text");
+      if (expTitle) expTitle.textContent = T("aboutPage.experience.title", _about.experience.title);
+      if (expText) expText.textContent = T("aboutPage.experience.text", _about.experience.text);
+
+      // Services
+      const svcTitle = document.getElementById("services-title");
+      const svcText = document.getElementById("services-text");
+      const svcList = document.getElementById("services-list");
+      if (svcTitle) svcTitle.textContent = T("aboutPage.services.title", _about.services.title);
+      if (svcText) svcText.textContent = T("aboutPage.services.text", _about.services.text);
+      if (svcList && _about.services.items) {
+        svcList.innerHTML = "";
+        _about.services.items.forEach((item, idx) => {
+          const li = create("li", { class: "flex items-start gap-3" }, [
+            create("span", { class: "msi mt-1", style: "color:var(--on-tertiary-container);font-size:20px" }, "check_circle"),
+            create("span", { style: "color:var(--on-surface)" }, T(`aboutPage.services.items.${idx}`, item))
+          ]);
+          svcList.appendChild(li);
+        });
+      }
+
+      // Team
+      const teamText = document.getElementById("team-text");
+      if (teamText) teamText.textContent = T("aboutPage.team.text", _about.team.text);
+
+      // Promise
+      const promiseTitle = document.getElementById("promise-title");
+      const promiseText = document.getElementById("promise-text");
+      if (promiseTitle) promiseTitle.textContent = T("aboutPage.promise.title", _about.promise.title);
+      if (promiseText) promiseText.textContent = T("aboutPage.promise.text", _about.promise.text);
+    }
+
+    onReady(renderAbout);
+    document.addEventListener("language:changed", () => renderAbout());
+  </script>
+</body>
+</html>

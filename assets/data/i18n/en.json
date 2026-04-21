@@ -7,6 +7,7 @@
     "pricing": "Pricing",
     "documents": "Documents",
     "howItWorks": "How it works",
+    "about": "About",
     "contact": "Contact",
     "faq": "FAQ",
     "openMenu": "Open menu",
@@ -464,6 +465,55 @@
       "reRegistration": "Re-registration",
       "deregistration": "Deregistration",
       "licensePlates": "License Plates"
+    }
+  },
+  "aboutPage": {
+    "eyebrow": "About us",
+    "title": "Who we are",
+    "subtitle": "Your trusted partner for vehicle registration in Rheine & Kreis Steinfurt.",
+    "intro": {
+      "text": "For over ten years, we have been firmly rooted in the local community – and for the past five years, we have also been actively involved in vehicle registration services and DEKRA-certified license plate embossing. What began as a passion for cars has evolved into a modern, reliable vehicle registration service with comprehensive support."
+    },
+    "experience": {
+      "title": "Built on real experience",
+      "text": "Our experience is no accident: Through privately buying and selling around 80 vehicles, we have developed a deep understanding of all the processes, challenges, and details surrounding vehicles. We have incorporated this knowledge into our business – with the goal of making things as easy as possible for our customers."
+    },
+    "services": {
+      "title": "What we offer",
+      "text": "Today, we offer much more than just standard vehicle registration:",
+      "items": {
+        "0": "We handle all registration matters – from initial registration, deregistration, and re-registration to changes of ownership.",
+        "1": "Whether it's a car, motorcycle, motorhome, or specialty vehicle – you're in the best hands with us.",
+        "2": "Online deregistration is also a standard part of our service.",
+        "3": "We take care of technical modifications and reliably accompany our customers to their vehicle inspection appointments.",
+        "4": "We prepare everything in advance so you don't have to worry about a thing – quickly, easily, and professionally."
+      }
+    },
+    "team": {
+      "title": "Our team",
+      "text": "Our company is backed by three women from Rheine: dedicated, competent, and with a strong network and direct connections to the vehicle registration office. We know what matters – and we are passionately committed to your needs."
+    },
+    "promise": {
+      "title": "Our promise",
+      "text": "Maximum service, minimal waiting time – and the peace of mind of not having to lift a finger."
+    },
+    "stats": {
+      "0": {
+        "value": "10+",
+        "label": "Years in the community"
+      },
+      "1": {
+        "value": "5+",
+        "label": "Years in registration services"
+      },
+      "2": {
+        "value": "80+",
+        "label": "Vehicles personally handled"
+      },
+      "3": {
+        "value": "3",
+        "label": "Dedicated team members"
+      }
     }
   },
   "footer": {
