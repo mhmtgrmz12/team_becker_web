@@ -1,19 +1,19 @@
-<header class="glass-panel sticky top-0 z-40 w-full" style="box-shadow:0 1px 0 rgba(196,198,205,0.3)">
+<header class="glass-panel sticky top-0 z-40 w-full" style="background:var(--primary);box-shadow:0 1px 0 rgba(196,198,205,0.3)">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
     <a href="/" class="flex items-center">
-      <img src="/assets/img/logo.png" alt="Civic Concierge" class="h-16 xl:h-20 w-auto" />
+      <img src="/assets/img/logo.png" alt="Civic Concierge" class="h-20 xl:h-24 w-auto" />
     </a>
     <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-[13px] xl:text-sm font-medium">
-      <a href="/services/" data-i18n="nav.services" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Services</a>
-      <a href="/pricing/" data-i18n="nav.pricing" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Pricing</a>
-      <a href="/documents/" data-i18n="nav.documents" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Documents</a>
-      <a href="/how-it-works/" data-i18n="nav.howItWorks" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">How it works</a>
-      <a href="/about/" data-i18n="nav.about" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">About</a>
-      <a href="/contact/" data-i18n="nav.contact" class="hover:opacity-80 transition-opacity" style="color:var(--secondary);white-space:nowrap">Contact</a>
+      <a href="/services/" data-i18n="nav.services" class="hover:opacity-80 transition-opacity" style="color:var(--on-primary);white-space:nowrap">Services</a>
+      <a href="/pricing/" data-i18n="nav.pricing" class="hover:opacity-80 transition-opacity" style="color:var(--on-primary);white-space:nowrap">Pricing</a>
+      <a href="/documents/" data-i18n="nav.documents" class="hover:opacity-80 transition-opacity" style="color:var(--on-primary);white-space:nowrap">Documents</a>
+      <a href="/how-it-works/" data-i18n="nav.howItWorks" class="hover:opacity-80 transition-opacity" style="color:var(--on-primary);white-space:nowrap">How it works</a>
+      <a href="/about/" data-i18n="nav.about" class="hover:opacity-80 transition-opacity" style="color:var(--on-primary);white-space:nowrap">About</a>
+      <a href="/contact/" data-i18n="nav.contact" class="hover:opacity-80 transition-opacity" style="color:var(--on-primary);white-space:nowrap">Contact</a>
     </nav>
     <div class="hidden lg:flex items-center gap-2 xl:gap-3">
       <div class="relative language-switcher">
-        <button id="lang-btn" class="text-xs xl:text-sm font-semibold px-2 xl:px-3 py-2 rounded-xl flex items-center gap-1" style="color:var(--primary)" aria-label="Change language" data-i18n-attr="aria-label:nav.changeLanguage" onclick="document.getElementById('lang-menu').classList.toggle('hidden')">
+        <button id="lang-btn" class="text-xs xl:text-sm font-semibold px-2 xl:px-3 py-2 rounded-xl flex items-center gap-1" style="color:var(--on-primary)" aria-label="Change language" data-i18n-attr="aria-label:nav.changeLanguage" onclick="document.getElementById('lang-menu').classList.toggle('hidden')">
           <span class="msi" style="font-size:18px">language</span>
           <span id="current-lang">EN</span>
         </button>
@@ -25,7 +25,7 @@
           <button data-lang="ru" class="lang-option w-full text-left px-4 py-2 text-sm hover:bg-opacity-50" style="color:var(--primary)" data-i18n-skip>Русский</button>
         </div>
       </div>
-      <a href="tel:+491733225570" class="text-xs xl:text-sm font-semibold px-3 xl:px-4 py-2 rounded-xl whitespace-nowrap" data-i18n="cta.call" style="color:var(--primary)" data-track="click_call_cta" data-track-location="header">
+      <a href="tel:+491733225570" class="text-xs xl:text-sm font-semibold px-3 xl:px-4 py-2 rounded-xl whitespace-nowrap" data-i18n="cta.call" style="color:var(--on-primary);background:rgba(255,255,255,0.1)" data-track="click_call_cta" data-track-location="header">
         Call
       </a>
       <a href="https://wa.me/491733225570?text=Hello%20Civic%20Concierge%2C%20I%27d%20like%20to%20start%20a%20request." target="_blank" rel="noopener" class="text-xs xl:text-sm font-bold px-4 xl:px-5 py-2.5 rounded-xl whitespace-nowrap" data-i18n="cta.whatsapp" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="header">
@@ -33,25 +33,25 @@
       </a>
     </div>
     <button class="lg:hidden p-2 rounded-lg" aria-label="Open menu" data-i18n-attr="aria-label:nav.openMenu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-      <span class="msi" style="color:var(--primary)">menu</span>
+      <span class="msi" style="color:var(--on-primary)">menu</span>
     </button>
   </div>
-  <div id="mobile-menu" class="lg:hidden hidden px-6 pb-4">
-    <a href="/services/" data-i18n="nav.services" class="block py-2" style="color:var(--primary)">Services</a>
-    <a href="/pricing/" data-i18n="nav.pricing" class="block py-2" style="color:var(--primary)">Pricing</a>
-    <a href="/documents/" data-i18n="nav.documents" class="block py-2" style="color:var(--primary)">Documents</a>
-    <a href="/how-it-works/" data-i18n="nav.howItWorks" class="block py-2" style="color:var(--primary)">How it works</a>
-    <a href="/about/" data-i18n="nav.about" class="block py-2" style="color:var(--primary)">About</a>
-    <a href="/contact/" data-i18n="nav.contact" class="block py-2" style="color:var(--primary)">Contact</a>
-    <a href="/faq/" data-i18n="nav.faq" class="block py-2" style="color:var(--primary)">FAQ</a>
+  <div id="mobile-menu" class="lg:hidden hidden px-6 pb-4" style="background:var(--primary)">
+    <a href="/services/" data-i18n="nav.services" class="block py-2" style="color:var(--on-primary)">Services</a>
+    <a href="/pricing/" data-i18n="nav.pricing" class="block py-2" style="color:var(--on-primary)">Pricing</a>
+    <a href="/documents/" data-i18n="nav.documents" class="block py-2" style="color:var(--on-primary)">Documents</a>
+    <a href="/how-it-works/" data-i18n="nav.howItWorks" class="block py-2" style="color:var(--on-primary)">How it works</a>
+    <a href="/about/" data-i18n="nav.about" class="block py-2" style="color:var(--on-primary)">About</a>
+    <a href="/contact/" data-i18n="nav.contact" class="block py-2" style="color:var(--on-primary)">Contact</a>
+    <a href="/faq/" data-i18n="nav.faq" class="block py-2" style="color:var(--on-primary)">FAQ</a>
     <div class="mt-4 pt-4 border-t" style="border-color:var(--outline-variant)">
-      <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)" data-i18n="nav.changeLanguage">Language</div>
+      <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:rgba(255,255,255,0.7)" data-i18n="nav.changeLanguage">Language</div>
       <div class="flex gap-2">
-        <button data-lang="en" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)" data-i18n-skip>EN</button>
-        <button data-lang="de" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)" data-i18n-skip>DE</button>
-        <button data-lang="tr" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)" data-i18n-skip>TR</button>
-        <button data-lang="ar" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)" data-i18n-skip>AR</button>
-        <button data-lang="ru" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:var(--surface-container-low);color:var(--primary)" data-i18n-skip>RU</button>
+        <button data-lang="en" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:rgba(255,255,255,0.1);color:var(--on-primary)" data-i18n-skip>EN</button>
+        <button data-lang="de" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:rgba(255,255,255,0.1);color:var(--on-primary)" data-i18n-skip>DE</button>
+        <button data-lang="tr" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:rgba(255,255,255,0.1);color:var(--on-primary)" data-i18n-skip>TR</button>
+        <button data-lang="ar" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:rgba(255,255,255,0.1);color:var(--on-primary)" data-i18n-skip>AR</button>
+        <button data-lang="ru" class="lang-option-mobile px-3 py-1.5 text-sm rounded-lg" style="background:rgba(255,255,255,0.1);color:var(--on-primary)" data-i18n-skip>RU</button>
       </div>
     </div>
   </div>

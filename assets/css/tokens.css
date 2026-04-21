@@ -1,19 +1,19 @@
 /* Civic Concierge — Design Tokens (from DESIGN.md) */
 :root {
   /* Brand */
-  --primary: #041627;
-  --primary-container: #1a2b3c;
+  --primary: #224495;
+  --primary-container: #3a5aaa;
   --on-primary: #ffffff;
-  --on-primary-container: #8192a7;
+  --on-primary-container: #a8b8d7;
   --inverse-primary: #b7c8de;
 
   /* Accent / CTA */
-  --tertiary: #001a0f;
-  --tertiary-fixed: #6ffbbe;
-  --tertiary-fixed-dim: #4edea3;
+  --tertiary: #8a7000;
+  --tertiary-fixed: #EBC832;
+  --tertiary-fixed-dim: #d4b52d;
   --on-tertiary: #ffffff;
-  --on-tertiary-fixed: #002113;
-  --on-tertiary-container: #00a572;
+  --on-tertiary-fixed: #2d2400;
+  --on-tertiary-container: #c4a828;
 
   /* Secondary / Body */
   --secondary: #545f72;
@@ -55,8 +55,8 @@
   --shadow-card: 0 8px 30px rgba(25, 28, 30, 0.04);
   --shadow-card-hover: 0 12px 40px rgba(25, 28, 30, 0.06);
   --shadow-soft: 0 4px 20px rgba(25, 28, 30, 0.03);
-  --shadow-glow: 0 8px 24px rgba(111, 251, 190, 0.2);
-  --shadow-dark: 0 24px 48px rgba(4, 22, 39, 0.08);
+  --shadow-glow: 0 8px 24px rgba(235, 200, 50, 0.3);
+  --shadow-dark: 0 24px 48px rgba(34, 68, 149, 0.08);
 
   /* Typography */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
