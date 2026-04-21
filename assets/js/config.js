@@ -18,7 +18,7 @@ export const CONFIG = {
   },
   // API endpoints (n8n behind edge proxy)
   endpoints: {
-    chat: "https://api.civic-concierge.de/webhook/chat",
+    chat: "https://n8n.srv1133461.hstgr.cloud/webhook/da6c8cbf-5c89-4f84-9264-f80fde96ec43",
     lead: "https://api.civic-concierge.de/webhook/lead",
     feedback: "https://api.civic-concierge.de/webhook/feedback",
   },

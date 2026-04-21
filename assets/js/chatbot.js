@@ -133,7 +133,9 @@ function resolveMessageText (m) {
   if (m.textParts) {
     return m.textParts.map(p => typeof p === "string" ? T(p) : (p && p.literal) || "").join("");
   }
-  return m.text || "";
+  // Convert \n to <br> for proper line breaks in HTML
+  const text = m.text || "";
+  return text.replace(/\n/g, '<br>');
 }
 
 function renderMessages (root) {

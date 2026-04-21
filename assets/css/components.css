@@ -55,8 +55,29 @@
 .cb-msg {
   max-width: 82%; padding: 10px 14px; border-radius: var(--radius-md);
   font-size: 0.9rem; line-height: 1.5;
+  white-space: pre-line; /* Preserve line breaks */
 }
-.cb-msg.bot { background: var(--surface-container-lowest); color: var(--on-surface); align-self: flex-start; box-shadow: var(--shadow-soft); }
+.cb-msg.bot { 
+  background: var(--surface-container-lowest); 
+  color: var(--on-surface); 
+  align-self: flex-start; 
+  box-shadow: var(--shadow-soft); 
+}
+/* Better spacing for bot messages */
+.cb-msg.bot br {
+  display: block;
+  content: "";
+  margin: 0.5em 0;
+}
+.cb-msg.bot p {
+  margin: 0.5em 0;
+}
+.cb-msg.bot p:first-child {
+  margin-top: 0;
+}
+.cb-msg.bot p:last-child {
+  margin-bottom: 0;
+}
 .cb-msg.user { background: var(--primary); color: var(--on-primary); align-self: flex-end; }
 .cb-msg.system { align-self: center; font-size: 0.75rem; color: var(--secondary); background: transparent; }
 
