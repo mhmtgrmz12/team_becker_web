@@ -1,5 +1,5 @@
 /* Highlights today's opening row and renders a small "Open now / Closed" pill. */
-import { $, $$, loadJSON, onReady } from "./utils.js";
+import { $, $$, loadJSON, whenI18nReady } from "./utils.js";
 
 function parseRange (str) {
   // "08:00-17:00" -> [{ h: 8, m: 0 }, { h: 17, m: 0 }]
@@ -50,6 +50,6 @@ export async function renderOpenNow () {
   }
 }
 
-onReady(renderOpenNow);
+whenI18nReady().then(renderOpenNow);
 document.addEventListener("partials:ready", renderOpenNow);
 document.addEventListener("language:changed", renderOpenNow);

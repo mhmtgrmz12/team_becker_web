@@ -23,7 +23,8 @@
     "ctaServices": "View services",
     "location": "200 m from the registration office",
     "hours": "Mon–Fri from 07:30",
-    "response": "Reply in minutes"
+    "response": "Reply in minutes",
+    "today": "Today"
   },
   "pillars": {
     "fast": {
@@ -121,7 +122,16 @@
     "includedTurnaround": "Turnaround: {turnaround}",
     "startThisService": "Start this service →",
     "fromPriceAnd": "From €{price} · {turnaround}",
-    "plusFrom": "+ from €{price}"
+    "plusFrom": "+ from €{price}",
+    "requiredEyebrow": "Required documents",
+    "requiredTitle": "What to bring",
+    "requiredDesc": "Gather these essentials. We verify them digitally before you hand them over, so there are zero surprises at the office.",
+    "extrasEyebrow": "Optional extras",
+    "extrasTitle": "Make your life easier",
+    "extrasDesc": "Add any of these to your request — skip entirely if you don't need them.",
+    "ctaBlockDesc": "Initiate this service securely. Our team will review your documents within minutes during office hours.",
+    "faqTitle": "Questions for this service",
+    "relatedTitle": "Related services"
   },
   "howItWorks": {
     "heading": "How it works",
@@ -173,7 +183,10 @@
         "title": "Always-on updates",
         "desc": "Every hand-off, every stamp — delivered as a short WhatsApp update. No surprises."
       }
-    }
+    },
+    "stepPrefix1": "Step 1",
+    "stepPrefix2": "Step 2",
+    "stepPrefix3": "Step 3"
   },
   "trust": {
     "title": "Loved locally",
@@ -208,18 +221,54 @@
       "Payment": "Payment"
     },
     "items": {
-      "cost":              { "question": "How much does the service cost?",                          "answer": "Our service fee starts at €29 incl. VAT. Authority fees from Kreis Steinfurt come on top and depend on the exact service. See our pricing page for a clear breakdown." },
-      "duration":          { "question": "How long does a registration take?",                       "answer": "Once we have all the original documents and they pass our digital pre-verification, the physical registration at the Rheine authority typically takes 24–48 hours. Same-day Express is available Mon–Fri." },
-      "documents_needed":  { "question": "Which documents do I need?",                               "answer": "It depends on the service. For a new registration: valid ID or passport, eVB insurance number, signed SEPA mandate, Zulassungsbescheinigung II, and the HU/AU report for used vehicles. See our documents page for the full list per service." },
-      "original_id":       { "question": "Do I need to hand over my original ID?",                   "answer": "Yes — the authority requires the original ID for final processing. We arrange a secure handover via courier or our in-office lockbox." },
-      "wunschkennzeichen": { "question": "Can you handle custom plates (Wunschkennzeichen)?",        "answer": "Yes. Reserve your combination online (free) and share the PIN with us, or let us reserve it for you. Kreis Steinfurt currently charges ~€10.20 for the combination." },
-      "keep_plates":       { "question": "Can I keep my existing plates when I re-register?",        "answer": "In many cases yes — we'll confirm during our intake on WhatsApp. If the authority assigns new plates, we can stamp them on the spot." },
-      "same_day":          { "question": "Can I still come today?",                                  "answer": "Check the hours on our contact page — the card shows whether we're open right now. Outside of opening hours, message us on WhatsApp and we'll arrange a slot." },
-      "payment":           { "question": "How do I pay?",                                            "answer": "You pay our service fee in cash or by card at pickup. Authority fees are typically settled via SEPA direct debit against your mandate." },
-      "hidden_fees":       { "question": "Are there any hidden fees?",                               "answer": "No. Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and are always shown separately." },
-      "lost_document":     { "question": "What if I lost a document?",                               "answer": "Tell us on WhatsApp — we know the fastest path for lost Zulassungsbescheinigungen, insurance letters, or SEPA mandates and can usually resolve it the same week." },
-      "deliver_plates":    { "question": "Can you deliver my new plates?",                           "answer": "Yes — we offer courier delivery within Rheine from €25. For surrounding towns, we'll quote a flat rate on WhatsApp." },
-      "express_urgency":   { "question": "How urgent is Express?",                                   "answer": "Express means we aim to have your vehicle registered the same day, subject to authority capacity. You'll get a confirmation on WhatsApp within 30 minutes." }
+      "cost": {
+        "question": "How much does the service cost?",
+        "answer": "Our service fee starts at €29 incl. VAT. Authority fees from Kreis Steinfurt come on top and depend on the exact service. See our pricing page for a clear breakdown."
+      },
+      "duration": {
+        "question": "How long does a registration take?",
+        "answer": "Once we have all the original documents and they pass our digital pre-verification, the physical registration at the Rheine authority typically takes 24–48 hours. Same-day Express is available Mon–Fri."
+      },
+      "documents_needed": {
+        "question": "Which documents do I need?",
+        "answer": "It depends on the service. For a new registration: valid ID or passport, eVB insurance number, signed SEPA mandate, Zulassungsbescheinigung II, and the HU/AU report for used vehicles. See our documents page for the full list per service."
+      },
+      "original_id": {
+        "question": "Do I need to hand over my original ID?",
+        "answer": "Yes — the authority requires the original ID for final processing. We arrange a secure handover via courier or our in-office lockbox."
+      },
+      "wunschkennzeichen": {
+        "question": "Can you handle custom plates (Wunschkennzeichen)?",
+        "answer": "Yes. Reserve your combination online (free) and share the PIN with us, or let us reserve it for you. Kreis Steinfurt currently charges ~€10.20 for the combination."
+      },
+      "keep_plates": {
+        "question": "Can I keep my existing plates when I re-register?",
+        "answer": "In many cases yes — we'll confirm during our intake on WhatsApp. If the authority assigns new plates, we can stamp them on the spot."
+      },
+      "same_day": {
+        "question": "Can I still come today?",
+        "answer": "Check the hours on our contact page — the card shows whether we're open right now. Outside of opening hours, message us on WhatsApp and we'll arrange a slot."
+      },
+      "payment": {
+        "question": "How do I pay?",
+        "answer": "You pay our service fee in cash or by card at pickup. Authority fees are typically settled via SEPA direct debit against your mandate."
+      },
+      "hidden_fees": {
+        "question": "Are there any hidden fees?",
+        "answer": "No. Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and are always shown separately."
+      },
+      "lost_document": {
+        "question": "What if I lost a document?",
+        "answer": "Tell us on WhatsApp — we know the fastest path for lost Zulassungsbescheinigungen, insurance letters, or SEPA mandates and can usually resolve it the same week."
+      },
+      "deliver_plates": {
+        "question": "Can you deliver my new plates?",
+        "answer": "Yes — we offer courier delivery within Rheine from €25. For surrounding towns, we'll quote a flat rate on WhatsApp."
+      },
+      "express_urgency": {
+        "question": "How urgent is Express?",
+        "answer": "Express means we aim to have your vehicle registered the same day, subject to authority capacity. You'll get a confirmation on WhatsApp within 30 minutes."
+      }
     }
   },
   "documents": {
@@ -306,16 +355,48 @@
       "service": "Service",
       "fee": "Service fee",
       "authorityFees": "Authority fees",
-      "turnaround": "Turnaround"
+      "turnaround": "Turnaround",
+      "serviceFee": "Service fee",
+      "totalFrom": "Total from",
+      "details": "Details"
     },
     "includedTitle": "What's included",
     "notIncludedTitle": "Not included",
     "optionalExtrasTitle": "Optional extras",
     "stillNotSure": "Still not sure?",
     "getQuote": "Get an exact quote",
-    "from": "From",
+    "from": "from",
     "feeSuffix": "+ authority fees",
-    "authorityDisclaimer": "Authority fees are set by Kreis Steinfurt and may change without notice."
+    "authorityDisclaimer": "Authority fees are set by Kreis Steinfurt and may change without notice.",
+    "pageTitle2": "Honest numbers, no surprises",
+    "pageSubtitle2": "Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and shown separately.",
+    "included": {
+      "0": "Digital document pre-verification",
+      "1": "Priority processing at the Steinfurt / Rheine authority",
+      "2": "Status updates via WhatsApp",
+      "3": "Clean, stamped paperwork handed back to you"
+    },
+    "notIncluded": {
+      "0": "Authority fees set by Kreis Steinfurt (paid to the authority)",
+      "1": "Motor vehicle tax (charged by the customs/tax office)",
+      "2": "Insurance premium"
+    },
+    "extras": {
+      "0": {
+        "label": "Custom plates (Wunschkennzeichen)",
+        "price": "~€10.20 authority fee"
+      },
+      "1": {
+        "label": "Plate stamping (in-house)",
+        "price": "€18"
+      },
+      "2": {
+        "label": "Courier pickup/delivery",
+        "price": "€25 within Rheine"
+      }
+    },
+    "note": "Authority fees are set by Kreis Steinfurt and may change. The prices above are for standard passenger vehicles.",
+    "stillNotSureDesc": "Message us with your plate and situation — we'll send back an exact quote."
   },
   "contact": {
     "pageEyebrow": "Contact",
@@ -576,7 +657,8 @@
     "imprint": "Imprint",
     "privacy": "Privacy",
     "terms": "Terms",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "lastUpdated": "Last updated:"
   },
   "common": {
     "loading": "Loading…",
@@ -584,5 +666,18 @@
     "retry": "Try again",
     "close": "Close",
     "back": "Back"
+  },
+  "servicesPage": {
+    "eyebrow": "Our services",
+    "title": "Everything we handle for you",
+    "subtitle": "Five services, one concierge desk. Pick the one that matches your situation — or message us and we'll point you to the right one.",
+    "compareTitle": "Compare at a glance",
+    "authorityFeesNote": "Authority fees are set by Kreis Steinfurt and may change.",
+    "helpTitle": "Not sure which service you need?",
+    "helpSubtitle": "Send us a quick message — we'll tell you in minutes.",
+    "view": "View →"
+  },
+  "breadcrumb": {
+    "home": "Home"
   }
 }

@@ -23,7 +23,8 @@
     "ctaServices": "Hizmetleri gör",
     "location": "Zulassungsstelle'ye 200 m",
     "hours": "Pzt–Cum 07:30'dan itibaren",
-    "response": "Dakikalar içinde yanıt"
+    "response": "Dakikalar içinde yanıt",
+    "today": "Bugün"
   },
   "pillars": {
     "fast": {
@@ -121,7 +122,16 @@
     "includedTurnaround": "Süre: {turnaround}",
     "startThisService": "Bu hizmeti başlat →",
     "fromPriceAnd": "€{price}'dan · {turnaround}",
-    "plusFrom": "+ €{price}'dan"
+    "plusFrom": "+ €{price}'dan",
+    "requiredEyebrow": "Gerekli belgeler",
+    "requiredTitle": "Getirmeniz gerekenler",
+    "requiredDesc": "Bu belgeleri toplayın. Teslim etmeden önce dijital olarak kontrol ediyoruz — sürpriz yok.",
+    "extrasEyebrow": "İsteğe bağlı ekstralar",
+    "extrasTitle": "Hayatınızı kolaylaştırın",
+    "extrasDesc": "İstediğiniz ekstraları ekleyin — ihtiyacınız yoksa bu adımı atlayın.",
+    "ctaBlockDesc": "Bu hizmeti güvenle başlatın. Ekibimiz belgelerinizi mesai saatlerinde dakikalar içinde inceleyecektir.",
+    "faqTitle": "Bu hizmetle ilgili sorular",
+    "relatedTitle": "İlgili hizmetler"
   },
   "howItWorks": {
     "heading": "Nasıl çalışır",
@@ -173,7 +183,10 @@
         "title": "Her an güncelleme",
         "desc": "Her teslim, her damga — kısa bir WhatsApp mesajıyla. Sürpriz yok."
       }
-    }
+    },
+    "stepPrefix1": "Adım 1",
+    "stepPrefix2": "Adım 2",
+    "stepPrefix3": "Adım 3"
   },
   "trust": {
     "title": "Yerel olarak seviliyor",
@@ -208,18 +221,54 @@
       "Payment": "Ödeme"
     },
     "items": {
-      "cost":              { "question": "Hizmetin maliyeti nedir?",                                      "answer": "Hizmet ücretimiz KDV dahil €29'dan başlar. Kreis Steinfurt resmi harçları buna eklenir ve hizmete göre değişir. Net bir döküm için fiyatlandırma sayfamıza bakın." },
-      "duration":          { "question": "Kayıt ne kadar sürer?",                                         "answer": "Tüm orijinal belgeler elimizde olup dijital ön doğrulamadan geçtikten sonra, Rheine'daki dairede fiziksel kayıt genellikle 24–48 saat sürer. Aynı gün Ekspres Pzt–Cum mevcuttur." },
-      "documents_needed":  { "question": "Hangi belgelere ihtiyacım var?",                                 "answer": "Hizmete bağlıdır. Yeni kayıt için: geçerli kimlik veya pasaport, eVB sigorta numarası, imzalı SEPA mandatı, Zulassungsbescheinigung II ve ikinci el araçlar için HU/AU raporu. Hizmet başına tam liste için belgeler sayfamıza bakın." },
-      "original_id":       { "question": "Orijinal kimliğimi teslim etmem gerekir mi?",                   "answer": "Evet — daire, son işlem için orijinal kimliği ister. Kurye veya ofis kasamız aracılığıyla güvenli teslim düzenleriz." },
-      "wunschkennzeichen": { "question": "Wunschkennzeichen işlemini yapabilir misiniz?",                   "answer": "Evet. Kombinasyonunuzu çevrimiçi (ücretsiz) rezerve edip PIN'i bize verin ya da sizin için rezerve edelim. Kreis Steinfurt şu anda kombinasyon için ~€10,20 alıyor." },
-      "keep_plates":       { "question": "Ummeldung'da mevcut plakalarımı saklayabilir miyim?",            "answer": "Çoğu durumda evet — WhatsApp'taki kabul sırasında onaylarız. Daire yeni plakalar verirse, yerinde damgalayabiliriz." },
-      "same_day":          { "question": "Bugün hâlâ gelebilir miyim?",                                   "answer": "İletişim sayfamızdaki saatleri kontrol edin — kart şu an açık olup olmadığımızı gösterir. Açılış saatleri dışında WhatsApp'tan yazın, size bir slot ayarlayalım." },
-      "payment":           { "question": "Nasıl ödeme yaparım?",                                           "answer": "Hizmet ücretimizi teslim alırken nakit veya kartla ödersiniz. Resmi harçlar genellikle SEPA otomatik ödeme ile mandatınız üzerinden tahsil edilir." },
-      "hidden_fees":       { "question": "Gizli ücret var mı?",                                           "answer": "Hayır. Seçtiğiniz hizmet için hizmet ücretimiz sabittir. Resmi harçlar Kreis Steinfurt tarafından belirlenir ve her zaman ayrı gösterilir." },
-      "lost_document":     { "question": "Bir belgemi kaybettiysem ne olur?",                             "answer": "WhatsApp'ta bize söyleyin — kayıp Zulassungsbescheinigung, sigorta mektupları veya SEPA mandatları için en hızlı yolu biliyoruz ve genellikle aynı hafta çözebiliriz." },
-      "deliver_plates":    { "question": "Yeni plakalarımı teslim edebilir misiniz?",                     "answer": "Evet — Rheine içinde €25'dan başlayan kurye teslimatı sunuyoruz. Çevre şehirler için WhatsApp'ta sabit fiyat veririz." },
-      "express_urgency":   { "question": "Ekspres ne kadar acildir?",                                     "answer": "Ekspres, daire kapasitesine bağlı olarak aracınızı aynı gün kaydetmeyi hedeflediğimiz anlamına gelir. 30 dakika içinde WhatsApp'ta onay alırsınız." }
+      "cost": {
+        "question": "Hizmetin maliyeti nedir?",
+        "answer": "Hizmet ücretimiz KDV dahil €29'dan başlar. Kreis Steinfurt resmi harçları buna eklenir ve hizmete göre değişir. Net bir döküm için fiyatlandırma sayfamıza bakın."
+      },
+      "duration": {
+        "question": "Kayıt ne kadar sürer?",
+        "answer": "Tüm orijinal belgeler elimizde olup dijital ön doğrulamadan geçtikten sonra, Rheine'daki dairede fiziksel kayıt genellikle 24–48 saat sürer. Aynı gün Ekspres Pzt–Cum mevcuttur."
+      },
+      "documents_needed": {
+        "question": "Hangi belgelere ihtiyacım var?",
+        "answer": "Hizmete bağlıdır. Yeni kayıt için: geçerli kimlik veya pasaport, eVB sigorta numarası, imzalı SEPA mandatı, Zulassungsbescheinigung II ve ikinci el araçlar için HU/AU raporu. Hizmet başına tam liste için belgeler sayfamıza bakın."
+      },
+      "original_id": {
+        "question": "Orijinal kimliğimi teslim etmem gerekir mi?",
+        "answer": "Evet — daire, son işlem için orijinal kimliği ister. Kurye veya ofis kasamız aracılığıyla güvenli teslim düzenleriz."
+      },
+      "wunschkennzeichen": {
+        "question": "Wunschkennzeichen işlemini yapabilir misiniz?",
+        "answer": "Evet. Kombinasyonunuzu çevrimiçi (ücretsiz) rezerve edip PIN'i bize verin ya da sizin için rezerve edelim. Kreis Steinfurt şu anda kombinasyon için ~€10,20 alıyor."
+      },
+      "keep_plates": {
+        "question": "Ummeldung'da mevcut plakalarımı saklayabilir miyim?",
+        "answer": "Çoğu durumda evet — WhatsApp'taki kabul sırasında onaylarız. Daire yeni plakalar verirse, yerinde damgalayabiliriz."
+      },
+      "same_day": {
+        "question": "Bugün hâlâ gelebilir miyim?",
+        "answer": "İletişim sayfamızdaki saatleri kontrol edin — kart şu an açık olup olmadığımızı gösterir. Açılış saatleri dışında WhatsApp'tan yazın, size bir slot ayarlayalım."
+      },
+      "payment": {
+        "question": "Nasıl ödeme yaparım?",
+        "answer": "Hizmet ücretimizi teslim alırken nakit veya kartla ödersiniz. Resmi harçlar genellikle SEPA otomatik ödeme ile mandatınız üzerinden tahsil edilir."
+      },
+      "hidden_fees": {
+        "question": "Gizli ücret var mı?",
+        "answer": "Hayır. Seçtiğiniz hizmet için hizmet ücretimiz sabittir. Resmi harçlar Kreis Steinfurt tarafından belirlenir ve her zaman ayrı gösterilir."
+      },
+      "lost_document": {
+        "question": "Bir belgemi kaybettiysem ne olur?",
+        "answer": "WhatsApp'ta bize söyleyin — kayıp Zulassungsbescheinigung, sigorta mektupları veya SEPA mandatları için en hızlı yolu biliyoruz ve genellikle aynı hafta çözebiliriz."
+      },
+      "deliver_plates": {
+        "question": "Yeni plakalarımı teslim edebilir misiniz?",
+        "answer": "Evet — Rheine içinde €25'dan başlayan kurye teslimatı sunuyoruz. Çevre şehirler için WhatsApp'ta sabit fiyat veririz."
+      },
+      "express_urgency": {
+        "question": "Ekspres ne kadar acildir?",
+        "answer": "Ekspres, daire kapasitesine bağlı olarak aracınızı aynı gün kaydetmeyi hedeflediğimiz anlamına gelir. 30 dakika içinde WhatsApp'ta onay alırsınız."
+      }
     }
   },
   "documents": {
@@ -306,16 +355,48 @@
       "service": "Hizmet",
       "fee": "Hizmet ücreti",
       "authorityFees": "Resmi harçlar",
-      "turnaround": "Süre"
+      "turnaround": "Süre",
+      "serviceFee": "Hizmet ücreti",
+      "totalFrom": "Toplam başlangıç",
+      "details": "Detaylar"
     },
     "includedTitle": "Dahil olanlar",
     "notIncludedTitle": "Dahil olmayanlar",
     "optionalExtrasTitle": "İsteğe bağlı ekler",
     "stillNotSure": "Hâlâ emin değil misiniz?",
     "getQuote": "Kesin teklif alın",
-    "from": "Başlangıç",
+    "from": "den",
     "feeSuffix": "+ resmi harçlar",
-    "authorityDisclaimer": "Resmi harçlar Kreis Steinfurt tarafından belirlenir ve önceden bildirimde bulunulmadan değişebilir."
+    "authorityDisclaimer": "Resmi harçlar Kreis Steinfurt tarafından belirlenir ve önceden bildirimde bulunulmadan değişebilir.",
+    "pageTitle2": "Dürüst fiyatlar, sürpriz yok",
+    "pageSubtitle2": "Hizmet ücretimiz seçtiğiniz hizmete göre sabit. Kreis Steinfurt'un belirlediği resmi harçlar ayrıca gösterilir.",
+    "included": {
+      "0": "Dijital belge ön doğrulaması",
+      "1": "Steinfurt / Rheine yetkili kurumunda öncelikli işlem",
+      "2": "WhatsApp üzerinden durum güncellemeleri",
+      "3": "Temiz, mühürlü evrakların size teslimi"
+    },
+    "notIncluded": {
+      "0": "Kreis Steinfurt resmi harçları (doğrudan kuruma ödenir)",
+      "1": "Motorlu taşıtlar vergisi (gümrük/vergi dairesi tarafından tahsil edilir)",
+      "2": "Sigorta primi"
+    },
+    "extras": {
+      "0": {
+        "label": "İsteğe bağlı plaka (Wunschkennzeichen)",
+        "price": "~€10,20 resmi harç"
+      },
+      "1": {
+        "label": "Plaka damgalama (kurum içi)",
+        "price": "€18"
+      },
+      "2": {
+        "label": "Kurye teslim alma/götürme",
+        "price": "Rheine içinde €25"
+      }
+    },
+    "note": "Resmi harçlar Kreis Steinfurt tarafından belirlenir ve değişebilir. Yukarıdaki fiyatlar standart binek araçlar içindir.",
+    "stillNotSureDesc": "Plakanızı ve durumunuzu bize yazın — kesin bir fiyat teklifi gönderelim."
   },
   "contact": {
     "pageEyebrow": "İletişim",
@@ -576,7 +657,8 @@
     "imprint": "Impressum",
     "privacy": "Gizlilik",
     "terms": "AGB",
-    "cookies": "Çerezler"
+    "cookies": "Çerezler",
+    "lastUpdated": "Son güncelleme:"
   },
   "common": {
     "loading": "Yükleniyor…",
@@ -584,5 +666,18 @@
     "retry": "Tekrar dene",
     "close": "Kapat",
     "back": "Geri"
+  },
+  "servicesPage": {
+    "eyebrow": "Hizmetlerimiz",
+    "title": "Sizin için hallettiğimiz her şey",
+    "subtitle": "Beş hizmet, tek bir concierge masası. Durumunuza uyanı seçin — ya da bize yazın, sizi doğru yönlendirelim.",
+    "compareTitle": "Bir bakışta karşılaştırın",
+    "authorityFeesNote": "Resmi harçlar Kreis Steinfurt tarafından belirlenir ve değişebilir.",
+    "helpTitle": "Hangi hizmete ihtiyacınız olduğundan emin değil misiniz?",
+    "helpSubtitle": "Bize kısa bir mesaj gönderin — dakikalar içinde yanıtlayalım.",
+    "view": "Görüntüle →"
+  },
+  "breadcrumb": {
+    "home": "Ana sayfa"
   }
 }

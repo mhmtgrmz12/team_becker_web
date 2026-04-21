@@ -29,25 +29,25 @@
   <main class="px-6 py-10">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-6">
-        <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)">Assistant</div>
-        <h1 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:var(--primary)">Ask the concierge</h1>
-        <p class="mt-2" style="color:var(--secondary)">Quick answers, or we'll prepare a WhatsApp request for you.</p>
+        <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)" data-i18n="chatbot.pageEyebrow">Assistant</div>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="chatbot.pageTitle">Ask the concierge</h1>
+        <p class="mt-2" style="color:var(--secondary)" data-i18n="chatbot.pageSubtitle">Quick answers, or we'll prepare a WhatsApp request for you.</p>
       </div>
       <div class="cb-root">
-        <button class="cb-launcher" aria-label="Open chat"><span class="msi">chat</span></button>
-        <section class="cb-panel open" role="dialog" aria-label="Civic Concierge assistant">
+        <button class="cb-launcher" data-i18n-attr="aria-label:chatbot.launcherAria" aria-label="Open chat"><span class="msi">chat</span></button>
+        <section class="cb-panel open" role="dialog" data-i18n-attr="aria-label:chatbot.dialogAria" aria-label="Civic Concierge assistant">
           <div class="cb-header">
-            <div class="avatar">CC</div>
+            <div class="avatar" data-i18n-skip>CC</div>
             <div>
-              <div class="title">Concierge Assistant</div>
+              <div class="title" data-i18n="chatbot.title">Concierge Assistant</div>
               <div class="subtitle"><span class="open-now-pill"></span></div>
             </div>
           </div>
           <div class="cb-messages" aria-live="polite"></div>
           <div class="cb-quick"></div>
           <form class="cb-input">
-            <input type="text" placeholder="Type a message..." autocomplete="off" />
-            <button type="submit" aria-label="Send"><span class="msi">send</span></button>
+            <input type="text" data-i18n-attr="placeholder:chatbot.inputPlaceholder" placeholder="Type a message..." autocomplete="off" />
+            <button type="submit" data-i18n-attr="aria-label:chatbot.sendAria" aria-label="Send"><span class="msi">send</span></button>
           </form>
         </section>
       </div>

@@ -23,7 +23,8 @@
     "ctaServices": "Dienstleistungen ansehen",
     "location": "200 m zur Zulassungsstelle",
     "hours": "Mo–Fr ab 07:30",
-    "response": "Antwort in Minuten"
+    "response": "Antwort in Minuten",
+    "today": "Heute"
   },
   "pillars": {
     "fast": {
@@ -121,7 +122,16 @@
     "includedTurnaround": "Bearbeitungszeit: {turnaround}",
     "startThisService": "Diese Dienstleistung starten →",
     "fromPriceAnd": "Ab €{price} · {turnaround}",
-    "plusFrom": "+ ab €{price}"
+    "plusFrom": "+ ab €{price}",
+    "requiredEyebrow": "Erforderliche Dokumente",
+    "requiredTitle": "Was Sie mitbringen müssen",
+    "requiredDesc": "Stellen Sie diese Dokumente bereit. Wir prüfen sie digital, bevor Sie sie übergeben — keine bösen Überraschungen.",
+    "extrasEyebrow": "Optionale Extras",
+    "extrasTitle": "Machen Sie es sich leichter",
+    "extrasDesc": "Fügen Sie beliebige Extras hinzu — überspringen Sie diesen Schritt, wenn Sie sie nicht brauchen.",
+    "ctaBlockDesc": "Starten Sie diesen Service sicher. Unser Team prüft Ihre Unterlagen innerhalb von Minuten während der Öffnungszeiten.",
+    "faqTitle": "Fragen zu diesem Service",
+    "relatedTitle": "Verwandte Leistungen"
   },
   "howItWorks": {
     "heading": "So funktioniert's",
@@ -173,7 +183,10 @@
         "title": "Immer aktuelle Updates",
         "desc": "Jede Übergabe, jeder Stempel — als kurzes WhatsApp-Update. Keine Überraschungen."
       }
-    }
+    },
+    "stepPrefix1": "Schritt 1",
+    "stepPrefix2": "Schritt 2",
+    "stepPrefix3": "Schritt 3"
   },
   "trust": {
     "title": "Lokal geliebt",
@@ -208,18 +221,54 @@
       "Payment": "Zahlung"
     },
     "items": {
-      "cost":              { "question": "Wie viel kostet der Service?",                                 "answer": "Unsere Servicegebühr beginnt bei €29 inkl. MwSt. Behördengebühren vom Kreis Steinfurt kommen hinzu und hängen von der genauen Dienstleistung ab. Siehe unsere Preisseite für eine klare Aufschlüsselung." },
-      "duration":          { "question": "Wie lange dauert eine Zulassung?",                              "answer": "Sobald wir alle Originaldokumente haben und sie unsere digitale Vorab-Prüfung bestehen, dauert die physische Zulassung bei der Behörde in Rheine typischerweise 24–48 Stunden. Taggleicher Express ist Mo–Fr verfügbar." },
-      "documents_needed":  { "question": "Welche Dokumente brauche ich?",                                 "answer": "Es kommt auf die Dienstleistung an. Für eine Neuzulassung: gültiger Personalausweis oder Reisepass, eVB-Versicherungsnummer, unterschriebenes SEPA-Mandat, Zulassungsbescheinigung II und der HU/AU-Bericht für Gebrauchtfahrzeuge. Siehe unsere Dokumentenseite für die vollständige Liste pro Dienstleistung." },
-      "original_id":       { "question": "Muss ich meinen Originalausweis abgeben?",                       "answer": "Ja — die Behörde verlangt den Originalausweis für die endgültige Bearbeitung. Wir organisieren eine sichere Übergabe per Kurier oder unseren Büro-Schließfach." },
-      "wunschkennzeichen": { "question": "Können Sie Wunschkennzeichen abwickeln?",                        "answer": "Ja. Reservieren Sie Ihre Kombination online (kostenlos) und teilen Sie uns die PIN mit, oder lassen Sie uns die Reservierung übernehmen. Der Kreis Steinfurt berechnet derzeit ~€10,20 für die Kombination." },
-      "keep_plates":       { "question": "Kann ich meine bestehenden Kennzeichen bei einer Ummeldung behalten?", "answer": "In vielen Fällen ja — wir bestätigen das während unserer Aufnahme auf WhatsApp. Falls die Behörde neue Kennzeichen zuweist, können wir sie vor Ort prägen." },
-      "same_day":          { "question": "Kann ich heute noch vorbeikommen?",                              "answer": "Prüfen Sie die Öffnungszeiten auf unserer Kontaktseite — die Karte zeigt, ob wir gerade geöffnet haben. Außerhalb der Öffnungszeiten schreiben Sie uns auf WhatsApp, und wir vereinbaren einen Termin." },
-      "payment":           { "question": "Wie zahle ich?",                                                 "answer": "Sie zahlen unsere Servicegebühr bar oder per Karte bei der Abholung. Behördengebühren werden typischerweise per SEPA-Lastschrift gegen Ihr Mandat abgewickelt." },
-      "hidden_fees":       { "question": "Gibt es versteckte Gebühren?",                                   "answer": "Nein. Unsere Servicegebühr ist für die gewählte Dienstleistung festgelegt. Behördengebühren werden vom Kreis Steinfurt festgelegt und immer separat ausgewiesen." },
-      "lost_document":     { "question": "Was, wenn ich ein Dokument verloren habe?",                      "answer": "Sagen Sie uns Bescheid auf WhatsApp — wir kennen den schnellsten Weg für verlorene Zulassungsbescheinigungen, Versicherungsbriefe oder SEPA-Mandate und können das meist in derselben Woche klären." },
-      "deliver_plates":    { "question": "Können Sie meine neuen Kennzeichen liefern?",                    "answer": "Ja — wir bieten Kurierlieferung in Rheine ab €25. Für umliegende Orte nennen wir auf WhatsApp einen Pauschalpreis." },
-      "express_urgency":   { "question": "Wie dringend ist Express?",                                      "answer": "Express bedeutet, dass wir versuchen, Ihr Fahrzeug am selben Tag zuzulassen, abhängig von der Kapazität der Behörde. Sie erhalten innerhalb von 30 Minuten eine Bestätigung auf WhatsApp." }
+      "cost": {
+        "question": "Wie viel kostet der Service?",
+        "answer": "Unsere Servicegebühr beginnt bei €29 inkl. MwSt. Behördengebühren vom Kreis Steinfurt kommen hinzu und hängen von der genauen Dienstleistung ab. Siehe unsere Preisseite für eine klare Aufschlüsselung."
+      },
+      "duration": {
+        "question": "Wie lange dauert eine Zulassung?",
+        "answer": "Sobald wir alle Originaldokumente haben und sie unsere digitale Vorab-Prüfung bestehen, dauert die physische Zulassung bei der Behörde in Rheine typischerweise 24–48 Stunden. Taggleicher Express ist Mo–Fr verfügbar."
+      },
+      "documents_needed": {
+        "question": "Welche Dokumente brauche ich?",
+        "answer": "Es kommt auf die Dienstleistung an. Für eine Neuzulassung: gültiger Personalausweis oder Reisepass, eVB-Versicherungsnummer, unterschriebenes SEPA-Mandat, Zulassungsbescheinigung II und der HU/AU-Bericht für Gebrauchtfahrzeuge. Siehe unsere Dokumentenseite für die vollständige Liste pro Dienstleistung."
+      },
+      "original_id": {
+        "question": "Muss ich meinen Originalausweis abgeben?",
+        "answer": "Ja — die Behörde verlangt den Originalausweis für die endgültige Bearbeitung. Wir organisieren eine sichere Übergabe per Kurier oder unseren Büro-Schließfach."
+      },
+      "wunschkennzeichen": {
+        "question": "Können Sie Wunschkennzeichen abwickeln?",
+        "answer": "Ja. Reservieren Sie Ihre Kombination online (kostenlos) und teilen Sie uns die PIN mit, oder lassen Sie uns die Reservierung übernehmen. Der Kreis Steinfurt berechnet derzeit ~€10,20 für die Kombination."
+      },
+      "keep_plates": {
+        "question": "Kann ich meine bestehenden Kennzeichen bei einer Ummeldung behalten?",
+        "answer": "In vielen Fällen ja — wir bestätigen das während unserer Aufnahme auf WhatsApp. Falls die Behörde neue Kennzeichen zuweist, können wir sie vor Ort prägen."
+      },
+      "same_day": {
+        "question": "Kann ich heute noch vorbeikommen?",
+        "answer": "Prüfen Sie die Öffnungszeiten auf unserer Kontaktseite — die Karte zeigt, ob wir gerade geöffnet haben. Außerhalb der Öffnungszeiten schreiben Sie uns auf WhatsApp, und wir vereinbaren einen Termin."
+      },
+      "payment": {
+        "question": "Wie zahle ich?",
+        "answer": "Sie zahlen unsere Servicegebühr bar oder per Karte bei der Abholung. Behördengebühren werden typischerweise per SEPA-Lastschrift gegen Ihr Mandat abgewickelt."
+      },
+      "hidden_fees": {
+        "question": "Gibt es versteckte Gebühren?",
+        "answer": "Nein. Unsere Servicegebühr ist für die gewählte Dienstleistung festgelegt. Behördengebühren werden vom Kreis Steinfurt festgelegt und immer separat ausgewiesen."
+      },
+      "lost_document": {
+        "question": "Was, wenn ich ein Dokument verloren habe?",
+        "answer": "Sagen Sie uns Bescheid auf WhatsApp — wir kennen den schnellsten Weg für verlorene Zulassungsbescheinigungen, Versicherungsbriefe oder SEPA-Mandate und können das meist in derselben Woche klären."
+      },
+      "deliver_plates": {
+        "question": "Können Sie meine neuen Kennzeichen liefern?",
+        "answer": "Ja — wir bieten Kurierlieferung in Rheine ab €25. Für umliegende Orte nennen wir auf WhatsApp einen Pauschalpreis."
+      },
+      "express_urgency": {
+        "question": "Wie dringend ist Express?",
+        "answer": "Express bedeutet, dass wir versuchen, Ihr Fahrzeug am selben Tag zuzulassen, abhängig von der Kapazität der Behörde. Sie erhalten innerhalb von 30 Minuten eine Bestätigung auf WhatsApp."
+      }
     }
   },
   "documents": {
@@ -306,16 +355,48 @@
       "service": "Dienstleistung",
       "fee": "Servicegebühr",
       "authorityFees": "Behördengebühren",
-      "turnaround": "Bearbeitungszeit"
+      "turnaround": "Bearbeitungszeit",
+      "serviceFee": "Servicegebühr",
+      "totalFrom": "Gesamt ab",
+      "details": "Details"
     },
     "includedTitle": "Was enthalten ist",
     "notIncludedTitle": "Nicht enthalten",
     "optionalExtrasTitle": "Optionale Extras",
     "stillNotSure": "Immer noch unsicher?",
     "getQuote": "Genaues Angebot erhalten",
-    "from": "Ab",
+    "from": "ab",
     "feeSuffix": "+ Behördengebühren",
-    "authorityDisclaimer": "Behördengebühren werden vom Kreis Steinfurt festgelegt und können sich ohne Vorankündigung ändern."
+    "authorityDisclaimer": "Behördengebühren werden vom Kreis Steinfurt festgelegt und können sich ohne Vorankündigung ändern.",
+    "pageTitle2": "Faire Preise, keine Überraschungen",
+    "pageSubtitle2": "Unsere Servicegebühr ist fest für die gewählte Leistung. Behördengebühren vom Kreis Steinfurt werden separat ausgewiesen.",
+    "included": {
+      "0": "Digitale Dokumentenvorprüfung",
+      "1": "Vorrangbearbeitung bei der Steinfurt / Rheine Behörde",
+      "2": "Statusmeldungen per WhatsApp",
+      "3": "Saubere, gestempelte Unterlagen zurück zu Ihnen"
+    },
+    "notIncluded": {
+      "0": "Behördengebühren des Kreises Steinfurt (direkt an die Behörde)",
+      "1": "Kfz-Steuer (vom Zoll/Finanzamt berechnet)",
+      "2": "Versicherungsprämie"
+    },
+    "extras": {
+      "0": {
+        "label": "Wunschkennzeichen",
+        "price": "~€10,20 Behördengebühr"
+      },
+      "1": {
+        "label": "Kennzeichenprägen (hausintern)",
+        "price": "€18"
+      },
+      "2": {
+        "label": "Kurier Abholung/Lieferung",
+        "price": "€25 in Rheine"
+      }
+    },
+    "note": "Behördengebühren werden vom Kreis Steinfurt festgesetzt und können sich ändern. Die oben genannten Preise gelten für Standard-Pkw.",
+    "stillNotSureDesc": "Schreiben Sie uns mit Ihrem Kennzeichen und Ihrer Situation — wir schicken Ihnen ein genaues Angebot."
   },
   "contact": {
     "pageEyebrow": "Kontakt",
@@ -576,7 +657,8 @@
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "terms": "AGB",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "lastUpdated": "Zuletzt aktualisiert:"
   },
   "common": {
     "loading": "Wird geladen…",
@@ -584,5 +666,18 @@
     "retry": "Erneut versuchen",
     "close": "Schließen",
     "back": "Zurück"
+  },
+  "servicesPage": {
+    "eyebrow": "Unsere Leistungen",
+    "title": "Alles, was wir für Sie erledigen",
+    "subtitle": "Fünf Leistungen, ein Concierge-Schalter. Wählen Sie das Passende — oder schreiben Sie uns, wir weisen Sie direkt zurecht.",
+    "compareTitle": "Auf einen Blick vergleichen",
+    "authorityFeesNote": "Behördengebühren werden vom Kreis Steinfurt festgesetzt und können sich ändern.",
+    "helpTitle": "Nicht sicher, welche Leistung Sie benötigen?",
+    "helpSubtitle": "Schreiben Sie uns kurz — wir antworten innerhalb von Minuten.",
+    "view": "Ansehen →"
+  },
+  "breadcrumb": {
+    "home": "Startseite"
   }
 }

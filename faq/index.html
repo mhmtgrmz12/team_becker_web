@@ -24,16 +24,16 @@
   <main>
     <section class="pt-14 pb-10 px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">FAQ</div>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)">Answers, without the jargon</h1>
-        <p class="mt-4 text-lg" style="color:var(--secondary)">Search or browse by category. Can't find your question? We're one WhatsApp tap away.</p>
+        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)" data-i18n="faq.pageEyebrow">FAQ</div>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="faq.pageTitle">Answers, without the jargon</h1>
+        <p class="mt-4 text-lg" style="color:var(--secondary)" data-i18n="faq.pageSubtitle">The questions we hear most — grouped, searchable, and answered in plain language.</p>
       </div>
     </section>
 
     <section class="pb-4 px-6">
       <div class="max-w-3xl mx-auto">
-        <label class="block text-sm font-semibold mb-2" style="color:var(--primary)" for="faq-search">Search</label>
-        <input id="faq-search" type="search" placeholder="e.g. 'how much', 'documents', 'wunschkennzeichen'" class="w-full px-5 py-3 rounded-xl" style="background:var(--surface-container-lowest);border:1px solid rgba(196,198,205,0.3);color:var(--on-surface)" />
+        <label class="block text-sm font-semibold mb-2" style="color:var(--primary)" for="faq-search" data-i18n="faq.searchLabel">Search</label>
+        <input id="faq-search" type="search" data-i18n-attr="placeholder:faq.searchPlaceholder" placeholder="e.g. 'how much', 'documents', 'wunschkennzeichen'" class="w-full px-5 py-3 rounded-xl" style="background:var(--surface-container-lowest);border:1px solid rgba(196,198,205,0.3);color:var(--on-surface)" />
       </div>
     </section>
 
@@ -47,9 +47,9 @@
 
     <section class="py-16 px-6" style="background:var(--surface-container-low)">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)">Didn't find your answer?</h2>
+        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="faq.didntFind">Didn't find your answer?</h2>
         <a href="/request/" class="inline-flex items-center gap-2 mt-6 px-7 py-4 rounded-xl font-bold" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)">
-          <span class="msi">chat</span> Ask on WhatsApp
+          <span class="msi">chat</span> <span data-i18n="faq.askOnWa">Ask on WhatsApp</span>
         </a>
       </div>
     </section>

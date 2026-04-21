@@ -297,7 +297,7 @@
 
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
-    import { loadJSON, create, $, onReady } from "/assets/js/utils.js";
+    import { loadJSON, create, $, whenI18nReady } from "/assets/js/utils.js";
 
     function T (key, fallback) {
       const fn = window.CCI18n && window.CCI18n.t;
@@ -398,8 +398,10 @@
       }
     }
 
-    onReady(renderHome);
+    // Re-render on every language change
     document.addEventListener("language:changed", () => renderHome());
+    // Initial render — wait for i18n to be ready
+    whenI18nReady().then(renderHome);
   </script>
 </body>
 </html>

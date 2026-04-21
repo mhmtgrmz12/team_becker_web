@@ -1,7 +1,7 @@
 /* Renders FAQ accordions from faq.json + small client-side search.
    Questions, answers, and category labels come from i18n (falls back to the
    values in faq.json when a key is missing). Re-renders on `language:changed`. */
-import { $, $$, create, loadJSON, onReady } from "./utils.js";
+import { $, $$, create, loadJSON, whenI18nReady } from "./utils.js";
 
 function T (key, fallback) {
   const fn = window.CCI18n && window.CCI18n.t;
@@ -74,14 +74,18 @@ async function boot () {
 
   if (search) search.addEventListener("input", (e) => { query = e.target.value; renderList(); });
 
-  renderChips();
-  renderList();
-  renderSearchPlaceholder();
-
+  // Re-render on every language change
   document.addEventListener("language:changed", () => {
     renderChips();
     renderList();
     renderSearchPlaceholder();
   });
+
+  // Initial render — wait for i18n to be ready so T() returns real translations
+  await whenI18nReady();
+  renderChips();
+  renderList();
+  renderSearchPlaceholder();
 }
-onReady(boot);
+
+boot();

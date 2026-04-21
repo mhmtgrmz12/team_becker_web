@@ -68,6 +68,7 @@ details > summary::-webkit-details-marker { display: none; }
   width: 8px; height: 8px; border-radius: 9999px;
   display: inline-block; margin-right: 6px;
 }
+[dir="rtl"] .status-dot { margin-right: 0; margin-left: 6px; }
 .status-dot.open { background: var(--tertiary-fixed-dim); box-shadow: 0 0 0 4px rgba(78,222,163,0.2); }
 .status-dot.closed { background: var(--outline); }
 
@@ -95,6 +96,7 @@ details > summary::-webkit-details-marker { display: none; }
 .prose-civic h3 { font-size: 1.15rem; font-weight: 600; color: var(--primary); margin-top: 1.5rem; margin-bottom: 0.5rem; }
 .prose-civic p { color: var(--secondary); line-height: 1.7; margin: 0 0 1rem; }
 .prose-civic ul { color: var(--secondary); line-height: 1.7; padding-left: 1.2rem; margin: 0 0 1rem; }
+[dir="rtl"] .prose-civic ul { padding-left: 0; padding-right: 1.2rem; }
 .prose-civic li { margin-bottom: 0.25rem; }
 
 /* Toast */

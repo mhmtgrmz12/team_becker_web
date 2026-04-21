@@ -75,7 +75,7 @@
 
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
-    import { loadJSON, create, onReady } from "/assets/js/utils.js";
+    import { loadJSON, create, whenI18nReady } from "/assets/js/utils.js";
 
     function T (key, fallback) {
       const fn = window.CCI18n && window.CCI18n.t;
@@ -90,8 +90,10 @@
     }
 
     let _svc = null;
+    const dataReady = loadJSON("/assets/data/services.json").then(s => { _svc = s; });
+
     async function render () {
-      if (!_svc) _svc = await loadJSON("/assets/data/services.json");
+      await dataReady;
       const box = document.getElementById("all-services");
       if (box) {
         box.innerHTML = "";
@@ -127,8 +129,11 @@
         });
       }
     }
-    onReady(render);
-    document.addEventListener("language:changed", () => render());
+    // Re-render on every language change
+    document.addEventListener("language:changed", render);
+
+    // Initial render — wait for both data and i18n to be ready
+    Promise.all([dataReady, whenI18nReady()]).then(render);
   </script>
 </body>
 </html>

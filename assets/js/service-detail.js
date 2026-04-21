@@ -1,6 +1,6 @@
 /* Renders a service detail page from services.json + documents.json + faq.json
    based on <body data-service-id="...">. Localised via i18n. */
-import { loadJSON, create, onReady } from "./utils.js";
+import { loadJSON, create, whenI18nReady } from "./utils.js";
 
 function T (key, vars) {
   const fn = window.CCI18n && window.CCI18n.t;
@@ -190,6 +190,7 @@ function faqItem (f) {
   return d;
 }
 
-onReady(boot);
-// Re-render on language change (data is cached, only DOM is rebuilt)
+// Re-render on every language change (data is cached, only DOM is rebuilt)
 document.addEventListener("language:changed", () => boot());
+// Initial render — wait for i18n to be ready so T() returns real translations
+whenI18nReady().then(boot);

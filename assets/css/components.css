@@ -164,3 +164,36 @@
 @media (min-width: 768px) {
   .cb-consent { left: auto; right: 24px; bottom: 24px; max-width: 420px; }
 }
+
+/* ============================================================
+   RTL (Arabic) overrides
+   Applied when <html dir="rtl"> is set by the i18n runtime.
+   ============================================================ */
+
+/* Chatbot launcher & panel — switch from right-anchored to left-anchored */
+[dir="rtl"] .cb-launcher { right: auto; left: 20px; }
+[dir="rtl"] .cb-panel    { right: auto; left: 20px; }
+@media (min-width: 768px) {
+  [dir="rtl"] .cb-launcher { right: auto; left: 24px; }
+  [dir="rtl"] .cb-panel    { right: auto; left: 24px; }
+}
+
+/* Chatbot header close button — was margin-left:auto, stays correct with flex auto but text direction changes */
+[dir="rtl"] .cb-header .close { margin-left: 0; margin-right: auto; }
+
+/* User messages bubble — align to left in RTL */
+[dir="rtl"] .cb-msg.user { align-self: flex-start; }
+[dir="rtl"] .cb-msg.bot  { align-self: flex-end; }
+
+/* Wizard step connector direction */
+[dir="rtl"] .wz-step-connector.done {
+  background: linear-gradient(to left, var(--tertiary-fixed), var(--surface-variant));
+}
+
+/* Cookie consent panel — in RTL on desktop, anchor to bottom-left instead of bottom-right */
+@media (min-width: 768px) {
+  [dir="rtl"] .cb-consent { right: 12px; left: 24px; }
+}
+
+/* Language dropdown — in RTL open to the left edge instead of right */
+[dir="rtl"] #lang-menu { right: auto; left: 0; }

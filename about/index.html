@@ -145,7 +145,7 @@
 
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
-    import { loadJSON, create, onReady } from "/assets/js/utils.js";
+    import { loadJSON, create, whenI18nReady } from "/assets/js/utils.js";
 
     function T (key, fallback) {
       const fn = window.CCI18n && window.CCI18n.t;
@@ -218,8 +218,10 @@
       if (promiseText) promiseText.textContent = T("aboutPage.promise.text", _about.promise.text);
     }
 
-    onReady(renderAbout);
+    // Re-render on every language change
     document.addEventListener("language:changed", () => renderAbout());
+    // Initial render — wait for i18n to be ready
+    whenI18nReady().then(renderAbout);
   </script>
 </body>
 </html>

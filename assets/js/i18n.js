@@ -16,7 +16,7 @@
  * - Expose both ES-module exports AND a `window.CCI18n` global for non-module inline scripts.
  */
 
-const SUPPORTED_LANGS = ['en', 'de', 'tr', 'ar'];
+const SUPPORTED_LANGS = ['en', 'de', 'tr', 'ar', 'ru'];
 const DEFAULT_LANG = 'en';
 const STORAGE_KEY = 'cc_lang';
 
@@ -233,6 +233,24 @@ export async function initI18n () {
 
 /* ---------- global bridge for non-module scripts ---------- */
 
+/* ---------- whenReady: resolves after first initI18n() completes ---------- */
+let _readyResolve;
+const _readyPromise = new Promise(res => { _readyResolve = res; });
+
+export function whenReady () { return _readyPromise; }
+
+// Patch initI18n to resolve the promise when done
+const _origInit = initI18n;
+// Note: initI18n is patched via the module scope — we override the exported symbol
+// by resolving _readyPromise inside initI18n itself (see initI18n body above for the dispatch).
+// We hook via the language:changed initial event instead:
+document.addEventListener('language:changed', function _onFirst(e) {
+  if (e.detail && e.detail.initial) {
+    _readyResolve();
+    document.removeEventListener('language:changed', _onFirst);
+  }
+});
+
 window.CCI18n = {
   t,
   setLang: setLanguage,
@@ -242,5 +260,6 @@ window.CCI18n = {
   isRTL,
   onChange,
   getSupportedLanguages,
-  apply: applyTranslations
+  apply: applyTranslations,
+  whenReady,
 };

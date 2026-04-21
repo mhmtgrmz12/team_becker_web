@@ -96,7 +96,7 @@
   <script type="module" src="/assets/js/service-detail.js"></script>
   <script type="module">
     // set breadcrumb name with i18n fallback
-    import { loadJSON, onReady } from "/assets/js/utils.js";
+    import { loadJSON, whenI18nReady } from "/assets/js/utils.js";
     function T (key, fallback) {
       const fn = window.CCI18n && window.CCI18n.t;
       if (typeof fn === "function") {
@@ -111,7 +111,7 @@
       const name = T(`services.items.${id}.name`, svc?.name || "");
       document.querySelectorAll("[data-breadcrumb]").forEach(n => n.textContent = name);
     }
-    onReady(renderBreadcrumb);
+    whenI18nReady().then(renderBreadcrumb);
     document.addEventListener("language:changed", renderBreadcrumb);
   </script>
 </body>

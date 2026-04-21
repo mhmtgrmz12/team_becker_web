@@ -25,8 +25,8 @@
 
   <main>
     <nav class="max-w-7xl mx-auto px-6 pt-8 text-sm" style="color:var(--secondary)">
-      <a href="/" style="color:var(--secondary)">Home</a> ·
-      <a href="/services/" style="color:var(--secondary)">Services</a> ·
+      <a href="/" style="color:var(--secondary)" data-i18n="breadcrumb.home">Home</a> ·
+      <a href="/services/" style="color:var(--secondary)" data-i18n="nav.services">Services</a> ·
       <span style="color:var(--primary)" class="font-semibold" data-breadcrumb></span>
     </nav>
 
@@ -35,9 +35,9 @@
     <section class="py-24 px-6 rounded-t-[3rem]" style="background:var(--surface-container-low)">
       <div class="max-w-7xl mx-auto">
         <div class="max-w-3xl mb-12">
-          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)">Required documents</div>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--primary)">What to bring</h2>
-          <p style="color:var(--secondary)">Gather these essentials. We verify them digitally before you hand them over, so there are zero surprises at the office.</p>
+          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)" data-i18n="serviceDetail.requiredEyebrow">Required documents</div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--primary)" data-i18n="serviceDetail.requiredTitle">What to bring</h2>
+          <p style="color:var(--secondary)" data-i18n="serviceDetail.requiredDesc">Gather these essentials. We verify them digitally before you hand them over, so there are zero surprises at the office.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="svc-docs"></div>
       </div>
@@ -46,9 +46,9 @@
     <section class="py-24 px-6">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         <div>
-          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)">Optional extras</div>
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--primary)">Make your life easier</h2>
-          <p style="color:var(--secondary)">Add any of these to your request — skip entirely if you don't need them.</p>
+          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--secondary)" data-i18n="serviceDetail.extrasEyebrow">Optional extras</div>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" style="color:var(--primary)" data-i18n="serviceDetail.extrasTitle">Make your life easier</h2>
+          <p style="color:var(--secondary)" data-i18n="serviceDetail.extrasDesc">Add any of these to your request — skip entirely if you don't need them.</p>
         </div>
         <div class="space-y-3" id="svc-extras"></div>
       </div>
@@ -60,8 +60,8 @@
         <div class="rounded-[2rem] p-10 md:p-14 text-white relative overflow-hidden flex flex-col justify-center" style="background:linear-gradient(135deg, var(--primary), var(--primary-container));box-shadow:var(--shadow-dark)">
           <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-50" style="background:rgba(255,255,255,0.08);filter:blur(60px)"></div>
           <div class="relative z-10">
-            <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">Ready to skip the line?</h3>
-            <p class="text-lg mb-8 opacity-90" style="color:var(--inverse-primary)">Initiate this service securely. Our team will review your documents within minutes during office hours.</p>
+            <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-3" data-i18n="serviceDetail.readyTitle">Ready to skip the line?</h3>
+            <p class="text-lg mb-8 opacity-90" style="color:var(--inverse-primary)" data-i18n="serviceDetail.ctaBlockDesc">Initiate this service securely. Our team will review your documents within minutes during office hours.</p>
             <a href="/request/?service=deregistration" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-lg" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)" data-track="click_whatsapp_cta" data-track-location="service_pricing_block">
               Start via WhatsApp <span class="msi">chat</span>
             </a>
@@ -73,7 +73,7 @@
     <section class="py-24 px-6">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:var(--primary)">Questions for this service</h2>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="serviceDetail.faqTitle">Questions for this service</h2>
         </div>
         <div class="space-y-3" id="svc-faq"></div>
       </div>
@@ -81,7 +81,7 @@
 
     <section class="py-16 px-6" style="background:var(--surface-container-low)">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-2xl font-bold mb-6" style="color:var(--primary)">Related services</h2>
+        <h2 class="text-2xl font-bold mb-6" style="color:var(--primary)" data-i18n="serviceDetail.relatedTitle">Related services</h2>
         <div id="svc-related" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
       </div>
     </section>
@@ -95,13 +95,22 @@
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module" src="/assets/js/service-detail.js"></script>
   <script type="module">
-    // set breadcrumb name
-    import { loadJSON, onReady } from "/assets/js/utils.js";
-    onReady(async () => {
+    // set breadcrumb name with i18n
+    import { loadJSON, whenI18nReady } from "/assets/js/utils.js";
+    function T (key, fallback) {
+      const fn = window.CCI18n && window.CCI18n.t;
+      if (typeof fn === 'function') { const v = fn(key); if (v && v \!== key) return v; }
+      return fallback;
+    }
+    const _svcReady = loadJSON("/assets/data/services.json");
+    async function renderBreadcrumb () {
       const id = document.body.dataset.serviceId;
-      const svc = (await loadJSON("/assets/data/services.json")).find(s => s.id === id);
-      document.querySelectorAll("[data-breadcrumb]").forEach(n => n.textContent = svc?.name || "");
-    });
+      const svc = (await _svcReady).find(s => s.id === id);
+      const name = T(`services.items.${id}.name`, svc?.name || '');
+      document.querySelectorAll("[data-breadcrumb]").forEach(n => n.textContent = name);
+    }
+    whenI18nReady().then(renderBreadcrumb);
+    document.addEventListener("language:changed", renderBreadcrumb);
   </script>
 </body>
 </html>

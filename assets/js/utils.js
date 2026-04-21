@@ -90,3 +90,16 @@ export function onReady (fn) {
   if (document.readyState !== "loading") fn();
   else document.addEventListener("DOMContentLoaded", fn);
 }
+
+/**
+ * Resolves after i18n is fully initialized (translations loaded, first render done).
+ * Safe to call at any time — if i18n is already ready, resolves immediately.
+ */
+export function whenI18nReady () {
+  // window.CCI18n.whenReady() is set by i18n.js and resolves after initI18n() completes
+  if (window.CCI18n && window.CCI18n.whenReady) return window.CCI18n.whenReady();
+  // Fallback: wait for the first language:changed event
+  return new Promise(resolve => {
+    document.addEventListener('language:changed', resolve, { once: true });
+  });
+}

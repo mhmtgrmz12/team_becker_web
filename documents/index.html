@@ -24,9 +24,9 @@
   <main>
     <section class="pt-14 pb-10 px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">Documents</div>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)">Bring the right paperwork — once</h1>
-        <p class="mt-4 text-lg" style="color:var(--secondary)">Filter by service to see exactly what you need. We verify your docs digitally before you hand them over.</p>
+        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)" data-i18n="documents.pageEyebrow">Documents</div>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="documents.pageTitle">Bring the right paperwork — once</h1>
+        <p class="mt-4 text-lg" style="color:var(--secondary)" data-i18n="documents.pageSubtitle">Every document we ask for, what it looks like, and why it matters. Filter by service to see only what applies to you.</p>
       </div>
     </section>
 
@@ -40,10 +40,10 @@
 
     <section class="py-16 px-6" style="background:var(--surface-container-low)">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)">Lost a document?</h2>
-        <p class="mt-3" style="color:var(--secondary)">No stress. We know the fastest path for lost Zulassungsbescheinigungen, insurance letters, and SEPA mandates — usually resolved within the week.</p>
+        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="documents.lostDocTitle">Lost a document?</h2>
+        <p class="mt-3" style="color:var(--secondary)" data-i18n="documents.lostDocSub">Tell us what's missing — we'll tell you the fastest recovery path.</p>
         <a href="/request/" class="inline-flex items-center gap-2 mt-6 px-7 py-4 rounded-xl font-bold" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)">
-          <span class="msi">chat</span> Tell us what's missing
+          <span class="msi">chat</span> <span data-i18n="documents.tellUs">Tell us on WhatsApp</span>
         </a>
       </div>
     </section>
@@ -56,50 +56,79 @@
 
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
-    import { loadJSON, onReady, create } from "/assets/js/utils.js";
-    onReady(async () => {
-      const [services, docs] = await Promise.all([
-        loadJSON("/assets/data/services.json"),
-        loadJSON("/assets/data/documents.json"),
-      ]);
-      const chips = document.getElementById("doc-chips");
-      const grid = document.getElementById("doc-grid");
-      let active = "all";
+    import { loadJSON, whenI18nReady, create } from "/assets/js/utils.js";
 
-      function render () {
-        grid.innerHTML = "";
-        let visible = docs;
-        if (active !== "all") {
-          const svc = services.find(s => s.id === active);
-          visible = docs.filter(d => (svc?.requiredDocumentIds || []).includes(d.id));
-        }
-        visible.forEach(d => {
-          grid.appendChild(create("div", { class: "p-6 rounded-2xl flex flex-col", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
-            create("div", { class: "w-12 h-12 rounded-full flex items-center justify-center mb-4", style: "background:var(--secondary-container);color:var(--primary)", html: `<span class="msi fill">${d.icon}</span>` }),
-            create("h3", { class: "text-lg font-bold mb-2", style: "color:var(--primary)" }, d.title),
-            create("p", { class: "text-sm mt-auto", style: "color:var(--secondary)" }, d.description),
-            d.formUrl ? create("a", { href: d.formUrl, class: "mt-4 text-sm font-semibold inline-flex items-center gap-1", style: "color:var(--on-tertiary-container)" }, "Download form →") : null,
-          ]));
-        });
+    function T(key, fallback) {
+      const fn = window.CCI18n && window.CCI18n.t;
+      if (typeof fn === "function") { const v = fn(key); if (v && v !== key) return v; }
+      return fallback || key;
+    }
+
+    let _services = null, _docs = null;
+    let active = "all";
+    let chips, grid;
+
+    function styleBtn(btn, isActive) {
+      btn.style.cssText = isActive
+        ? "background:var(--primary);color:var(--on-primary);border:1px solid var(--primary)"
+        : "background:var(--surface-container-lowest);color:var(--primary);border:1px solid rgba(196,198,205,0.3)";
+    }
+
+    function renderGrid() {
+      if (!grid || !_docs || !_services) return;
+      grid.innerHTML = "";
+      let visible = _docs;
+      if (active !== "all") {
+        const svc = _services.find(s => s.id === active);
+        visible = _docs.filter(d => (svc?.requiredDocumentIds || []).includes(d.id));
       }
+      visible.forEach(d => {
+        const title = T(`documents.items.${d.id}.title`, d.title);
+        const desc = T(`documents.items.${d.id}.description`, d.description);
+        const dlLabel = T("documents.downloadForm", "Download form →");
+        grid.appendChild(create("div", { class: "p-6 rounded-2xl flex flex-col", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
+          create("div", { class: "w-12 h-12 rounded-full flex items-center justify-center mb-4", style: "background:var(--secondary-container);color:var(--primary)", html: `<span class="msi fill">${d.icon}</span>` }),
+          create("h3", { class: "text-lg font-bold mb-2", style: "color:var(--primary)" }, title),
+          create("p", { class: "text-sm mt-auto", style: "color:var(--secondary)" }, desc),
+          d.formUrl ? create("a", { href: d.formUrl, class: "mt-4 text-sm font-semibold inline-flex items-center gap-1", style: "color:var(--on-tertiary-container)" }, dlLabel) : null,
+        ]));
+      });
+    }
 
-      const cats = [{ id: "all", name: "All services" }, ...services.map(s => ({ id: s.id, name: s.shortName || s.name }))];
+    function renderChips() {
+      if (!chips || !_services) return;
+      chips.innerHTML = "";
+      const cats = [{ id: "all", label: T("documents.allServices", "All services") }, ..._services.map(s => ({ id: s.id, label: T(`services.items.${s.id}.shortName`, s.shortName || s.name) }))];
       cats.forEach(c => {
-        const btn = create("button", { class: "px-4 py-2 rounded-full text-sm font-semibold" }, c.name);
-        function style () { btn.style = active === c.id ? "background:var(--primary);color:var(--on-primary);border:1px solid var(--primary)" : "background:var(--surface-container-lowest);color:var(--primary);border:1px solid rgba(196,198,205,0.3)"; }
-        style();
+        const btn = create("button", { class: "px-4 py-2 rounded-full text-sm font-semibold" }, c.label);
+        styleBtn(btn, active === c.id);
         btn.addEventListener("click", () => {
           active = c.id;
-          [...chips.children].forEach((el, i) => { el.__active = cats[i].id === active; });
-          render();
-          [...chips.children].forEach((el, i) => {
-            el.style = cats[i].id === active ? "background:var(--primary);color:var(--on-primary);border:1px solid var(--primary)" : "background:var(--surface-container-lowest);color:var(--primary);border:1px solid rgba(196,198,205,0.3)";
-          });
+          [...chips.children].forEach((el, i) => styleBtn(el, cats[i].id === active));
+          renderGrid();
         });
         chips.appendChild(btn);
       });
-      render();
+    }
+
+    const dataReady = (async () => {
+      [_services, _docs] = await Promise.all([
+        loadJSON("/assets/data/services.json"),
+        loadJSON("/assets/data/documents.json"),
+      ]);
+      chips = document.getElementById("doc-chips");
+      grid = document.getElementById("doc-grid");
+    })();
+
+    // Re-render on every language change
+    document.addEventListener("language:changed", async () => {
+      await dataReady;
+      renderChips();
+      renderGrid();
     });
+
+    // Initial render — wait for both data and i18n to be ready
+    Promise.all([dataReady, whenI18nReady()]).then(() => { renderChips(); renderGrid(); });
   </script>
 </body>
 </html>

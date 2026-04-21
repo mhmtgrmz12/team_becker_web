@@ -23,9 +23,9 @@
   <main>
     <section class="pt-14 pb-10 px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)">Pricing</div>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)">Honest numbers, no surprises</h1>
-        <p class="mt-4 text-lg" style="color:var(--secondary)">Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and shown separately.</p>
+        <div class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--secondary)" data-i18n="pricing.pageEyebrow">Pricing</div>
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="pricing.pageTitle2">Honest numbers, no surprises</h1>
+        <p class="mt-4 text-lg" style="color:var(--secondary)" data-i18n="pricing.pageSubtitle2">Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and shown separately.</p>
       </div>
     </section>
 
@@ -34,10 +34,10 @@
         <table class="w-full text-sm">
           <thead>
             <tr style="background:var(--surface-container-low);color:var(--primary)">
-              <th class="text-left p-4 font-bold">Service</th>
-              <th class="text-left p-4 font-bold">Service fee</th>
-              <th class="text-left p-4 font-bold">Authority fees</th>
-              <th class="text-left p-4 font-bold">Total from</th>
+              <th class="text-left p-4 font-bold" data-i18n="pricing.tableHeaders.service">Service</th>
+              <th class="text-left p-4 font-bold" data-i18n="pricing.tableHeaders.serviceFee">Service fee</th>
+              <th class="text-left p-4 font-bold" data-i18n="pricing.tableHeaders.authorityFees">Authority fees</th>
+              <th class="text-left p-4 font-bold" data-i18n="pricing.tableHeaders.totalFrom">Total from</th>
               <th class="text-left p-4 font-bold"></th>
             </tr>
           </thead>
@@ -49,11 +49,11 @@
     <section class="py-14 px-6" style="background:var(--surface-container-low)">
       <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-card)">
-          <h2 class="text-2xl font-bold mb-4" style="color:var(--primary)">What's included</h2>
+          <h2 class="text-2xl font-bold mb-4" style="color:var(--primary)" data-i18n="pricing.includedTitle">What's included</h2>
           <ul class="space-y-2 text-sm" style="color:var(--secondary)" id="included-list"></ul>
         </div>
         <div class="p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-card)">
-          <h2 class="text-2xl font-bold mb-4" style="color:var(--primary)">Not included</h2>
+          <h2 class="text-2xl font-bold mb-4" style="color:var(--primary)" data-i18n="pricing.notIncludedTitle">Not included</h2>
           <ul class="space-y-2 text-sm" style="color:var(--secondary)" id="excluded-list"></ul>
         </div>
       </div>
@@ -61,7 +61,7 @@
 
     <section class="py-14 px-6">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-bold mb-6" style="color:var(--primary)">Optional extras</h2>
+        <h2 class="text-2xl font-bold mb-6" style="color:var(--primary)" data-i18n="pricing.optionalExtrasTitle">Optional extras</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="extras-list"></div>
         <p class="text-xs mt-4" style="color:var(--secondary)" id="pricing-note"></p>
       </div>
@@ -69,10 +69,10 @@
 
     <section class="py-16 px-6" style="background:var(--surface-container-low)">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)">Still not sure?</h2>
-        <p class="mt-3" style="color:var(--secondary)">Message us with your plate and situation — we'll send back an exact quote.</p>
+        <h2 class="text-3xl font-bold tracking-tight" style="color:var(--primary)" data-i18n="pricing.stillNotSure">Still not sure?</h2>
+        <p class="mt-3" style="color:var(--secondary)" data-i18n="pricing.stillNotSureDesc">Message us with your plate and situation — we'll send back an exact quote.</p>
         <a href="/request/" class="inline-flex items-center gap-2 mt-6 px-7 py-4 rounded-xl font-bold" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)">
-          <span class="msi">chat</span> Get an exact quote
+          <span class="msi">chat</span> <span data-i18n="pricing.getQuote">Get an exact quote</span>
         </a>
       </div>
     </section>
@@ -85,26 +85,80 @@
 
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
-    import { loadJSON, onReady } from "/assets/js/utils.js";
-    onReady(async () => {
-      const p = await loadJSON("/assets/data/pricing.json");
+    import { loadJSON, whenI18nReady } from "/assets/js/utils.js";
+
+    function T(key, fallback) {
+      const fn = window.CCI18n && window.CCI18n.t;
+      if (typeof fn === "function") { const v = fn(key); if (v && v !== key) return v; }
+      return fallback || key;
+    }
+
+    let _p = null, _services = null;
+
+    function render() {
+      if (!_p || !_services) return;
+
       const body = document.getElementById("pricing-body");
-      p.rows.forEach(r => {
-        const tr = document.createElement("tr");
-        tr.style.borderTop = "1px solid rgba(196,198,205,0.3)";
-        tr.innerHTML = `
-          <td class="p-4 font-semibold" style="color:var(--primary)">${r.service}</td>
-          <td class="p-4" style="color:var(--secondary)">from €${r.serviceFee}</td>
-          <td class="p-4" style="color:var(--secondary)">${r.authorityFeeHint}</td>
-          <td class="p-4 font-bold" style="color:var(--on-tertiary-container)">${r.totalHint}</td>
-          <td class="p-4 text-right"><a href="/services/${r.slug}/" class="font-semibold" style="color:var(--on-tertiary-container)">Details →</a></td>`;
-        body.appendChild(tr);
-      });
-      document.getElementById("included-list").innerHTML = p.included.map(x => `<li class="flex gap-2"><span class="msi" style="color:var(--tertiary-fixed-dim)">check_circle</span><span>${x}</span></li>`).join("");
-      document.getElementById("excluded-list").innerHTML = p.notIncluded.map(x => `<li class="flex gap-2"><span class="msi" style="color:var(--outline)">cancel</span><span>${x}</span></li>`).join("");
-      document.getElementById("extras-list").innerHTML = p.extras.map(x => `<div class="p-5 rounded-xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-soft)"><div class="font-bold mb-1" style="color:var(--primary)">${x.label}</div><div class="text-sm" style="color:var(--on-tertiary-container)">${x.price}</div></div>`).join("");
-      document.getElementById("pricing-note").textContent = p.note || "";
+      if (body) {
+        body.innerHTML = "";
+        _p.rows.forEach(r => {
+          const svcName = T(`services.items.${r.slug}.name`, r.service);
+          const fromLabel = T("pricing.from", "from");
+          const detailsLabel = T("pricing.tableHeaders.details", "Details →");
+          const tr = document.createElement("tr");
+          tr.style.borderTop = "1px solid rgba(196,198,205,0.3)";
+          tr.innerHTML = `
+            <td class="p-4 font-semibold" style="color:var(--primary)">${svcName}</td>
+            <td class="p-4" style="color:var(--secondary)">${fromLabel} €${r.serviceFee}</td>
+            <td class="p-4" style="color:var(--secondary)">${r.authorityFeeHint}</td>
+            <td class="p-4 font-bold" style="color:var(--on-tertiary-container)">${r.totalHint}</td>
+            <td class="p-4 text-right"><a href="/services/${r.slug}/" class="font-semibold" style="color:var(--on-tertiary-container)">${detailsLabel}</a></td>`;
+          body.appendChild(tr);
+        });
+      }
+
+      const included = document.getElementById("included-list");
+      if (included) {
+        included.innerHTML = [0,1,2,3].map(i => {
+          const text = T(`pricing.included.${i}`, _p.included[i] || "");
+          return text ? `<li class="flex gap-2"><span class="msi" style="color:var(--tertiary-fixed-dim)">check_circle</span><span>${text}</span></li>` : "";
+        }).join("");
+      }
+
+      const excluded = document.getElementById("excluded-list");
+      if (excluded) {
+        excluded.innerHTML = [0,1,2].map(i => {
+          const text = T(`pricing.notIncluded.${i}`, _p.notIncluded[i] || "");
+          return text ? `<li class="flex gap-2"><span class="msi" style="color:var(--outline)">cancel</span><span>${text}</span></li>` : "";
+        }).join("");
+      }
+
+      const extrasList = document.getElementById("extras-list");
+      if (extrasList) {
+        extrasList.innerHTML = _p.extras.map((x, i) => {
+          const label = T(`pricing.extras.${i}.label`, x.label);
+          const price = T(`pricing.extras.${i}.price`, x.price);
+          return `<div class="p-5 rounded-xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-soft)"><div class="font-bold mb-1" style="color:var(--primary)">${label}</div><div class="text-sm" style="color:var(--on-tertiary-container)">${price}</div></div>`;
+        }).join("");
+      }
+
+      const note = document.getElementById("pricing-note");
+      if (note) note.textContent = T("pricing.note", _p.note || "");
+    }
+
+    const dataReady = Promise.all([
+      loadJSON("/assets/data/pricing.json"),
+      loadJSON("/assets/data/services.json"),
+    ]).then(([p, s]) => { _p = p; _services = s; });
+
+    // Re-render on every language change
+    document.addEventListener("language:changed", async () => {
+      await dataReady;
+      render();
     });
+
+    // Initial render — wait for both data and i18n to be ready
+    Promise.all([dataReady, whenI18nReady()]).then(render);
   </script>
 </body>
 </html>
