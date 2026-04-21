@@ -1,11 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#041627"/>
-      <stop offset="100%" stop-color="#1a2b3c"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <path d="M20 40 L32 20 L44 40 Z" fill="#6ffbbe"/>
-  <circle cx="32" cy="42" r="4" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <circle cx="100" cy="100" r="97" fill="#FFFFFF" stroke="#202020" stroke-width="2"/>
+
+  <circle cx="100" cy="100" r="91" fill="#009A44" stroke="#202020" stroke-width="1.5"/>
+
+  <rect x="42" y="55" width="34" height="34" rx="2" fill="#FFFFFF" stroke="#202020" stroke-width="1"/>
+
+  <circle cx="59" cy="67" r="10" fill="#E3000F"/>
+  <circle cx="59" cy="67" r="7.5" fill="#FFFFFF"/>
+
+  <text x="59" y="68.5" font-family="Arial, Helvetica, sans-serif" font-size="4" font-weight="bold" fill="#202020" text-anchor="middle">Umwelt</text>
+  <text x="59" y="85" font-family="Arial, Helvetica, sans-serif" font-size="6.5" font-weight="bold" fill="#202020" text-anchor="middle" letter-spacing="0.5">ZONE</text>
+
+  <path d="M120 35 L136 35 L136 110 L120 110 L120 96 L75 96 L75 85 L120 35 Z M120 85 L120 55 L93 85 Z" fill="#202020" fill-rule="evenodd" />
+
+  <rect x="42" y="115" width="116" height="36" fill="#FFFFFF" stroke="#202020" stroke-width="1.5"/>
+
+  <circle cx="100" cy="158" r="18" fill="none" stroke="#202020" stroke-width="1.5"/>
 </svg>
