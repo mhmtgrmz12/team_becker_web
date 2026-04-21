@@ -1,5 +1,16 @@
-/* Renders FAQ accordions from faq.json + small client-side search. */
+/* Renders FAQ accordions from faq.json + small client-side search.
+   Questions, answers, and category labels come from i18n (falls back to the
+   values in faq.json when a key is missing). Re-renders on `language:changed`. */
 import { $, $$, create, loadJSON, onReady } from "./utils.js";
+
+function T (key, fallback) {
+  const fn = window.CCI18n && window.CCI18n.t;
+  if (typeof fn === "function") {
+    const v = fn(key);
+    if (v && v !== key) return v;
+  }
+  return fallback;
+}
 
 async function boot () {
   const list = document.getElementById("faq-list");
@@ -11,43 +22,66 @@ async function boot () {
   let activeCat = "all";
   let query = "";
 
-  function render () {
+  const q = (f) => T(`faq.items.${f.id}.question`, f.question);
+  const a = (f) => T(`faq.items.${f.id}.answer`, f.answer);
+  const catLabel = (c) => c === "all"
+    ? T("faq.allCategory", "All")
+    : T(`faq.categories.${c}`, c);
+
+  function renderList () {
     list.innerHTML = "";
     const filtered = data.filter(f =>
       (activeCat === "all" || f.category === activeCat) &&
-      (!query || (f.question + " " + f.answer).toLowerCase().includes(query.toLowerCase()))
+      (!query || (q(f) + " " + a(f)).toLowerCase().includes(query.toLowerCase()))
     );
     if (filtered.length === 0) {
-      list.appendChild(create("p", { class: "text-center py-8", style: "color:var(--secondary)" }, "No matching questions. Try a different search."));
+      list.appendChild(create("p", { class: "text-center py-8", style: "color:var(--secondary)" }, T("faq.noResults", "No matching questions. Try a different search.")));
       return;
     }
     filtered.forEach(f => {
       const d = create("details", { class: "group rounded-2xl", style: "background:var(--surface-container-lowest);box-shadow:0 2px 10px rgba(25,28,30,0.02)" });
-      d.appendChild(create("summary", { class: "flex justify-between items-center font-bold p-6", style: "color:var(--primary)", html: `${f.question}<span class="msi transition group-open:rotate-180" style="color:var(--secondary)">expand_more</span>` }));
-      d.appendChild(create("div", { class: "leading-relaxed px-6 pb-6", style: "color:var(--secondary)" }, f.answer));
+      d.appendChild(create("summary", { class: "flex justify-between items-center font-bold p-6", style: "color:var(--primary)", html: `${q(f)}<span class="msi transition group-open:rotate-180" style="color:var(--secondary)">expand_more</span>` }));
+      d.appendChild(create("div", { class: "leading-relaxed px-6 pb-6", style: "color:var(--secondary)" }, a(f)));
       list.appendChild(d);
     });
   }
 
-  // Build chips
-  if (chipsWrap) {
+  function renderChips () {
+    if (!chipsWrap) return;
+    chipsWrap.innerHTML = "";
     const cats = ["all", ...new Set(data.map(f => f.category))];
     cats.forEach(c => {
-      const btn = create("button", { class: "px-4 py-2 rounded-full text-sm font-semibold", style: `background:${c === activeCat ? "var(--primary)" : "var(--surface-container-lowest)"};color:${c === activeCat ? "var(--on-primary)" : "var(--primary)"};border:1px solid rgba(196,198,205,0.3)` }, c === "all" ? "All" : c);
+      const isActive = c === activeCat;
+      const btn = create("button", {
+        class: "px-4 py-2 rounded-full text-sm font-semibold",
+        "data-cat": c,
+        style: `background:${isActive ? "var(--primary)" : "var(--surface-container-lowest)"};color:${isActive ? "var(--on-primary)" : "var(--primary)"};border:1px solid rgba(196,198,205,0.3)`
+      }, catLabel(c));
       btn.addEventListener("click", () => {
         activeCat = c;
-        [...chipsWrap.children].forEach((el, i) => {
-          const label = cats[i];
-          el.style.background = label === activeCat ? "var(--primary)" : "var(--surface-container-lowest)";
-          el.style.color = label === activeCat ? "var(--on-primary)" : "var(--primary)";
-        });
-        render();
+        renderChips();
+        renderList();
       });
       chipsWrap.appendChild(btn);
     });
   }
-  if (search) search.addEventListener("input", (e) => { query = e.target.value; render(); });
 
-  render();
+  function renderSearchPlaceholder () {
+    if (!search) return;
+    const ph = T("faq.searchPlaceholder");
+    if (ph && ph !== "faq.searchPlaceholder") search.setAttribute("placeholder", ph);
+  }
+
+  if (search) search.addEventListener("input", (e) => { query = e.target.value; renderList(); });
+
+  renderChips();
+  renderList();
+  renderSearchPlaceholder();
+
+  document.addEventListener("language:changed", () => {
+    renderChips();
+    renderList();
+    renderSearchPlaceholder();
+  });
 }
 onReady(boot);

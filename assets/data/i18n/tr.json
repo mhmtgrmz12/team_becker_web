@@ -1,32 +1,37 @@
 {
+  "brand": {
+    "name": "Civic Concierge"
+  },
   "nav": {
     "services": "Hizmetler",
     "pricing": "Fiyatlandırma",
     "documents": "Belgeler",
     "howItWorks": "Nasıl Çalışır",
     "contact": "İletişim",
-    "faq": "SSS"
+    "faq": "SSS",
+    "openMenu": "Menüyü aç",
+    "changeLanguage": "Dili değiştir"
   },
   "hero": {
     "badge": "Resmi kayıt hizmeti",
-    "title": "Hızlı, modern araç kaydı",
+    "title": "Hızlı, modern araç kaydı —",
     "titleHighlight": "Rheine",
-    "titleEnd": "ve Kreis Steinfurt'ta.",
-    "subtitle": "Kuyruğu atlayın. Kayıt, yeniden kayıt ve kayıt silme işlemlerini WhatsApp üzerinden iletişimle ve gereksiz evrak işi olmadan hallederiz.",
-    "ctaWhatsApp": "WhatsApp ile Başla",
-    "ctaServices": "Hizmetleri Gör",
-    "location": "Kayıt ofisine 200 m",
+    "titleEnd": "ve Kreis Steinfurt.",
+    "subtitle": "Kuyruğu atlayın. Zulassung, Ummeldung ve Abmeldung işlemlerini WhatsApp iletişimiyle ve gereksiz evrak olmadan biz hallederiz.",
+    "ctaWhatsApp": "WhatsApp ile başla",
+    "ctaServices": "Hizmetleri gör",
+    "location": "Zulassungsstelle'ye 200 m",
     "hours": "Pzt–Cum 07:30'dan itibaren",
     "response": "Dakikalar içinde yanıt"
   },
   "pillars": {
     "fast": {
       "title": "Hızlı işlem",
-      "desc": "Haftalarca süren resmi randevu beklemesini atlayın. Günlük öncelikli kuyruklarımız var."
+      "desc": "Haftalarca süren randevu beklemesini atlayın. Her gün öncelikli kuyruklarımız var."
     },
     "trust": {
       "title": "Güvenilir işlem",
-      "desc": "WhatsApp üzerinden tam şeffaflık ve durum güncellemeleriyle güvenli belge işleme."
+      "desc": "Tam şeffaflık ve WhatsApp üzerinden durum güncellemeleriyle güvenli belge işleme."
     },
     "local": {
       "title": "Yerel uzmanlar",
@@ -39,7 +44,83 @@
     "seeAll": "Tüm hizmetleri gör →",
     "from": "Başlangıç",
     "details": "Detaylar →",
-    "popular": "Popüler"
+    "view": "Görüntüle →",
+    "popular": "Popüler",
+    "pageEyebrow": "Hizmetlerimiz",
+    "pageTitle": "Sizin için yaptığımız her şey",
+    "pageSubtitle": "Beş hizmet, tek concierge masası. Size uygun olanı seçin — gerisini biz hallederiz.",
+    "compareTitle": "Bir bakışta karşılaştırın",
+    "compareHeaders": {
+      "service": "Hizmet",
+      "serviceFee": "Hizmet ücreti",
+      "authorityFees": "Resmi harçlar",
+      "turnaround": "Süre"
+    },
+    "compareFooter": "Resmi harçlar Kreis Steinfurt tarafından belirlenir ve değişebilir.",
+    "notSureTitle": "Hangi hizmete ihtiyacınız olduğundan emin değil misiniz?",
+    "notSureSubtitle": "Bize kısa bir mesaj atın — dakikalar içinde söyleriz.",
+    "startWa": "WhatsApp ile başla",
+    "items": {
+      "registration": {
+        "name": "Araç Kaydı (Zulassung)",
+        "shortName": "Zulassung",
+        "blurb": "Yeni, ithal veya ikinci el aracınızı Kreis Steinfurt'ta kaydettirin. Evrakları hazırlar, gişeyi biz hallederiz.",
+        "authorityFeeHint": "€28–€40 tipik",
+        "turnaround": "24–48 saat"
+      },
+      "re-registration": {
+        "name": "Ummeldung",
+        "shortName": "Ummeldung",
+        "blurb": "Sahip değişikliği, adres güncellemesi veya plaka değişimi. Ummeldung sürecinin tamamını biz yürütürüz.",
+        "authorityFeeHint": "€20–€35 tipik",
+        "turnaround": "24–48 saat"
+      },
+      "deregistration": {
+        "name": "Abmeldung",
+        "shortName": "Abmeldung",
+        "blurb": "Aracı trafikten çekin — satış, hurda veya ihracat. Zulassungsstelle'de temiz bir Abmeldung yaparız.",
+        "authorityFeeHint": "€8–€16 tipik",
+        "turnaround": "Aynı gün"
+      },
+      "license-plate": {
+        "name": "Plakalar",
+        "shortName": "Plakalar",
+        "blurb": "Wunschkennzeichen, yedek plaka, sezon plakası — sipariş, damga, teslimat.",
+        "authorityFeeHint": "€30–€45 tipik",
+        "turnaround": "24 saat"
+      },
+      "express": {
+        "name": "Ekspres Hizmet",
+        "shortName": "Ekspres",
+        "blurb": "Zaman kritik durumlar için aynı gün işlem. Zulassungsstelle'de öncelik sırası.",
+        "authorityFeeHint": "Standart + öncelik ücreti",
+        "turnaround": "Aynı gün"
+      }
+    }
+  },
+  "serviceDetail": {
+    "eyebrow": "Hizmet detayı",
+    "startWa": "WhatsApp ile başla",
+    "viewPricing": "Fiyatlandırmayı gör",
+    "feeSuffix": "+ resmi harçlar",
+    "requiredDocs": "Gerekli belgeler",
+    "requiredDocsSub": "Yanınızda getirecekleriniz",
+    "optionalExtras": "İsteğe bağlı ekler",
+    "optionalExtrasSub": "İşinizi kolaylaştırın",
+    "readyTitle": "Kuyruğu atlamaya hazır mısınız?",
+    "readySub": "Aracınız hakkında WhatsApp'ta bize bilgi verin — her şeyi dakikalar içinde inceleriz.",
+    "faqHeading": "Bu hizmete dair sorular",
+    "relatedHeading": "İlgili hizmetler",
+    "home": "Ana sayfa",
+    "downloadForm": "Formu indir →",
+    "allInclusive": "Her şey dahil concierge hizmeti.",
+    "includedPreVerification": "Dijital ön doğrulama",
+    "includedPriority": "Kreis Steinfurt'ta öncelik",
+    "includedUpdates": "WhatsApp durum güncellemeleri",
+    "includedTurnaround": "Süre: {turnaround}",
+    "startThisService": "Bu hizmeti başlat →",
+    "fromPriceAnd": "€{price}'dan · {turnaround}",
+    "plusFrom": "+ €{price}'dan"
   },
   "howItWorks": {
     "heading": "Nasıl çalışır",
@@ -47,15 +128,50 @@
     "subtitle": "Şeffaf, yönetilen bir zaman çizelgesi. Sürtünmeyi biz hallederiz; siz sonuçları alırsınız.",
     "step1": {
       "title": "WhatsApp ile talep gönderin",
-      "desc": "Bize mesaj atın. Tam araç tipiniz ve durumunuz için gereken belgeleri hemen belirtiriz."
+      "desc": "Bize mesaj atın. Araç tipinize ve durumunuza özgü gerekli belgeleri hemen sıralarız."
     },
     "step2": {
       "title": "Dijital belge doğrulama",
-      "desc": "Belgelerinizin fotoğraflarını gönderin. Resmi kurumda başarıyı garanti etmek için eksiksizlik açısından denetleriz."
+      "desc": "Belgelerinizin fotoğraflarını gönderin. Resmi kurumda başarıyı garanti etmek için eksiksizliği denetleriz."
     },
     "step3": {
       "title": "Kayıt ve teslimat",
-      "desc": "Başvurunuzu Rheine'da işleme alırız. Damgalı belgeler ve yeni plakalar 48 saat içinde hazır — teslim alma veya kurye."
+      "desc": "Başvurunuzu Rheine'de işleriz. Damgalı belgeler ve yeni plakalar 48 saat içinde hazır — teslim alma veya kurye."
+    },
+    "pageEyebrow": "Nasıl çalışır",
+    "pageTitle": "Dört sakin adım",
+    "pageSubtitle": "Kuyruk yok, karışıklık yok — sorudan damgalı belgeye yönetilen bir yol.",
+    "long": {
+      "step1": {
+        "title": "Bize yazın",
+        "desc": "WhatsApp'ı açın ve neye ihtiyacınız olduğunu söyleyin. Ofis saatlerinde dakikalar içinde yanıt veririz."
+      },
+      "step2": {
+        "title": "Ön doğrulama yaparız",
+        "desc": "Belgelerinizin fotoğraflarını gönderin. Gişede geri dönmesin diye eksiksizliği kontrol ederiz."
+      },
+      "step3": {
+        "title": "Evrakları teslim edin",
+        "desc": "Rheine'deki ofise uğrayın ya da kurye seçeneğini kullanın. Siz vaktinizi korursunuz; biz daireye gideriz."
+      },
+      "step4": {
+        "title": "Plakalar elinizde",
+        "desc": "Damgalı belgeleri ve yeni plakaları 48 saat içinde teslim ederiz — teslim alma, teslimat veya doğrudan servise."
+      }
+    },
+    "pillars": {
+      "secure": {
+        "title": "Güvenli işlem",
+        "desc": "Belgeleriniz gözetimimizden çıkmaz. Alman veri koruma standartlarına göre çalışırız."
+      },
+      "express": {
+        "title": "Ekspres seçenek",
+        "desc": "Zaman kritik mi? Ekspres eklentisini seçin — Zulassungsstelle izin verdiğinde aynı gün işlem."
+      },
+      "alwaysOn": {
+        "title": "Her an güncelleme",
+        "desc": "Her teslim, her damga — kısa bir WhatsApp mesajıyla. Sürpriz yok."
+      }
     }
   },
   "trust": {
@@ -66,13 +182,324 @@
   "cta": {
     "title": "Kuyruğu atlamaya hazır mısınız?",
     "subtitle": "Kaydınızı 60 saniyenin altında başlatın. Concierge masamız belgelerinizi incelemeye hazır.",
-    "whatsapp": "WhatsApp ile Başla",
-    "call": "veya arayın +49 173 322 55 70"
+    "whatsapp": "WhatsApp ile başla",
+    "call": "Ara",
+    "callOr": "veya arayın +49 173 322 55 70"
   },
   "faq": {
     "title": "Hızlı cevaplar",
     "subtitle": "En çok duyduğumuz beş soru. Tam liste",
-    "faqPage": "SSS sayfasında"
+    "faqPage": "SSS sayfasında",
+    "pageEyebrow": "SSS",
+    "pageTitle": "Jargonsuz cevaplar",
+    "pageSubtitle": "En sık duyduğumuz sorular — kategoriye göre gruplanmış, aranabilir, sade bir dille yanıtlanmış.",
+    "searchLabel": "Arama",
+    "searchPlaceholder": "ör. 'fiyat', 'belgeler', 'Wunschkennzeichen'",
+    "allCategory": "Tümü",
+    "noResults": "Eşleşen soru yok. Farklı bir arama deneyin.",
+    "didntFind": "Cevabınızı bulamadınız mı?",
+    "askOnWa": "WhatsApp'ta sorun",
+    "categories": {
+      "Pricing": "Fiyat",
+      "Timing": "Süre",
+      "Documents": "Belgeler",
+      "Plates": "Plakalar",
+      "Payment": "Ödeme"
+    },
+    "items": {
+      "cost":              { "question": "Hizmetin maliyeti nedir?",                                      "answer": "Hizmet ücretimiz KDV dahil €29'dan başlar. Kreis Steinfurt resmi harçları buna eklenir ve hizmete göre değişir. Net bir döküm için fiyatlandırma sayfamıza bakın." },
+      "duration":          { "question": "Kayıt ne kadar sürer?",                                         "answer": "Tüm orijinal belgeler elimizde olup dijital ön doğrulamadan geçtikten sonra, Rheine'daki dairede fiziksel kayıt genellikle 24–48 saat sürer. Aynı gün Ekspres Pzt–Cum mevcuttur." },
+      "documents_needed":  { "question": "Hangi belgelere ihtiyacım var?",                                 "answer": "Hizmete bağlıdır. Yeni kayıt için: geçerli kimlik veya pasaport, eVB sigorta numarası, imzalı SEPA mandatı, Zulassungsbescheinigung II ve ikinci el araçlar için HU/AU raporu. Hizmet başına tam liste için belgeler sayfamıza bakın." },
+      "original_id":       { "question": "Orijinal kimliğimi teslim etmem gerekir mi?",                   "answer": "Evet — daire, son işlem için orijinal kimliği ister. Kurye veya ofis kasamız aracılığıyla güvenli teslim düzenleriz." },
+      "wunschkennzeichen": { "question": "Wunschkennzeichen işlemini yapabilir misiniz?",                   "answer": "Evet. Kombinasyonunuzu çevrimiçi (ücretsiz) rezerve edip PIN'i bize verin ya da sizin için rezerve edelim. Kreis Steinfurt şu anda kombinasyon için ~€10,20 alıyor." },
+      "keep_plates":       { "question": "Ummeldung'da mevcut plakalarımı saklayabilir miyim?",            "answer": "Çoğu durumda evet — WhatsApp'taki kabul sırasında onaylarız. Daire yeni plakalar verirse, yerinde damgalayabiliriz." },
+      "same_day":          { "question": "Bugün hâlâ gelebilir miyim?",                                   "answer": "İletişim sayfamızdaki saatleri kontrol edin — kart şu an açık olup olmadığımızı gösterir. Açılış saatleri dışında WhatsApp'tan yazın, size bir slot ayarlayalım." },
+      "payment":           { "question": "Nasıl ödeme yaparım?",                                           "answer": "Hizmet ücretimizi teslim alırken nakit veya kartla ödersiniz. Resmi harçlar genellikle SEPA otomatik ödeme ile mandatınız üzerinden tahsil edilir." },
+      "hidden_fees":       { "question": "Gizli ücret var mı?",                                           "answer": "Hayır. Seçtiğiniz hizmet için hizmet ücretimiz sabittir. Resmi harçlar Kreis Steinfurt tarafından belirlenir ve her zaman ayrı gösterilir." },
+      "lost_document":     { "question": "Bir belgemi kaybettiysem ne olur?",                             "answer": "WhatsApp'ta bize söyleyin — kayıp Zulassungsbescheinigung, sigorta mektupları veya SEPA mandatları için en hızlı yolu biliyoruz ve genellikle aynı hafta çözebiliriz." },
+      "deliver_plates":    { "question": "Yeni plakalarımı teslim edebilir misiniz?",                     "answer": "Evet — Rheine içinde €25'dan başlayan kurye teslimatı sunuyoruz. Çevre şehirler için WhatsApp'ta sabit fiyat veririz." },
+      "express_urgency":   { "question": "Ekspres ne kadar acildir?",                                     "answer": "Ekspres, daire kapasitesine bağlı olarak aracınızı aynı gün kaydetmeyi hedeflediğimiz anlamına gelir. 30 dakika içinde WhatsApp'ta onay alırsınız." }
+    }
+  },
+  "documents": {
+    "pageEyebrow": "Belgeler",
+    "pageTitle": "Doğru evrakları — tek seferde getirin",
+    "pageSubtitle": "İstediğimiz her belge, nasıl göründüğü ve neden gerekli olduğu. Hizmete göre filtreleyin.",
+    "allServices": "Tüm hizmetler",
+    "lostDocTitle": "Belge mi kaybettiniz?",
+    "lostDocSub": "Neyin eksik olduğunu söyleyin — en hızlı yenileme yolunu söyleriz.",
+    "tellUs": "WhatsApp'ta bildirin",
+    "downloadForm": "Formu indir →",
+    "items": {
+      "id_card": {
+        "title": "Kimlik veya pasaport",
+        "description": "Geçerli Alman Personalausweis, oturma izni veya pasaport — kimliği resmi dairede doğrularız."
+      },
+      "evb": {
+        "title": "eVB Numarası",
+        "description": "Sigortanızdan yedi haneli elektronik sigorta onayı. Aracın trafiğe kaydı için zorunludur."
+      },
+      "sepa": {
+        "title": "SEPA Mandatı",
+        "description": "Kfz-Steuer (motorlu taşıt vergisi) için otomatik ödeme talimatı. Doldurulabilir bir şablon sunuyoruz."
+      },
+      "zb1": {
+        "title": "Zulassungsbescheinigung I",
+        "description": "Araçta kalan ruhsat belgesi — \"küçük\" yeşil belge."
+      },
+      "zb2": {
+        "title": "Zulassungsbescheinigung II",
+        "description": "Araç mülkiyet belgesi — evde güvende tutulur, sahip değişikliği için gereklidir."
+      },
+      "hu_report": {
+        "title": "HU / AU Raporu",
+        "description": "Geçerli muayene raporu (TÜV/Dekra). Kayıt anında hâlâ geçerli olmalıdır."
+      },
+      "power_of_attorney": {
+        "title": "Vekaletname",
+        "description": "Zulassungsstelle'de sizin adınıza hareket etmemizi sağlayan imzalı yetki belgesi."
+      },
+      "sales_contract": {
+        "title": "Satış sözleşmesi",
+        "description": "Satıcı/alıcı bilgileri ve araç tanımlayıcılarıyla imzalı alım sözleşmesi (ikinci el araç)."
+      },
+      "plates": {
+        "title": "Eski plakalar",
+        "description": "Ummeldung veya Abmeldung için — lütfen mevcut plakaları ofise getirin."
+      }
+    }
+  },
+  "extras": {
+    "items": {
+      "wunschkennzeichen": {
+        "name": "Wunschkennzeichen",
+        "description": "Araç kaydedilmeden önce Wunschkennzeichen kombinasyonunuzu rezerve edip sipariş edin."
+      },
+      "plate_stamping": {
+        "name": "Plaka damgalama",
+        "description": "Damgalanmış, monte edilmeye hazır plakaları biz teslim alırız — sizin için ek yol yok."
+      },
+      "courier": {
+        "name": "Kurye teslimatı",
+        "description": "Damgalı belgeler ve plakalar evinize, ofisinize veya bayinize teslim edilir."
+      },
+      "express": {
+        "name": "Ekspres işlem",
+        "description": "Zulassungsstelle izin verdiğinde aynı gün randevu. Öncelik sırası dahildir."
+      },
+      "power_of_attorney_prep": {
+        "name": "Vekaletname hazırlığı",
+        "description": "Vekaletname belgesini sizin için hazırlarız — sadece imzalayıp iade edin."
+      },
+      "used_car_check": {
+        "name": "İkinci el araç belge kontrolü",
+        "description": "Alım öncesi Zulassungsbescheinigung II, HU raporu ve VIN kontrolü."
+      }
+    }
+  },
+  "pricing": {
+    "pageEyebrow": "Fiyatlandırma",
+    "pageTitle": "Şeffaf, sabit hizmet ücretleri",
+    "pageSubtitle": "Bize ödediğiniz ücret net — resmi harçlar (Kreis Steinfurt tarafından belirlenir) ayrıdır ve her zaman gösterilir.",
+    "tableHeaders": {
+      "service": "Hizmet",
+      "fee": "Hizmet ücreti",
+      "authorityFees": "Resmi harçlar",
+      "turnaround": "Süre"
+    },
+    "includedTitle": "Dahil olanlar",
+    "notIncludedTitle": "Dahil olmayanlar",
+    "optionalExtrasTitle": "İsteğe bağlı ekler",
+    "stillNotSure": "Hâlâ emin değil misiniz?",
+    "getQuote": "Kesin teklif alın",
+    "from": "Başlangıç",
+    "feeSuffix": "+ resmi harçlar",
+    "authorityDisclaimer": "Resmi harçlar Kreis Steinfurt tarafından belirlenir ve önceden bildirimde bulunulmadan değişebilir."
+  },
+  "contact": {
+    "pageEyebrow": "İletişim",
+    "pageTitle": "Concierge ile iletişime geçin",
+    "pageSubtitle": "En hızlı kanal WhatsApp. Ofis saatlerinde telefon ve e-postaya da yanıt veriyoruz.",
+    "channels": {
+      "whatsappTitle": "WhatsApp",
+      "whatsappDesc": "En hızlı kanal — fotoğraflar, formlar ve durum güncellemeleri tek başlıkta.",
+      "phoneTitle": "Telefon",
+      "phoneDesc": "Kısa bir arama mı tercih edersiniz? Pzt–Cum ofis saatlerinde cevaplıyoruz.",
+      "emailTitle": "E-posta",
+      "emailDesc": "Taranmış belgeler için veya resmi her şey için kullanın. Genelde saatler içinde yanıt."
+    },
+    "officeHeading": "Ofis",
+    "officeText": "Rheine'deki Zulassungsstelle Kreis Steinfurt'a 200 m. Kapının önünde park yeri.",
+    "getDirections": "Yol tarifi al",
+    "hoursHeading": "Açılış saatleri",
+    "evenings": "Akşamlar (18:00'den itibaren) ve hafta sonları randevuyla.",
+    "call": "Ara"
+  },
+  "request": {
+    "pageEyebrow": "Talep",
+    "pageTitle": "Talebinizi başlatın",
+    "pageSubtitle": "Üç kısa adım. WhatsApp'ı her şey doldurulmuş olarak açarız.",
+    "steps": {
+      "service": "Hizmet",
+      "extras": "Ekler",
+      "details": "Detaylar"
+    },
+    "step1": {
+      "title": "Size nasıl yardımcı olabiliriz?",
+      "subtitle": "Birincil hizmeti seçin. Evrakları biz yapıyoruz, siz yapmayın.",
+      "next": "Eklere devam →",
+      "errorSelect": "Lütfen bir hizmet seçin."
+    },
+    "step2": {
+      "title": "Ek seçenek?",
+      "subtitle": "İsteğe bağlı — hayatınızı kolaylaştıran her şeyi seçin. Bu adımı atlayabilirsiniz.",
+      "youllNeed": "İhtiyacınız olacak",
+      "next": "Detaylara devam →"
+    },
+    "step3": {
+      "title": "Birkaç hızlı detay",
+      "subtitle": "Talebinizi hazırlamak için minimum bilgiye ihtiyacımız var. Hesap gerekmez.",
+      "fields": {
+        "name": "Ad Soyad",
+        "phone": "Telefon / WhatsApp",
+        "phonePh": "+49 ...",
+        "email": "E-posta (isteğe bağlı)",
+        "vehicle": "Araç (plaka / FIN / marka)",
+        "preferredTime": "Tercih edilen zaman (ör. Sal 10:00)",
+        "note": "Kısa not (isteğe bağlı)"
+      },
+      "consentBefore": "Bu talebi hazırlamak için verilerimin işlenmesini kabul ediyorum, ",
+      "privacyPolicy": "gizlilik politikası",
+      "consentAfter": " kapsamında.",
+      "requiredMark": " *",
+      "errorRequired": "Ad ve telefon gereklidir.",
+      "errorConsent": "Lütfen gizlilik politikasını kabul edin.",
+      "next": "İncele →"
+    },
+    "step4": {
+      "title": "Göndermeye hazır",
+      "subtitle": "WhatsApp'ı önceden doldurulmuş bir mesajla açarız. Sadece gönder'e basın.",
+      "openWa": "İsteğimle WhatsApp'ı aç",
+      "fallbackLine": "WhatsApp yok mu? Bize e-posta veya telefonla da ulaşabilirsiniz.",
+      "tapAgain": "WhatsApp'ı açmak için düğmeye tekrar dokunun.",
+      "tapHere": "WhatsApp'ı açmak için buraya dokunun",
+      "sendEmail": "E-posta ile gönder",
+      "callBtn": "{phone} ara",
+      "summary": {
+        "service": "Hizmet",
+        "extras": "Ekler",
+        "name": "Ad",
+        "phone": "Telefon",
+        "email": "E-posta",
+        "vehicle": "Araç",
+        "preferredTime": "Tercih edilen zaman",
+        "note": "Not"
+      }
+    },
+    "sent": {
+      "title": "Talebiniz WhatsApp'ta hazır",
+      "desc": "Ofis saatlerinde genellikle dakikalar içinde yanıt veriyoruz. Bu sekmeyi kapatabilirsiniz.",
+      "reopen": "WhatsApp'ı tekrar aç"
+    },
+    "actions": {
+      "back": "← Geri",
+      "cancel": "İptal",
+      "continue": "Devam →"
+    },
+    "toast": {
+      "loadFail": "Hizmetler yüklenemedi. Lütfen sayfayı yenileyin."
+    }
+  },
+  "prefill": {
+    "hello": "Merhaba Civic Concierge,",
+    "service": "Hizmet",
+    "extras": "Ekler",
+    "preferredTime": "Tercih edilen zaman",
+    "name": "Ad",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "vehicle": "Araç",
+    "note": "Not",
+    "sentFrom": "(civic-concierge.de üzerinden gönderildi)",
+    "chatbotNote": "Chatbot'tan başlatıldı",
+    "emailSubject": "Civic Concierge — WhatsApp talebi"
+  },
+  "chatbot": {
+    "launcherAria": "Sohbeti aç",
+    "dialogAria": "Civic Concierge asistanı",
+    "title": "Concierge Asistanı",
+    "closeAria": "Kapat",
+    "sendAria": "Gönder",
+    "inputPlaceholder": "Mesajınızı yazın...",
+    "pageEyebrow": "Asistan",
+    "pageTitle": "Concierge'e sorun",
+    "pageSubtitle": "Hızlı cevaplar veya sizin için WhatsApp talebi hazırlarız.",
+    "greet": "Merhaba! Ben Civic Concierge asistanıyım. Bugün ne yapmak istersiniz?",
+    "askServicePrefix": "Harika — ",
+    "askServiceSuffix": ". Ekspres hizmetimizi ister misiniz (mümkünse aynı gün)?",
+    "askName": "Mükemmel. Ad soyadınız nedir?",
+    "askPhone": "Peki WhatsApp / telefon numaranız?",
+    "handoff": "Teşekkürler {name} — bir talep hazırladım. WhatsApp'ta devam edebilirsiniz, gerisini biz hallederiz.",
+    "handoffFallbackName": "",
+    "askPrice": "Hizmet ücretimiz KDV dahil €29'dan başlar. Kreis Steinfurt'un resmi harçları eklenir. Belirli bir hizmet için teklif ister misiniz?",
+    "askDocuments": "Çoğu kayıt için şunlar gerekir: kimlik veya pasaport, eVB sigorta onayı, Kfz-Steuer için SEPA mandatı ve Zulassungsbescheinigung II (araç mülkiyet belgesi). Talep başlatayım mı?",
+    "talkHuman": "Sizi doğrudan ekibe yönlendirebilirim. Ofis saatlerinde dakikalar içinde WhatsApp'ta yanıt alırsınız.",
+    "fallback": "Üzgünüm, anlayamadım. WhatsApp'ta devam etmek ister misiniz?",
+    "continueWa": "WhatsApp'ta devam et →",
+    "quick": {
+      "registerVehicle": "Araç kaydet",
+      "reRegister": "Ummeldung / Halterwechsel",
+      "deregister": "Araç Abmeldung",
+      "getPlates": "Plaka siparişi",
+      "askPricing": "Fiyat sor",
+      "askDocuments": "Belgeleri sor",
+      "talkTeam": "Ekiple konuş",
+      "yesExpress": "Evet, ekspres",
+      "noStandard": "Hayır, standart",
+      "back": "Geri",
+      "startRequest": "Talep başlat"
+    },
+    "services": {
+      "newRegistration": "Yeni Kayıt (Neuzulassung)",
+      "reRegistration": "Ummeldung",
+      "deregistration": "Abmeldung",
+      "licensePlates": "Plakalar"
+    }
+  },
+  "footer": {
+    "tagline": "Rheine & Kreis Steinfurt'ta hızlı ve güvenilir araç kaydı. WhatsApp öncelikli, sakin ve halledilmiş.",
+    "services": "Hizmetler",
+    "company": "Şirket",
+    "links": {
+      "registration": "Araç Kaydı",
+      "reRegistration": "Ummeldung",
+      "deregistration": "Abmeldung",
+      "licensePlates": "Plakalar",
+      "express": "Ekspres Hizmet",
+      "howItWorks": "Nasıl çalışır",
+      "faq": "SSS",
+      "contact": "İletişim",
+      "imprint": "Impressum",
+      "privacy": "Gizlilik",
+      "terms": "Şartlar (AGB)",
+      "privacySettings": "Gizlilik ayarları"
+    },
+    "copyright": "© {year} Civic Concierge · Rheine Araç Kayıt Hizmetleri",
+    "madeIn": "Westfalen'de sakince yapıldı."
+  },
+  "cookie": {
+    "aria": "Çerez ve gizlilik ayarları",
+    "title": "Gizliliğinize saygı duyuyoruz",
+    "descBefore": "Bu siteyi çalıştırmak ve size WhatsApp'ta ulaşmanıza yardımcı olmak için minimum veri kullanıyoruz. İsteğe bağlı analizler varsayılan olarak kapalıdır. ",
+    "privacyLink": "Gizlilik politikamız",
+    "descAfter": "na bakın.",
+    "essentialsOnly": "Sadece gerekliler",
+    "acceptAll": "Tümünü kabul et"
+  },
+  "bottomNav": {
+    "whatsapp": "WhatsApp",
+    "call": "Ara",
+    "help": "Yardım"
   },
   "location": {
     "hours": "Saatler",
@@ -92,5 +519,19 @@
       "Sunday": "Pazar"
     },
     "closed": "Kapalı"
+  },
+  "legal": {
+    "heading": "Hukuki",
+    "imprint": "Impressum",
+    "privacy": "Gizlilik",
+    "terms": "AGB",
+    "cookies": "Çerezler"
+  },
+  "common": {
+    "loading": "Yükleniyor…",
+    "error": "Bir şeyler ters gitti",
+    "retry": "Tekrar dene",
+    "close": "Kapat",
+    "back": "Geri"
   }
 }

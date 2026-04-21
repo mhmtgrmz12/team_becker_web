@@ -58,21 +58,31 @@ export function toast (msg, ms = 2400) {
 }
 
 export function buildPrefillMessage (data) {
+  // Translate via the global i18n bridge; fall back to English labels if i18n
+  // hasn't loaded yet (we always produce a usable message).
+  const T = (key, fallback) => {
+    const fn = window.CCI18n && window.CCI18n.t;
+    if (typeof fn === "function") {
+      const v = fn(key);
+      if (v && v !== key) return v;
+    }
+    return fallback;
+  };
   const lines = [
-    "Hello Civic Concierge,",
+    T("prefill.hello", "Hello Civic Concierge,"),
     "",
-    `Service: ${data.service || "—"}`,
+    `${T("prefill.service", "Service")}: ${data.service || "—"}`,
   ];
-  if (data.extras && data.extras.length) lines.push(`Extras: ${data.extras.join(", ")}`);
-  if (data.preferredTime) lines.push(`Preferred time: ${data.preferredTime}`);
+  if (data.extras && data.extras.length) lines.push(`${T("prefill.extras", "Extras")}: ${data.extras.join(", ")}`);
+  if (data.preferredTime) lines.push(`${T("prefill.preferredTime", "Preferred time")}: ${data.preferredTime}`);
   lines.push("");
-  if (data.name) lines.push(`Name: ${data.name}`);
-  if (data.phone) lines.push(`Phone: ${data.phone}`);
-  if (data.email) lines.push(`Email: ${data.email}`);
-  if (data.vehicle) lines.push(`Vehicle: ${data.vehicle}`);
-  if (data.note) { lines.push(""); lines.push(`Note: ${data.note}`); }
+  if (data.name) lines.push(`${T("prefill.name", "Name")}: ${data.name}`);
+  if (data.phone) lines.push(`${T("prefill.phone", "Phone")}: ${data.phone}`);
+  if (data.email) lines.push(`${T("prefill.email", "Email")}: ${data.email}`);
+  if (data.vehicle) lines.push(`${T("prefill.vehicle", "Vehicle")}: ${data.vehicle}`);
+  if (data.note) { lines.push(""); lines.push(`${T("prefill.note", "Note")}: ${data.note}`); }
   lines.push("");
-  lines.push("(sent from civic-concierge.de)");
+  lines.push(T("prefill.sentFrom", "(sent from civic-concierge.de)"));
   return lines.join("\n");
 }
 

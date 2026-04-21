@@ -1,11 +1,16 @@
 {
+  "brand": {
+    "name": "Civic Concierge"
+  },
   "nav": {
     "services": "Dienstleistungen",
     "pricing": "Preise",
     "documents": "Dokumente",
     "howItWorks": "So funktioniert's",
     "contact": "Kontakt",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "openMenu": "Menü öffnen",
+    "changeLanguage": "Sprache ändern"
   },
   "hero": {
     "badge": "Offizieller Zulassungsservice",
@@ -15,7 +20,7 @@
     "subtitle": "Überspringen Sie die Warteschlange. Wir kümmern uns um Zulassung, Ummeldung und Abmeldung — mit WhatsApp-Kommunikation und ohne unnötigen Papierkram.",
     "ctaWhatsApp": "Per WhatsApp starten",
     "ctaServices": "Dienstleistungen ansehen",
-    "location": "200 m von der Zulassungsstelle",
+    "location": "200 m zur Zulassungsstelle",
     "hours": "Mo–Fr ab 07:30",
     "response": "Antwort in Minuten"
   },
@@ -39,7 +44,83 @@
     "seeAll": "Alle Dienstleistungen ansehen →",
     "from": "Ab",
     "details": "Details →",
-    "popular": "Beliebt"
+    "view": "Ansehen →",
+    "popular": "Beliebt",
+    "pageEyebrow": "Unsere Dienstleistungen",
+    "pageTitle": "Alles, was wir für Sie erledigen",
+    "pageSubtitle": "Fünf Dienstleistungen, ein Concierge-Desk. Wählen Sie, was passt — den Rest übernehmen wir.",
+    "compareTitle": "Auf einen Blick vergleichen",
+    "compareHeaders": {
+      "service": "Dienstleistung",
+      "serviceFee": "Servicegebühr",
+      "authorityFees": "Behördengebühren",
+      "turnaround": "Bearbeitungszeit"
+    },
+    "compareFooter": "Behördengebühren werden vom Kreis Steinfurt festgelegt und können sich ändern.",
+    "notSureTitle": "Unsicher, welche Dienstleistung Sie brauchen?",
+    "notSureSubtitle": "Schreiben Sie uns kurz — wir sagen es Ihnen in Minuten.",
+    "startWa": "Per WhatsApp starten",
+    "items": {
+      "registration": {
+        "name": "Fahrzeugzulassung",
+        "shortName": "Zulassung",
+        "blurb": "Zulassung eines neuen, importierten oder gebrauchten Fahrzeugs beim Kreis Steinfurt. Wir bereiten die Unterlagen vor und übernehmen den Schalter.",
+        "authorityFeeHint": "€28–€40 typisch",
+        "turnaround": "24–48 Std."
+      },
+      "re-registration": {
+        "name": "Ummeldung",
+        "shortName": "Ummeldung",
+        "blurb": "Halterwechsel, Adressänderung oder Kennzeichenwechsel. Wir übernehmen den gesamten Ummeldevorgang.",
+        "authorityFeeHint": "€20–€35 typisch",
+        "turnaround": "24–48 Std."
+      },
+      "deregistration": {
+        "name": "Abmeldung",
+        "shortName": "Abmeldung",
+        "blurb": "Fahrzeug außer Betrieb setzen — Verkauf, Verschrottung oder Export. Wir melden es sauber bei der Zulassungsstelle ab.",
+        "authorityFeeHint": "€8–€16 typisch",
+        "turnaround": "Taggleich"
+      },
+      "license-plate": {
+        "name": "Kennzeichen",
+        "shortName": "Kennzeichen",
+        "blurb": "Wunschkennzeichen, Ersatzkennzeichen, Saisonkennzeichen — bestellt, gestempelt, geliefert.",
+        "authorityFeeHint": "€30–€45 typisch",
+        "turnaround": "24 Std."
+      },
+      "express": {
+        "name": "Express-Service",
+        "shortName": "Express",
+        "blurb": "Taggleiche Bearbeitung für zeitkritische Fälle. Prioritätswarteschlange bei der Zulassungsstelle.",
+        "authorityFeeHint": "Standard + Prioritätsgebühr",
+        "turnaround": "Taggleich"
+      }
+    }
+  },
+  "serviceDetail": {
+    "eyebrow": "Dienstleistung",
+    "startWa": "Per WhatsApp starten",
+    "viewPricing": "Preise ansehen",
+    "feeSuffix": "+ Behördengebühren",
+    "requiredDocs": "Erforderliche Dokumente",
+    "requiredDocsSub": "Das müssen Sie mitbringen",
+    "optionalExtras": "Optionale Extras",
+    "optionalExtrasSub": "Machen Sie sich das Leben leichter",
+    "readyTitle": "Bereit, die Warteschlange zu überspringen?",
+    "readySub": "Erzählen Sie uns per WhatsApp von Ihrem Fahrzeug — wir prüfen alles in Minuten.",
+    "faqHeading": "Fragen zu dieser Dienstleistung",
+    "relatedHeading": "Verwandte Dienstleistungen",
+    "home": "Start",
+    "downloadForm": "Formular herunterladen →",
+    "allInclusive": "Rundum-Concierge-Abwicklung.",
+    "includedPreVerification": "Digitale Vorab-Prüfung",
+    "includedPriority": "Priorität beim Kreis Steinfurt",
+    "includedUpdates": "WhatsApp-Statusupdates",
+    "includedTurnaround": "Bearbeitungszeit: {turnaround}",
+    "startThisService": "Diese Dienstleistung starten →",
+    "fromPriceAnd": "Ab €{price} · {turnaround}",
+    "plusFrom": "+ ab €{price}"
   },
   "howItWorks": {
     "heading": "So funktioniert's",
@@ -56,6 +137,41 @@
     "step3": {
       "title": "Zulassung & Lieferung",
       "desc": "Wir bearbeiten Ihren Antrag in Rheine. Gestempelte Dokumente und neue Kennzeichen innerhalb von 48 Stunden fertig — Abholung oder Kurier."
+    },
+    "pageEyebrow": "So funktioniert's",
+    "pageTitle": "Vier ruhige Schritte",
+    "pageSubtitle": "Keine Warteschlangen, keine Verwirrung — ein geführter Weg von der Frage bis zum gestempelten Dokument.",
+    "long": {
+      "step1": {
+        "title": "Schreiben Sie uns",
+        "desc": "Öffnen Sie WhatsApp und sagen Sie uns, was Sie brauchen. Wir antworten innerhalb von Minuten während der Bürozeiten."
+      },
+      "step2": {
+        "title": "Wir prüfen vorab",
+        "desc": "Senden Sie Fotos Ihrer Dokumente. Wir prüfen Vollständigkeit, damit am Schalter nichts zurückkommt."
+      },
+      "step3": {
+        "title": "Unterlagen übergeben",
+        "desc": "Kommen Sie ins Büro in Rheine oder nutzen Sie den Kurier. Sie behalten Ihre Zeit; wir gehen zur Behörde."
+      },
+      "step4": {
+        "title": "Kennzeichen in der Hand",
+        "desc": "Wir liefern gestempelte Dokumente und neue Kennzeichen innerhalb von 48 Stunden — Abholung, Lieferung oder direkt zur Werkstatt."
+      }
+    },
+    "pillars": {
+      "secure": {
+        "title": "Sichere Abwicklung",
+        "desc": "Ihre Dokumente verlassen unsere Obhut nicht. Wir arbeiten standardmäßig nach deutschen Datenschutzstandards."
+      },
+      "express": {
+        "title": "Express-Option",
+        "desc": "Zeitkritisch? Fügen Sie den Express-Extra hinzu — taggleiche Bearbeitung, wenn die Behörde es zulässt."
+      },
+      "alwaysOn": {
+        "title": "Immer aktuelle Updates",
+        "desc": "Jede Übergabe, jeder Stempel — als kurzes WhatsApp-Update. Keine Überraschungen."
+      }
     }
   },
   "trust": {
@@ -67,12 +183,323 @@
     "title": "Bereit, die Warteschlange zu überspringen?",
     "subtitle": "Starten Sie Ihre Zulassung in unter 60 Sekunden. Unser Concierge-Desk steht bereit, um Ihre Dokumente zu prüfen.",
     "whatsapp": "Per WhatsApp starten",
-    "call": "oder anrufen +49 173 322 55 70"
+    "call": "Anrufen",
+    "callOr": "oder anrufen +49 173 322 55 70"
   },
   "faq": {
     "title": "Schnelle Antworten",
     "subtitle": "Die fünf, die wir am häufigsten hören. Die vollständige Liste finden Sie auf",
-    "faqPage": "der FAQ-Seite"
+    "faqPage": "der FAQ-Seite",
+    "pageEyebrow": "FAQ",
+    "pageTitle": "Antworten, ohne Fachchinesisch",
+    "pageSubtitle": "Die Fragen, die wir am häufigsten hören — gruppiert, durchsuchbar und in einfacher Sprache beantwortet.",
+    "searchLabel": "Suche",
+    "searchPlaceholder": "z. B. 'Kosten', 'Dokumente', 'Wunschkennzeichen'",
+    "allCategory": "Alle",
+    "noResults": "Keine passenden Fragen. Versuchen Sie eine andere Suche.",
+    "didntFind": "Keine Antwort gefunden?",
+    "askOnWa": "Auf WhatsApp fragen",
+    "categories": {
+      "Pricing": "Preise",
+      "Timing": "Dauer",
+      "Documents": "Dokumente",
+      "Plates": "Kennzeichen",
+      "Payment": "Zahlung"
+    },
+    "items": {
+      "cost":              { "question": "Wie viel kostet der Service?",                                 "answer": "Unsere Servicegebühr beginnt bei €29 inkl. MwSt. Behördengebühren vom Kreis Steinfurt kommen hinzu und hängen von der genauen Dienstleistung ab. Siehe unsere Preisseite für eine klare Aufschlüsselung." },
+      "duration":          { "question": "Wie lange dauert eine Zulassung?",                              "answer": "Sobald wir alle Originaldokumente haben und sie unsere digitale Vorab-Prüfung bestehen, dauert die physische Zulassung bei der Behörde in Rheine typischerweise 24–48 Stunden. Taggleicher Express ist Mo–Fr verfügbar." },
+      "documents_needed":  { "question": "Welche Dokumente brauche ich?",                                 "answer": "Es kommt auf die Dienstleistung an. Für eine Neuzulassung: gültiger Personalausweis oder Reisepass, eVB-Versicherungsnummer, unterschriebenes SEPA-Mandat, Zulassungsbescheinigung II und der HU/AU-Bericht für Gebrauchtfahrzeuge. Siehe unsere Dokumentenseite für die vollständige Liste pro Dienstleistung." },
+      "original_id":       { "question": "Muss ich meinen Originalausweis abgeben?",                       "answer": "Ja — die Behörde verlangt den Originalausweis für die endgültige Bearbeitung. Wir organisieren eine sichere Übergabe per Kurier oder unseren Büro-Schließfach." },
+      "wunschkennzeichen": { "question": "Können Sie Wunschkennzeichen abwickeln?",                        "answer": "Ja. Reservieren Sie Ihre Kombination online (kostenlos) und teilen Sie uns die PIN mit, oder lassen Sie uns die Reservierung übernehmen. Der Kreis Steinfurt berechnet derzeit ~€10,20 für die Kombination." },
+      "keep_plates":       { "question": "Kann ich meine bestehenden Kennzeichen bei einer Ummeldung behalten?", "answer": "In vielen Fällen ja — wir bestätigen das während unserer Aufnahme auf WhatsApp. Falls die Behörde neue Kennzeichen zuweist, können wir sie vor Ort prägen." },
+      "same_day":          { "question": "Kann ich heute noch vorbeikommen?",                              "answer": "Prüfen Sie die Öffnungszeiten auf unserer Kontaktseite — die Karte zeigt, ob wir gerade geöffnet haben. Außerhalb der Öffnungszeiten schreiben Sie uns auf WhatsApp, und wir vereinbaren einen Termin." },
+      "payment":           { "question": "Wie zahle ich?",                                                 "answer": "Sie zahlen unsere Servicegebühr bar oder per Karte bei der Abholung. Behördengebühren werden typischerweise per SEPA-Lastschrift gegen Ihr Mandat abgewickelt." },
+      "hidden_fees":       { "question": "Gibt es versteckte Gebühren?",                                   "answer": "Nein. Unsere Servicegebühr ist für die gewählte Dienstleistung festgelegt. Behördengebühren werden vom Kreis Steinfurt festgelegt und immer separat ausgewiesen." },
+      "lost_document":     { "question": "Was, wenn ich ein Dokument verloren habe?",                      "answer": "Sagen Sie uns Bescheid auf WhatsApp — wir kennen den schnellsten Weg für verlorene Zulassungsbescheinigungen, Versicherungsbriefe oder SEPA-Mandate und können das meist in derselben Woche klären." },
+      "deliver_plates":    { "question": "Können Sie meine neuen Kennzeichen liefern?",                    "answer": "Ja — wir bieten Kurierlieferung in Rheine ab €25. Für umliegende Orte nennen wir auf WhatsApp einen Pauschalpreis." },
+      "express_urgency":   { "question": "Wie dringend ist Express?",                                      "answer": "Express bedeutet, dass wir versuchen, Ihr Fahrzeug am selben Tag zuzulassen, abhängig von der Kapazität der Behörde. Sie erhalten innerhalb von 30 Minuten eine Bestätigung auf WhatsApp." }
+    }
+  },
+  "documents": {
+    "pageEyebrow": "Dokumente",
+    "pageTitle": "Die richtigen Unterlagen — einmal",
+    "pageSubtitle": "Jedes Dokument, das wir verlangen, wie es aussieht und warum es wichtig ist. Filtern Sie nach Dienstleistung.",
+    "allServices": "Alle Dienstleistungen",
+    "lostDocTitle": "Dokument verloren?",
+    "lostDocSub": "Sagen Sie uns, was fehlt — wir nennen Ihnen den schnellsten Weg zur Ersatzbeschaffung.",
+    "tellUs": "Per WhatsApp Bescheid geben",
+    "downloadForm": "Formular herunterladen →",
+    "items": {
+      "id_card": {
+        "title": "Personalausweis oder Reisepass",
+        "description": "Gültiger Personalausweis, Aufenthaltstitel oder Reisepass — wir bestätigen die Identität bei der Behörde."
+      },
+      "evb": {
+        "title": "eVB-Nummer",
+        "description": "Siebenstellige elektronische Versicherungsbestätigung Ihrer Versicherung. Erforderlich, um ein Fahrzeug zuzulassen."
+      },
+      "sepa": {
+        "title": "SEPA-Mandat",
+        "description": "Lastschriftmandat für die Kfz-Steuer. Wir stellen eine ausfüllbare Vorlage bereit."
+      },
+      "zb1": {
+        "title": "Zulassungsbescheinigung I",
+        "description": "Zulassungsbescheinigung Teil I, die im Fahrzeug bleibt — das \"kleine\" grüne Dokument."
+      },
+      "zb2": {
+        "title": "Zulassungsbescheinigung II",
+        "description": "Fahrzeugbrief / Eigentumsnachweis — zu Hause sicher aufbewahrt, für Halterwechsel erforderlich."
+      },
+      "hu_report": {
+        "title": "HU / AU-Bericht",
+        "description": "Gültiger Hauptuntersuchungsbericht (TÜV/Dekra). Muss zum Zeitpunkt der Zulassung noch gültig sein."
+      },
+      "power_of_attorney": {
+        "title": "Vollmacht",
+        "description": "Unterschriebene Vollmacht, die uns ermöglicht, für Sie bei der Zulassungsstelle zu handeln."
+      },
+      "sales_contract": {
+        "title": "Kaufvertrag",
+        "description": "Unterschriebener Kaufvertrag (Gebrauchtwagen) mit Verkäufer-/Käuferdaten und Fahrzeugidentifikatoren."
+      },
+      "plates": {
+        "title": "Alte Kennzeichen",
+        "description": "Für Ummeldung oder Abmeldung — bitte bringen Sie die vorhandenen Kennzeichen ins Büro mit."
+      }
+    }
+  },
+  "extras": {
+    "items": {
+      "wunschkennzeichen": {
+        "name": "Wunschkennzeichen",
+        "description": "Reservieren und bestellen Sie Ihre Wunschkennzeichen-Kombination, bevor wir das Fahrzeug anmelden."
+      },
+      "plate_stamping": {
+        "name": "Kennzeichen-Prägung",
+        "description": "Wir holen gestempelte, montagefertige Kennzeichen ab — kein zusätzlicher Weg für Sie."
+      },
+      "courier": {
+        "name": "Kurierlieferung",
+        "description": "Gestempelte Dokumente und Kennzeichen werden nach Hause, ins Büro oder zum Autohaus geliefert."
+      },
+      "express": {
+        "name": "Express-Bearbeitung",
+        "description": "Taggleicher Termin, sofern die Zulassungsstelle es zulässt. Prioritätswarteschlange inklusive."
+      },
+      "power_of_attorney_prep": {
+        "name": "Vollmacht vorbereiten",
+        "description": "Wir bereiten die Vollmacht für Sie vor — nur unterschreiben und zurücksenden."
+      },
+      "used_car_check": {
+        "name": "Gebrauchtwagen-Dokumentenprüfung",
+        "description": "Vorkauf-Prüfung von Zulassungsbescheinigung II, HU-Bericht und FIN-Plausibilität."
+      }
+    }
+  },
+  "pricing": {
+    "pageEyebrow": "Preise",
+    "pageTitle": "Transparente, pauschale Servicegebühren",
+    "pageSubtitle": "Unsere Gebühr ist das, was Sie uns zahlen — Behördengebühren (vom Kreis Steinfurt festgelegt) sind separat und immer ausgewiesen.",
+    "tableHeaders": {
+      "service": "Dienstleistung",
+      "fee": "Servicegebühr",
+      "authorityFees": "Behördengebühren",
+      "turnaround": "Bearbeitungszeit"
+    },
+    "includedTitle": "Was enthalten ist",
+    "notIncludedTitle": "Nicht enthalten",
+    "optionalExtrasTitle": "Optionale Extras",
+    "stillNotSure": "Immer noch unsicher?",
+    "getQuote": "Genaues Angebot erhalten",
+    "from": "Ab",
+    "feeSuffix": "+ Behördengebühren",
+    "authorityDisclaimer": "Behördengebühren werden vom Kreis Steinfurt festgelegt und können sich ohne Vorankündigung ändern."
+  },
+  "contact": {
+    "pageEyebrow": "Kontakt",
+    "pageTitle": "Kontakt zum Concierge",
+    "pageSubtitle": "WhatsApp ist am schnellsten. Wir antworten auch per Telefon und E-Mail während der Bürozeiten.",
+    "channels": {
+      "whatsappTitle": "WhatsApp",
+      "whatsappDesc": "Schnellster Kanal — Fotos, Formulare und Statusupdates in einem Gespräch.",
+      "phoneTitle": "Telefon",
+      "phoneDesc": "Lieber kurz anrufen? Mo–Fr während der Bürozeiten erreichbar.",
+      "emailTitle": "E-Mail",
+      "emailDesc": "Scans anhängen oder für alles Formelle nutzen. Antwort meist innerhalb weniger Stunden."
+    },
+    "officeHeading": "Büro",
+    "officeText": "200 m von der Zulassungsstelle Kreis Steinfurt in Rheine. Parkplätze direkt vor der Tür.",
+    "getDirections": "Route anzeigen",
+    "hoursHeading": "Öffnungszeiten",
+    "evenings": "Abends (ab 18:00) und Wochenenden nach Vereinbarung.",
+    "call": "Anrufen"
+  },
+  "request": {
+    "pageEyebrow": "Anfrage",
+    "pageTitle": "Anfrage starten",
+    "pageSubtitle": "Drei kurze Schritte. Wir öffnen WhatsApp mit allem vorausgefüllt.",
+    "steps": {
+      "service": "Dienstleistung",
+      "extras": "Extras",
+      "details": "Details"
+    },
+    "step1": {
+      "title": "Wobei können wir helfen?",
+      "subtitle": "Wählen Sie die primäre Dienstleistung aus. Wir übernehmen den Papierkram, damit Sie es nicht tun müssen.",
+      "next": "Weiter zu Extras →",
+      "errorSelect": "Bitte wählen Sie eine Dienstleistung."
+    },
+    "step2": {
+      "title": "Extras hinzufügen?",
+      "subtitle": "Optional — wählen Sie, was Ihnen das Leben erleichtert. Sie können diesen Schritt überspringen.",
+      "youllNeed": "Sie benötigen",
+      "next": "Weiter zu Details →"
+    },
+    "step3": {
+      "title": "Ein paar kurze Angaben",
+      "subtitle": "Wir brauchen das Minimum, um Ihre Anfrage vorzubereiten. Kein Konto erforderlich.",
+      "fields": {
+        "name": "Vollständiger Name",
+        "phone": "Telefon / WhatsApp",
+        "phonePh": "+49 ...",
+        "email": "E-Mail (optional)",
+        "vehicle": "Fahrzeug (Kennzeichen / FIN / Marke)",
+        "preferredTime": "Wunschtermin (z. B. Di 10:00)",
+        "note": "Kurze Notiz (optional)"
+      },
+      "consentBefore": "Ich stimme zu, dass meine Daten zur Bearbeitung dieser Anfrage verarbeitet werden, gemäß der ",
+      "privacyPolicy": "Datenschutzerklärung",
+      "consentAfter": ".",
+      "requiredMark": " *",
+      "errorRequired": "Name und Telefon sind erforderlich.",
+      "errorConsent": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+      "next": "Überprüfen →"
+    },
+    "step4": {
+      "title": "Bereit zum Senden",
+      "subtitle": "Wir öffnen WhatsApp mit einer vorausgefüllten Nachricht. Einfach auf Senden tippen.",
+      "openWa": "WhatsApp mit meiner Anfrage öffnen",
+      "fallbackLine": "WhatsApp nicht verfügbar? Sie können uns auch per E-Mail oder Anruf erreichen.",
+      "tapAgain": "Tippen Sie die Schaltfläche erneut, um WhatsApp zu öffnen.",
+      "tapHere": "Hier tippen, um WhatsApp zu öffnen",
+      "sendEmail": "Per E-Mail senden",
+      "callBtn": "{phone} anrufen",
+      "summary": {
+        "service": "Dienstleistung",
+        "extras": "Extras",
+        "name": "Name",
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "vehicle": "Fahrzeug",
+        "preferredTime": "Wunschtermin",
+        "note": "Notiz"
+      }
+    },
+    "sent": {
+      "title": "Ihre Anfrage ist in WhatsApp bereit",
+      "desc": "Wir antworten meist innerhalb von Minuten während der Bürozeiten. Sie können diesen Tab schließen.",
+      "reopen": "WhatsApp erneut öffnen"
+    },
+    "actions": {
+      "back": "← Zurück",
+      "cancel": "Abbrechen",
+      "continue": "Weiter →"
+    },
+    "toast": {
+      "loadFail": "Dienstleistungen konnten nicht geladen werden. Bitte Seite neu laden."
+    }
+  },
+  "prefill": {
+    "hello": "Hallo Civic Concierge,",
+    "service": "Dienstleistung",
+    "extras": "Extras",
+    "preferredTime": "Wunschtermin",
+    "name": "Name",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "vehicle": "Fahrzeug",
+    "note": "Notiz",
+    "sentFrom": "(gesendet von civic-concierge.de)",
+    "chatbotNote": "Über den Chatbot gestartet",
+    "emailSubject": "Civic Concierge — WhatsApp-Anfrage"
+  },
+  "chatbot": {
+    "launcherAria": "Chat öffnen",
+    "dialogAria": "Civic Concierge Assistent",
+    "title": "Concierge-Assistent",
+    "closeAria": "Schließen",
+    "sendAria": "Senden",
+    "inputPlaceholder": "Nachricht eingeben...",
+    "pageEyebrow": "Assistent",
+    "pageTitle": "Fragen Sie den Concierge",
+    "pageSubtitle": "Schnelle Antworten, oder wir bereiten eine WhatsApp-Anfrage für Sie vor.",
+    "greet": "Hallo! Ich bin der Civic Concierge Assistent. Was möchten Sie heute erledigen?",
+    "askServicePrefix": "Super — ",
+    "askServiceSuffix": ". Möchten Sie unseren Express-Service (taggleich wenn möglich)?",
+    "askName": "Perfekt. Wie ist Ihr vollständiger Name?",
+    "askPhone": "Und Ihre WhatsApp- / Telefonnummer?",
+    "handoff": "Danke {name} — ich habe eine Anfrage vorbereitet. Sie können auf WhatsApp weitermachen, und wir übernehmen von hier.",
+    "handoffFallbackName": "",
+    "askPrice": "Unsere Servicegebühr beginnt bei €29 inkl. MwSt. Behördengebühren vom Kreis Steinfurt kommen hinzu. Möchten Sie ein Angebot für eine bestimmte Dienstleistung?",
+    "askDocuments": "Für die meisten Zulassungen benötigen Sie: Personalausweis oder Reisepass, eVB-Bestätigung der Versicherung, SEPA-Mandat für die Kfz-Steuer und die Zulassungsbescheinigung II (Fahrzeugbrief). Soll ich eine Anfrage starten?",
+    "talkHuman": "Ich übergebe Sie gerne direkt an das Team. Sie erhalten innerhalb weniger Minuten während der Bürozeiten eine Antwort in WhatsApp.",
+    "fallback": "Entschuldigung, das habe ich nicht verstanden. Möchten Sie auf WhatsApp weitermachen?",
+    "continueWa": "Auf WhatsApp fortfahren →",
+    "quick": {
+      "registerVehicle": "Fahrzeug zulassen",
+      "reRegister": "Ummelden / Halterwechsel",
+      "deregister": "Fahrzeug abmelden",
+      "getPlates": "Kennzeichen bestellen",
+      "askPricing": "Preise erfragen",
+      "askDocuments": "Dokumente erfragen",
+      "talkTeam": "Mit dem Team sprechen",
+      "yesExpress": "Ja, Express",
+      "noStandard": "Nein, Standard",
+      "back": "Zurück",
+      "startRequest": "Anfrage starten"
+    },
+    "services": {
+      "newRegistration": "Neuzulassung",
+      "reRegistration": "Ummeldung",
+      "deregistration": "Abmeldung",
+      "licensePlates": "Kennzeichen"
+    }
+  },
+  "footer": {
+    "tagline": "Schnelle, vertrauenswürdige Fahrzeugzulassung in Rheine & Kreis Steinfurt. WhatsApp-first, ruhig und erledigt.",
+    "services": "Dienstleistungen",
+    "company": "Unternehmen",
+    "links": {
+      "registration": "Fahrzeugzulassung",
+      "reRegistration": "Ummeldung",
+      "deregistration": "Abmeldung",
+      "licensePlates": "Kennzeichen",
+      "express": "Express-Service",
+      "howItWorks": "So funktioniert's",
+      "faq": "FAQ",
+      "contact": "Kontakt",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "privacySettings": "Datenschutzeinstellungen"
+    },
+    "copyright": "© {year} Civic Concierge · Rheiner Zulassungsdienste",
+    "madeIn": "Mit Ruhe in Westfalen gemacht."
+  },
+  "cookie": {
+    "aria": "Cookie- und Datenschutzeinstellungen",
+    "title": "Wir respektieren Ihre Privatsphäre",
+    "descBefore": "Wir verwenden ein Minimum an Daten, um diese Website zu betreiben und Ihnen zu helfen, uns auf WhatsApp zu erreichen. Optionale Analysen sind standardmäßig deaktiviert. Siehe unsere ",
+    "privacyLink": "Datenschutzerklärung",
+    "descAfter": ".",
+    "essentialsOnly": "Nur Essenzielle",
+    "acceptAll": "Alle akzeptieren"
+  },
+  "bottomNav": {
+    "whatsapp": "WhatsApp",
+    "call": "Anruf",
+    "help": "Hilfe"
   },
   "location": {
     "hours": "Öffnungszeiten",
@@ -92,5 +519,19 @@
       "Sunday": "Sonntag"
     },
     "closed": "Geschlossen"
+  },
+  "legal": {
+    "heading": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "cookies": "Cookies"
+  },
+  "common": {
+    "loading": "Wird geladen…",
+    "error": "Etwas ist schiefgelaufen",
+    "retry": "Erneut versuchen",
+    "close": "Schließen",
+    "back": "Zurück"
   }
 }

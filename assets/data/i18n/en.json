@@ -1,11 +1,16 @@
 {
+  "brand": {
+    "name": "Civic Concierge"
+  },
   "nav": {
     "services": "Services",
     "pricing": "Pricing",
     "documents": "Documents",
     "howItWorks": "How it works",
     "contact": "Contact",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "openMenu": "Open menu",
+    "changeLanguage": "Change language"
   },
   "hero": {
     "badge": "Official registration service",
@@ -39,7 +44,83 @@
     "seeAll": "See all services →",
     "from": "From",
     "details": "Details →",
-    "popular": "Popular"
+    "view": "View →",
+    "popular": "Popular",
+    "pageEyebrow": "Our services",
+    "pageTitle": "Everything we handle for you",
+    "pageSubtitle": "Five services, one concierge desk. Pick what fits — we'll handle the rest.",
+    "compareTitle": "Compare at a glance",
+    "compareHeaders": {
+      "service": "Service",
+      "serviceFee": "Service fee",
+      "authorityFees": "Authority fees",
+      "turnaround": "Turnaround"
+    },
+    "compareFooter": "Authority fees are set by Kreis Steinfurt and may change.",
+    "notSureTitle": "Not sure which service you need?",
+    "notSureSubtitle": "Send us a quick message — we'll tell you in minutes.",
+    "startWa": "Start via WhatsApp",
+    "items": {
+      "registration": {
+        "name": "Vehicle Registration",
+        "shortName": "Registration",
+        "blurb": "Register a new, imported, or used vehicle at Kreis Steinfurt. We prepare the paperwork and handle the counter.",
+        "authorityFeeHint": "€28–€40 typical",
+        "turnaround": "24–48 h"
+      },
+      "re-registration": {
+        "name": "Re-registration",
+        "shortName": "Re-registration",
+        "blurb": "Transfer ownership, update address, or change plates. We handle the full re-registration flow.",
+        "authorityFeeHint": "€20–€35 typical",
+        "turnaround": "24–48 h"
+      },
+      "deregistration": {
+        "name": "Deregistration",
+        "shortName": "Deregistration",
+        "blurb": "Take a vehicle out of circulation — sale, scrap, or export. We deregister it cleanly with the Zulassungsstelle.",
+        "authorityFeeHint": "€8–€16 typical",
+        "turnaround": "Same day"
+      },
+      "license-plate": {
+        "name": "License Plates",
+        "shortName": "License Plates",
+        "blurb": "Custom plates (Wunschkennzeichen), replacement plates, season plates — ordered, stamped, delivered.",
+        "authorityFeeHint": "€30–€45 typical",
+        "turnaround": "24 h"
+      },
+      "express": {
+        "name": "Express Service",
+        "shortName": "Express",
+        "blurb": "Same-day handling for time-critical cases. Priority queue at the Zulassungsstelle.",
+        "authorityFeeHint": "Standard + priority fee",
+        "turnaround": "Same day"
+      }
+    }
+  },
+  "serviceDetail": {
+    "eyebrow": "Service detail",
+    "startWa": "Start via WhatsApp",
+    "viewPricing": "View pricing",
+    "feeSuffix": "+ authority fees",
+    "requiredDocs": "Required documents",
+    "requiredDocsSub": "What to bring",
+    "optionalExtras": "Optional extras",
+    "optionalExtrasSub": "Make your life easier",
+    "readyTitle": "Ready to skip the line?",
+    "readySub": "Tell us about your vehicle on WhatsApp — we'll review everything in minutes.",
+    "faqHeading": "Questions for this service",
+    "relatedHeading": "Related services",
+    "home": "Home",
+    "downloadForm": "Download form →",
+    "allInclusive": "All-inclusive concierge handling.",
+    "includedPreVerification": "Digital pre-verification",
+    "includedPriority": "Priority at Kreis Steinfurt",
+    "includedUpdates": "WhatsApp status updates",
+    "includedTurnaround": "Turnaround: {turnaround}",
+    "startThisService": "Start this service →",
+    "fromPriceAnd": "From €{price} · {turnaround}",
+    "plusFrom": "+ from €{price}"
   },
   "howItWorks": {
     "heading": "How it works",
@@ -56,6 +137,41 @@
     "step3": {
       "title": "Registration & delivery",
       "desc": "We process your application in Rheine. Stamped documents and new plates ready within 48 hours — pickup or courier."
+    },
+    "pageEyebrow": "How it works",
+    "pageTitle": "Four calm steps",
+    "pageSubtitle": "No queues, no confusion — a managed path from question to stamped documents.",
+    "long": {
+      "step1": {
+        "title": "Message us",
+        "desc": "Open WhatsApp and tell us what you need. We reply within minutes during office hours."
+      },
+      "step2": {
+        "title": "We pre-verify",
+        "desc": "Send photos of your documents. We check completeness so nothing bounces back at the counter."
+      },
+      "step3": {
+        "title": "Hand over the paperwork",
+        "desc": "Drop by the office in Rheine or use the courier option. You keep your time; we walk into the authority."
+      },
+      "step4": {
+        "title": "Plates in your hand",
+        "desc": "We return stamped documents and new plates within 48 hours — pickup, delivery, or direct to the repair shop."
+      }
+    },
+    "pillars": {
+      "secure": {
+        "title": "Secure handling",
+        "desc": "Your documents never leave our custody. We work with German data-protection standards by default."
+      },
+      "express": {
+        "title": "Express option",
+        "desc": "Time-critical? Add the Express extra — same-day handling where the authority permits it."
+      },
+      "alwaysOn": {
+        "title": "Always-on updates",
+        "desc": "Every hand-off, every stamp — delivered as a short WhatsApp update. No surprises."
+      }
     }
   },
   "trust": {
@@ -67,12 +183,323 @@
     "title": "Ready to skip the line?",
     "subtitle": "Initiate your registration in under 60 seconds. Our concierge desk is standing by to review your documents.",
     "whatsapp": "Start via WhatsApp",
-    "call": "or call +49 173 322 55 70"
+    "call": "Call",
+    "callOr": "or call +49 173 322 55 70"
   },
   "faq": {
     "title": "Quick answers",
     "subtitle": "The five we hear most. The full list is on",
-    "faqPage": "the FAQ page"
+    "faqPage": "the FAQ page",
+    "pageEyebrow": "FAQ",
+    "pageTitle": "Answers, without the jargon",
+    "pageSubtitle": "The questions we hear most — grouped, searchable, and answered in plain language.",
+    "searchLabel": "Search",
+    "searchPlaceholder": "e.g. 'how much', 'documents', 'Wunschkennzeichen'",
+    "allCategory": "All",
+    "noResults": "No matching questions. Try a different search.",
+    "didntFind": "Didn't find your answer?",
+    "askOnWa": "Ask on WhatsApp",
+    "categories": {
+      "Pricing": "Pricing",
+      "Timing": "Timing",
+      "Documents": "Documents",
+      "Plates": "Plates",
+      "Payment": "Payment"
+    },
+    "items": {
+      "cost":              { "question": "How much does the service cost?",                          "answer": "Our service fee starts at €29 incl. VAT. Authority fees from Kreis Steinfurt come on top and depend on the exact service. See our pricing page for a clear breakdown." },
+      "duration":          { "question": "How long does a registration take?",                       "answer": "Once we have all the original documents and they pass our digital pre-verification, the physical registration at the Rheine authority typically takes 24–48 hours. Same-day Express is available Mon–Fri." },
+      "documents_needed":  { "question": "Which documents do I need?",                               "answer": "It depends on the service. For a new registration: valid ID or passport, eVB insurance number, signed SEPA mandate, Zulassungsbescheinigung II, and the HU/AU report for used vehicles. See our documents page for the full list per service." },
+      "original_id":       { "question": "Do I need to hand over my original ID?",                   "answer": "Yes — the authority requires the original ID for final processing. We arrange a secure handover via courier or our in-office lockbox." },
+      "wunschkennzeichen": { "question": "Can you handle custom plates (Wunschkennzeichen)?",        "answer": "Yes. Reserve your combination online (free) and share the PIN with us, or let us reserve it for you. Kreis Steinfurt currently charges ~€10.20 for the combination." },
+      "keep_plates":       { "question": "Can I keep my existing plates when I re-register?",        "answer": "In many cases yes — we'll confirm during our intake on WhatsApp. If the authority assigns new plates, we can stamp them on the spot." },
+      "same_day":          { "question": "Can I still come today?",                                  "answer": "Check the hours on our contact page — the card shows whether we're open right now. Outside of opening hours, message us on WhatsApp and we'll arrange a slot." },
+      "payment":           { "question": "How do I pay?",                                            "answer": "You pay our service fee in cash or by card at pickup. Authority fees are typically settled via SEPA direct debit against your mandate." },
+      "hidden_fees":       { "question": "Are there any hidden fees?",                               "answer": "No. Our service fee is fixed for the service you pick. Authority fees are set by Kreis Steinfurt and are always shown separately." },
+      "lost_document":     { "question": "What if I lost a document?",                               "answer": "Tell us on WhatsApp — we know the fastest path for lost Zulassungsbescheinigungen, insurance letters, or SEPA mandates and can usually resolve it the same week." },
+      "deliver_plates":    { "question": "Can you deliver my new plates?",                           "answer": "Yes — we offer courier delivery within Rheine from €25. For surrounding towns, we'll quote a flat rate on WhatsApp." },
+      "express_urgency":   { "question": "How urgent is Express?",                                   "answer": "Express means we aim to have your vehicle registered the same day, subject to authority capacity. You'll get a confirmation on WhatsApp within 30 minutes." }
+    }
+  },
+  "documents": {
+    "pageEyebrow": "Documents",
+    "pageTitle": "Bring the right paperwork — once",
+    "pageSubtitle": "Every document we ask for, what it looks like, and why it matters. Filter by service to see only what applies to you.",
+    "allServices": "All services",
+    "lostDocTitle": "Lost a document?",
+    "lostDocSub": "Tell us what's missing — we'll tell you the fastest recovery path.",
+    "tellUs": "Tell us on WhatsApp",
+    "downloadForm": "Download form →",
+    "items": {
+      "id_card": {
+        "title": "ID card or passport",
+        "description": "A valid German Personalausweis, residence permit, or passport — we confirm identity at the authority."
+      },
+      "evb": {
+        "title": "eVB Number",
+        "description": "Seven-character electronic insurance confirmation from your insurer. Required to register any vehicle on the road."
+      },
+      "sepa": {
+        "title": "SEPA Mandate",
+        "description": "Direct-debit mandate for the motor vehicle tax (Kfz-Steuer). We provide a fillable template."
+      },
+      "zb1": {
+        "title": "Zulassungsbescheinigung I",
+        "description": "Vehicle registration certificate that stays in the car — the \"small\" green document."
+      },
+      "zb2": {
+        "title": "Zulassungsbescheinigung II",
+        "description": "Vehicle title / certificate of ownership — kept safe at home, needed for ownership changes."
+      },
+      "hu_report": {
+        "title": "HU / AU Report",
+        "description": "Valid main inspection (TÜV/Dekra) report. Must still be within its validity window at the time of registration."
+      },
+      "power_of_attorney": {
+        "title": "Power of attorney",
+        "description": "Signed authorisation that lets us act at the Zulassungsstelle on your behalf."
+      },
+      "sales_contract": {
+        "title": "Sales contract",
+        "description": "Signed purchase agreement (used car) with seller / buyer details and vehicle identifiers."
+      },
+      "plates": {
+        "title": "Old plates",
+        "description": "For re-registration or deregistration — please bring the existing plates to the office."
+      }
+    }
+  },
+  "extras": {
+    "items": {
+      "wunschkennzeichen": {
+        "name": "Custom plates (Wunschkennzeichen)",
+        "description": "Reserve and order your custom license-plate combination before we register the car."
+      },
+      "plate_stamping": {
+        "name": "Plate stamping",
+        "description": "We pick up stamped, ready-to-mount license plates — no extra trip for you."
+      },
+      "courier": {
+        "name": "Courier delivery",
+        "description": "Stamped documents and plates delivered to your home, office, or dealership."
+      },
+      "express": {
+        "name": "Express handling",
+        "description": "Same-day slot where the Zulassungsstelle allows it. Priority queue included."
+      },
+      "power_of_attorney_prep": {
+        "name": "Power-of-attorney prep",
+        "description": "We prepare the signed authorisation for you — just sign and send back."
+      },
+      "used_car_check": {
+        "name": "Used-car document check",
+        "description": "Pre-purchase review of Zulassungsbescheinigung II, HU report, and VIN plausibility."
+      }
+    }
+  },
+  "pricing": {
+    "pageEyebrow": "Pricing",
+    "pageTitle": "Transparent, flat service fees",
+    "pageSubtitle": "Our fee is what you pay us — authority fees (set by Kreis Steinfurt) are separate and always shown.",
+    "tableHeaders": {
+      "service": "Service",
+      "fee": "Service fee",
+      "authorityFees": "Authority fees",
+      "turnaround": "Turnaround"
+    },
+    "includedTitle": "What's included",
+    "notIncludedTitle": "Not included",
+    "optionalExtrasTitle": "Optional extras",
+    "stillNotSure": "Still not sure?",
+    "getQuote": "Get an exact quote",
+    "from": "From",
+    "feeSuffix": "+ authority fees",
+    "authorityDisclaimer": "Authority fees are set by Kreis Steinfurt and may change without notice."
+  },
+  "contact": {
+    "pageEyebrow": "Contact",
+    "pageTitle": "Get in touch with the concierge",
+    "pageSubtitle": "WhatsApp is fastest. We also answer phone and email during office hours.",
+    "channels": {
+      "whatsappTitle": "WhatsApp",
+      "whatsappDesc": "Fastest channel — photos, forms, and status updates in one thread.",
+      "phoneTitle": "Phone",
+      "phoneDesc": "Prefer a short call? We answer Mon–Fri during office hours.",
+      "emailTitle": "Email",
+      "emailDesc": "Attach scans or use for anything formal. Reply usually within hours."
+    },
+    "officeHeading": "Office",
+    "officeText": "200 m from the Rheine registration office (Zulassungsstelle Kreis Steinfurt). Parking directly in front.",
+    "getDirections": "Get directions",
+    "hoursHeading": "Opening hours",
+    "evenings": "Evenings (from 18:00) and weekends by appointment.",
+    "call": "Call"
+  },
+  "request": {
+    "pageEyebrow": "Request",
+    "pageTitle": "Start your request",
+    "pageSubtitle": "Three short steps. We'll open WhatsApp with everything prefilled.",
+    "steps": {
+      "service": "Service",
+      "extras": "Extras",
+      "details": "Details"
+    },
+    "step1": {
+      "title": "What do you need help with?",
+      "subtitle": "Select the primary service you require. We handle the paperwork, so you don't have to.",
+      "next": "Continue to Extras →",
+      "errorSelect": "Please select a service."
+    },
+    "step2": {
+      "title": "Add any extras?",
+      "subtitle": "Optional — select anything that makes your life easier. You can skip this step.",
+      "youllNeed": "You'll need",
+      "next": "Continue to Details →"
+    },
+    "step3": {
+      "title": "A few quick details",
+      "subtitle": "We need the minimum to prepare your request. No account needed.",
+      "fields": {
+        "name": "Full name",
+        "phone": "Phone / WhatsApp",
+        "phonePh": "+49 ...",
+        "email": "Email (optional)",
+        "vehicle": "Vehicle (plate / VIN / make)",
+        "preferredTime": "Preferred time (e.g. Tue 10:00)",
+        "note": "Short note (optional)"
+      },
+      "consentBefore": "I agree that my data will be processed to prepare this request, in line with the ",
+      "privacyPolicy": "privacy policy",
+      "consentAfter": ".",
+      "requiredMark": " *",
+      "errorRequired": "Name and phone are required.",
+      "errorConsent": "Please accept the privacy policy.",
+      "next": "Review →"
+    },
+    "step4": {
+      "title": "Ready to send",
+      "subtitle": "We'll open WhatsApp with a prefilled message. Just tap send.",
+      "openWa": "Open WhatsApp with my request",
+      "fallbackLine": "WhatsApp not available? You can also email or call us instead.",
+      "tapAgain": "Tap the button again to open WhatsApp.",
+      "tapHere": "Tap here to open WhatsApp",
+      "sendEmail": "Send by email",
+      "callBtn": "Call {phone}",
+      "summary": {
+        "service": "Service",
+        "extras": "Extras",
+        "name": "Name",
+        "phone": "Phone",
+        "email": "Email",
+        "vehicle": "Vehicle",
+        "preferredTime": "Preferred time",
+        "note": "Note"
+      }
+    },
+    "sent": {
+      "title": "Your request is ready in WhatsApp",
+      "desc": "We usually reply within minutes during office hours. You can close this tab.",
+      "reopen": "Reopen WhatsApp"
+    },
+    "actions": {
+      "back": "← Back",
+      "cancel": "Cancel",
+      "continue": "Continue →"
+    },
+    "toast": {
+      "loadFail": "Could not load services. Please refresh."
+    }
+  },
+  "prefill": {
+    "hello": "Hello Civic Concierge,",
+    "service": "Service",
+    "extras": "Extras",
+    "preferredTime": "Preferred time",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "vehicle": "Vehicle",
+    "note": "Note",
+    "sentFrom": "(sent from civic-concierge.de)",
+    "chatbotNote": "Started from chatbot",
+    "emailSubject": "Civic Concierge — WhatsApp request"
+  },
+  "chatbot": {
+    "launcherAria": "Open chat",
+    "dialogAria": "Civic Concierge assistant",
+    "title": "Concierge Assistant",
+    "closeAria": "Close",
+    "sendAria": "Send",
+    "inputPlaceholder": "Type a message...",
+    "pageEyebrow": "Assistant",
+    "pageTitle": "Ask the concierge",
+    "pageSubtitle": "Quick answers, or we'll prepare a WhatsApp request for you.",
+    "greet": "Hi! I'm the Civic Concierge assistant. What would you like to do today?",
+    "askServicePrefix": "Great — ",
+    "askServiceSuffix": ". Do you want our Express service (same-day if possible)?",
+    "askName": "Perfect. What's your full name?",
+    "askPhone": "And your WhatsApp / phone number?",
+    "handoff": "Thanks {name} — I've prepared a request. You can continue on WhatsApp and we'll take it from here.",
+    "handoffFallbackName": "there",
+    "askPrice": "Our service fee starts at €29 incl. VAT. Authority fees from Kreis Steinfurt come on top. Would you like a quote for a specific service?",
+    "askDocuments": "For most registrations you'll need: ID or passport, eVB insurance confirmation, SEPA mandate for motor tax, and the Zulassungsbescheinigung II (vehicle title). Shall I start a request?",
+    "talkHuman": "I can hand you to the team directly. You'll get a reply in WhatsApp within minutes during office hours.",
+    "fallback": "Sorry, I didn't catch that. Would you like to continue on WhatsApp?",
+    "continueWa": "Continue on WhatsApp →",
+    "quick": {
+      "registerVehicle": "Register a vehicle",
+      "reRegister": "Re-register / change owner",
+      "deregister": "Deregister a vehicle",
+      "getPlates": "Get license plates",
+      "askPricing": "Ask about pricing",
+      "askDocuments": "Ask about documents",
+      "talkTeam": "Talk to the team",
+      "yesExpress": "Yes, express",
+      "noStandard": "No, standard",
+      "back": "Back",
+      "startRequest": "Start a request"
+    },
+    "services": {
+      "newRegistration": "New Registration",
+      "reRegistration": "Re-registration",
+      "deregistration": "Deregistration",
+      "licensePlates": "License Plates"
+    }
+  },
+  "footer": {
+    "tagline": "Fast, trustworthy vehicle registration in Rheine & Kreis Steinfurt. WhatsApp-first, calm, and handled.",
+    "services": "Services",
+    "company": "Company",
+    "links": {
+      "registration": "Vehicle Registration",
+      "reRegistration": "Re-registration",
+      "deregistration": "Deregistration",
+      "licensePlates": "License Plates",
+      "express": "Express Service",
+      "howItWorks": "How it works",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "imprint": "Imprint",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "privacySettings": "Privacy settings"
+    },
+    "copyright": "© {year} Civic Concierge · Rheine Vehicle Registration Services",
+    "madeIn": "Made calmly in Westphalia."
+  },
+  "cookie": {
+    "aria": "Cookie and privacy settings",
+    "title": "We respect your privacy",
+    "descBefore": "We use a minimum of data to run this site and help you reach us on WhatsApp. Optional analytics are off by default. See our ",
+    "privacyLink": "privacy policy",
+    "descAfter": ".",
+    "essentialsOnly": "Essentials only",
+    "acceptAll": "Accept all"
+  },
+  "bottomNav": {
+    "whatsapp": "WhatsApp",
+    "call": "Call",
+    "help": "Help"
   },
   "location": {
     "hours": "Hours",
@@ -92,5 +519,19 @@
       "Sunday": "Sunday"
     },
     "closed": "Closed"
+  },
+  "legal": {
+    "heading": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "close": "Close",
+    "back": "Back"
   }
 }

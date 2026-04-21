@@ -111,9 +111,9 @@
               <span class="msi" style="font-size:220px;color:var(--tertiary-fixed);opacity:0.9">directions_car</span>
             </div>
             <div class="absolute bottom-4 left-4 right-4 rounded-xl p-4" style="background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);color:var(--on-primary)">
-              <div class="text-xs uppercase tracking-widest opacity-80 mb-1">Today</div>
+              <div class="text-xs uppercase tracking-widest opacity-80 mb-1" data-i18n="hero.today">Today</div>
               <div class="flex items-center justify-between">
-                <div class="font-bold">Rheine &amp; Kreis Steinfurt</div>
+                <div class="font-bold" data-i18n-skip>Rheine &amp; Kreis Steinfurt</div>
                 <span class="open-now-pill text-xs font-bold px-2 py-1 rounded-full" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed)"></span>
               </div>
             </div>
@@ -172,7 +172,7 @@
               <div class="w-1 h-20 rounded-full mt-2 opacity-20" style="background:linear-gradient(to bottom, var(--primary), var(--surface-container-high))"></div>
             </div>
             <div class="flex-1 p-6 md:p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-soft)">
-              <div class="text-xs font-bold uppercase tracking-widest mb-1 md:hidden" style="color:var(--secondary)">Step 1</div>
+              <div class="text-xs font-bold uppercase tracking-widest mb-1 md:hidden" style="color:var(--secondary)" data-i18n="howItWorks.stepPrefix1">Step 1</div>
               <h3 class="text-2xl font-bold mb-2" style="color:var(--primary)" data-i18n="howItWorks.step1.title">Submit request via WhatsApp</h3>
               <p style="color:var(--secondary)" data-i18n="howItWorks.step1.desc">Message us. We immediately outline the specific documents for your exact vehicle type and situation.</p>
             </div>
@@ -183,7 +183,7 @@
               <div class="w-1 h-20 rounded-full mt-2 opacity-20" style="background:linear-gradient(to bottom, var(--primary-container), var(--surface-container-high))"></div>
             </div>
             <div class="flex-1 p-6 md:p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-soft)">
-              <div class="text-xs font-bold uppercase tracking-widest mb-1 md:hidden" style="color:var(--secondary)">Step 2</div>
+              <div class="text-xs font-bold uppercase tracking-widest mb-1 md:hidden" style="color:var(--secondary)" data-i18n="howItWorks.stepPrefix2">Step 2</div>
               <h3 class="text-2xl font-bold mb-2" style="color:var(--primary)" data-i18n="howItWorks.step2.title">Digital document verification</h3>
               <p style="color:var(--secondary)" data-i18n="howItWorks.step2.desc">Send photos of your documents. We audit them for completeness to guarantee success at the authority.</p>
             </div>
@@ -193,7 +193,7 @@
               <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl" style="background:var(--tertiary-fixed);color:var(--on-tertiary-fixed);box-shadow:var(--shadow-glow)">3</div>
             </div>
             <div class="flex-1 p-6 md:p-8 rounded-2xl" style="background:var(--surface-container-lowest);box-shadow:var(--shadow-soft)">
-              <div class="text-xs font-bold uppercase tracking-widest mb-1 md:hidden" style="color:var(--secondary)">Step 3</div>
+              <div class="text-xs font-bold uppercase tracking-widest mb-1 md:hidden" style="color:var(--secondary)" data-i18n="howItWorks.stepPrefix3">Step 3</div>
               <h3 class="text-2xl font-bold mb-2" style="color:var(--primary)" data-i18n="howItWorks.step3.title">Registration &amp; delivery</h3>
               <p style="color:var(--secondary)" data-i18n="howItWorks.step3.desc">We process your application in Rheine. Stamped documents and new plates ready within 48 hours — pickup or courier.</p>
             </div>
@@ -267,8 +267,8 @@
           <div class="flex items-center gap-2 text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--secondary)">
             <span class="msi" style="font-size:18px">place</span> <span data-i18n="location.office">Office</span>
           </div>
-          <p class="font-bold text-lg" style="color:var(--primary)">Civic Concierge</p>
-          <p style="color:var(--secondary)">Bayernstraße 90<br/>48429 Rheine, Germany</p>
+          <p class="font-bold text-lg" style="color:var(--primary)" data-i18n-skip>Civic Concierge</p>
+          <p style="color:var(--secondary)"><span data-i18n-skip>Bayernstraße 90</span><br/><span data-i18n="location.address">48429 Rheine, Germany</span></p>
           <div class="mt-5 flex flex-wrap gap-3">
             <a href="https://www.google.com/maps/search/?api=1&query=Bayernstra%C3%9Fe+90%2C+48429+Rheine" target="_blank" rel="noopener" class="text-sm font-semibold px-4 py-2 rounded-lg" style="background:var(--surface-container-lowest);color:var(--primary)" data-i18n="location.getDirections">Get directions</a>
             <a href="tel:+491733225570" class="text-sm font-semibold px-4 py-2 rounded-lg" style="background:var(--surface-container-lowest);color:var(--primary)" data-i18n="location.call">Call</a>
@@ -286,68 +286,108 @@
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
     import { loadJSON, create, $, onReady } from "/assets/js/utils.js";
-    onReady(async () => {
-      // Service cards
-      const svc = await loadJSON("/assets/data/services.json");
-      const box = document.getElementById("home-services");
-      svc.forEach(s => {
-        const card = create("a", { href: `/services/${s.slug}/`, class: "block p-6 rounded-2xl hover:-translate-y-0.5 transition-transform", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
-          create("div", { class: "flex items-center justify-between mb-4" }, [
-            create("div", { class: "w-12 h-12 rounded-full flex items-center justify-center", style: "background:var(--secondary-container);color:var(--primary)", html: `<span class="msi">${s.icon}</span>` }),
-            s.popular ? create("span", { class: "text-xs font-bold uppercase tracking-widest px-2 py-1 rounded-full", style: "background:rgba(111,251,190,0.2);color:var(--on-tertiary-container)" }, "Popular") : null,
-          ]),
-          create("h3", { class: "text-xl font-bold mb-1", style: "color:var(--primary)" }, s.name),
-          create("p", { class: "text-sm mb-4", style: "color:var(--secondary)" }, s.blurb),
-          create("div", { class: "flex items-center justify-between" }, [
-            create("span", { class: "font-bold", style: "color:var(--primary)" }, `From €${s.serviceFeeFrom}`),
-            create("span", { class: "text-sm font-semibold", style: "color:var(--on-tertiary-container)" }, "Details →"),
-          ]),
+
+    function T (key, fallback) {
+      const fn = window.CCI18n && window.CCI18n.t;
+      if (typeof fn === "function") {
+        const v = fn(key);
+        if (v && v !== key) return v;
+      }
+      return fallback;
+    }
+    function svcField (svc, field) {
+      return T(`services.items.${svc.id}.${field}`, svc[field] || "");
+    }
+    function faqField (f, field) {
+      return T(`faq.items.${f.id}.${field}`, f[field] || "");
+    }
+
+    let _cached = null;
+
+    async function renderHome () {
+      if (!_cached) {
+        const [services, reviews, faqs, site] = await Promise.all([
+          loadJSON("/assets/data/services.json"),
+          loadJSON("/assets/data/reviews.json"),
+          loadJSON("/assets/data/faq.json"),
+          loadJSON("/assets/data/site.json"),
         ]);
-        box.appendChild(card);
-      });
+        _cached = { services, reviews, faqs, site };
+      }
+      const { services, reviews, faqs, site } = _cached;
+
+      // Service cards
+      const box = document.getElementById("home-services");
+      if (box) {
+        box.innerHTML = "";
+        services.forEach(s => {
+          const card = create("a", { href: `/services/${s.slug}/`, class: "block p-6 rounded-2xl hover:-translate-y-0.5 transition-transform", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
+            create("div", { class: "flex items-center justify-between mb-4" }, [
+              create("div", { class: "w-12 h-12 rounded-full flex items-center justify-center", style: "background:var(--secondary-container);color:var(--primary)", html: `<span class="msi">${s.icon}</span>` }),
+              s.popular ? create("span", { class: "text-xs font-bold uppercase tracking-widest px-2 py-1 rounded-full", style: "background:rgba(111,251,190,0.2);color:var(--on-tertiary-container)" }, T("services.popular", "Popular")) : null,
+            ]),
+            create("h3", { class: "text-xl font-bold mb-1", style: "color:var(--primary)" }, svcField(s, "name")),
+            create("p", { class: "text-sm mb-4", style: "color:var(--secondary)" }, svcField(s, "blurb")),
+            create("div", { class: "flex items-center justify-between" }, [
+              create("span", { class: "font-bold", style: "color:var(--primary)" }, `${T("services.from", "From")} €${s.serviceFeeFrom}`),
+              create("span", { class: "text-sm font-semibold", style: "color:var(--on-tertiary-container)" }, T("services.details", "Details →")),
+            ]),
+          ]);
+          box.appendChild(card);
+        });
+      }
 
       // Reviews
-      const reviews = await loadJSON("/assets/data/reviews.json");
       const rbox = document.getElementById("review-cards");
-      reviews.slice(0, 4).forEach(r => {
-        rbox.appendChild(create("div", { class: "p-6 rounded-2xl", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
-          create("div", { class: "flex items-center gap-1 mb-3", style: "color:var(--on-tertiary-container)", html: '<span class="msi fill">star</span>'.repeat(r.rating) }),
-          create("p", { class: "text-sm leading-relaxed mb-3", style: "color:var(--on-surface)" }, r.text),
-          create("p", { class: "text-xs font-bold uppercase tracking-widest", style: "color:var(--secondary)" }, r.author),
-        ]));
-      });
+      if (rbox) {
+        rbox.innerHTML = "";
+        reviews.slice(0, 4).forEach(r => {
+          const text = T(`reviews.items.${r.id}.text`, r.text);
+          const author = T(`reviews.items.${r.id}.author`, r.author);
+          rbox.appendChild(create("div", { class: "p-6 rounded-2xl", style: "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)" }, [
+            create("div", { class: "flex items-center gap-1 mb-3", style: "color:var(--on-tertiary-container)", html: '<span class="msi fill">star</span>'.repeat(r.rating) }),
+            create("p", { class: "text-sm leading-relaxed mb-3", style: "color:var(--on-surface)" }, text),
+            create("p", { class: "text-xs font-bold uppercase tracking-widest", style: "color:var(--secondary)" }, author),
+          ]));
+        });
+      }
 
       // FAQ teaser
-      const faqs = (await loadJSON("/assets/data/faq.json")).slice(0, 5);
       const fbox = document.getElementById("home-faq");
-      faqs.forEach(f => {
-        const d = document.createElement("details");
-        d.className = "group rounded-2xl";
-        d.style = "background:var(--surface-container-lowest);box-shadow:0 2px 10px rgba(25,28,30,0.02)";
-        d.innerHTML = `<summary class="flex justify-between items-center font-bold p-5" style="color:var(--primary)">${f.question}<span class="msi transition group-open:rotate-180" style="color:var(--secondary)">expand_more</span></summary><div class="px-5 pb-5" style="color:var(--secondary)">${f.answer}</div>`;
-        fbox.appendChild(d);
-      });
+      if (fbox) {
+        fbox.innerHTML = "";
+        faqs.slice(0, 5).forEach(f => {
+          const d = document.createElement("details");
+          d.className = "group rounded-2xl";
+          d.style = "background:var(--surface-container-lowest);box-shadow:0 2px 10px rgba(25,28,30,0.02)";
+          d.innerHTML = `<summary class="flex justify-between items-center font-bold p-5" style="color:var(--primary)">${faqField(f, "question")}<span class="msi transition group-open:rotate-180" style="color:var(--secondary)">expand_more</span></summary><div class="px-5 pb-5" style="color:var(--secondary)">${faqField(f, "answer")}</div>`;
+          fbox.appendChild(d);
+        });
+      }
 
       // Hours
-      const site = await loadJSON("/assets/data/site.json");
-      const { t } = await import("/assets/js/i18n.js");
       const DAYS = [["mon","Monday"],["tue","Tuesday"],["wed","Wednesday"],["thu","Thursday"],["fri","Friday"],["sat","Saturday"],["sun","Sunday"]];
       const hl = document.getElementById("hours-list");
-      DAYS.forEach(([k, label]) => {
-        const ranges = site.hours[k] || [];
-        const li = document.createElement("li");
-        li.setAttribute("data-hours-row", k);
-        li.className = "flex justify-between py-2";
-        const translatedDay = t(`location.days.${label}`);
-        const translatedClosed = t('location.closed');
-        li.innerHTML = `<span style="color:var(--primary)">${translatedDay}</span><span style="color:var(--secondary)">${ranges.length ? ranges.join(" · ") : translatedClosed}</span>`;
-        hl.appendChild(li);
-      });
-      // Today highlight
-      const todayKey = ["sun","mon","tue","wed","thu","fri","sat"][new Date().getDay()];
-      const tr = hl.querySelector(`[data-hours-row="${todayKey}"]`);
-      if (tr) { tr.style.background = "var(--surface-container-lowest)"; tr.style.borderRadius = "8px"; tr.style.padding = "8px 12px"; }
-    });
+      if (hl) {
+        hl.innerHTML = "";
+        DAYS.forEach(([k, label]) => {
+          const ranges = site.hours[k] || [];
+          const li = document.createElement("li");
+          li.setAttribute("data-hours-row", k);
+          li.className = "flex justify-between py-2";
+          const translatedDay = T(`location.days.${label}`, label);
+          const translatedClosed = T("location.closed", "Closed");
+          li.innerHTML = `<span style="color:var(--primary)">${translatedDay}</span><span style="color:var(--secondary)">${ranges.length ? ranges.join(" · ") : translatedClosed}</span>`;
+          hl.appendChild(li);
+        });
+        const todayKey = ["sun","mon","tue","wed","thu","fri","sat"][new Date().getDay()];
+        const tr = hl.querySelector(`[data-hours-row="${todayKey}"]`);
+        if (tr) { tr.style.background = "var(--surface-container-lowest)"; tr.style.borderRadius = "8px"; tr.style.padding = "8px 12px"; }
+      }
+    }
+
+    onReady(renderHome);
+    document.addEventListener("language:changed", () => renderHome());
   </script>
 </body>
 </html>

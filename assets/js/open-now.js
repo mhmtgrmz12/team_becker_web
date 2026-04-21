@@ -33,9 +33,11 @@ export async function renderOpenNow () {
     const todayRanges = (hours[todayKey] || []).map(parseRange).filter(Boolean);
     const open = isNowInRanges(todayRanges);
 
-    // Pills
+    // Pills (text comes from i18n so it re-localises on language change)
+    const t = (window.CCI18n && window.CCI18n.t) || ((k) => k);
+    const label = open ? t("location.openNow") : t("location.closedNow");
     $$(".open-now-pill").forEach(el => {
-      el.innerHTML = `<span class="status-dot ${open ? "open" : "closed"}"></span>${open ? "Open now" : "Closed"}`;
+      el.innerHTML = `<span class="status-dot ${open ? "open" : "closed"}"></span>${label}`;
       el.classList.toggle("is-open", open);
     });
 
@@ -50,3 +52,4 @@ export async function renderOpenNow () {
 
 onReady(renderOpenNow);
 document.addEventListener("partials:ready", renderOpenNow);
+document.addEventListener("language:changed", renderOpenNow);
