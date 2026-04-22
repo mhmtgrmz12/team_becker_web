@@ -231,6 +231,9 @@ export async function initI18n () {
   document.dispatchEvent(new CustomEvent('language:changed', {
     detail: { lang: currentLang, dict: translations, initial: true }
   }));
+
+  // Reveal the page now that translations are applied — removes the FOUC flash.
+  if (document.body) document.body.classList.add('i18n-ready');
 }
 
 /* ---------- global bridge for non-module scripts ---------- */
