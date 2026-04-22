@@ -29,13 +29,19 @@ const changeListeners = new Set();
 /* ---------- detection ---------- */
 
 export function detectLanguage () {
-  // Always start in German on every page load.
-  // Users can switch via the language picker; that switch is applied live
-  // but is not persisted across page loads (by design).
+  // Default language is German. Within the same browser session (tab), any
+  // language the user picks is remembered via sessionStorage so it survives
+  // page-to-page navigation. When the tab is closed and reopened, the session
+  // is cleared and German is shown again.
   try {
     const q = new URLSearchParams(window.location.search).get('lang');
     if (q && SUPPORTED_LANGS.includes(q)) return q;
   } catch (_) { /* ignore */ }
+
+  try {
+    const stored = sessionStorage.getItem(STORAGE_KEY);
+    if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
+  } catch (_) { /* storage unavailable */ }
 
   return 'de';
 }
@@ -151,7 +157,9 @@ export async function loadTranslations (lang) {
     translations = {};
   }
   currentLang = lang;
-  // Do not persist language to localStorage — page always opens in German (see detectLanguage).
+  // Persist to sessionStorage so language survives page navigation within the same tab.
+  // (Not localStorage — closing and reopening the tab resets to German.)
+  try { sessionStorage.setItem(STORAGE_KEY, lang); } catch (_) { /* ignore */ }
   applyDirection(lang);
   return translations;
 }
