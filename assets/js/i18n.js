@@ -29,21 +29,15 @@ const changeListeners = new Set();
 /* ---------- detection ---------- */
 
 export function detectLanguage () {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
-  } catch (_) { /* storage unavailable */ }
-
+  // Always start in German on every page load.
+  // Users can switch via the language picker; that switch is applied live
+  // but is not persisted across page loads (by design).
   try {
     const q = new URLSearchParams(window.location.search).get('lang');
     if (q && SUPPORTED_LANGS.includes(q)) return q;
   } catch (_) { /* ignore */ }
 
-  const htmlLang = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
-  if (htmlLang && SUPPORTED_LANGS.includes(htmlLang)) return htmlLang;
-
-  const browser = (navigator.language || 'en').split('-')[0].toLowerCase();
-  return SUPPORTED_LANGS.includes(browser) ? browser : DEFAULT_LANG;
+  return 'de';
 }
 
 /* ---------- dictionary loading ---------- */
@@ -157,7 +151,7 @@ export async function loadTranslations (lang) {
     translations = {};
   }
   currentLang = lang;
-  try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) { /* ignore */ }
+  // Do not persist language to localStorage — page always opens in German (see detectLanguage).
   applyDirection(lang);
   return translations;
 }
