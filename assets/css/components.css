@@ -55,7 +55,6 @@
 .cb-msg {
   max-width: 82%; padding: 10px 14px; border-radius: var(--radius-md);
   font-size: 0.9rem; line-height: 1.5;
-  white-space: pre-line; /* Preserve line breaks */
 }
 .cb-msg.bot { 
   background: var(--surface-container-lowest); 
@@ -77,6 +76,16 @@
 }
 .cb-msg.bot p:last-child {
   margin-bottom: 0;
+}
+/* Clickable links inside bot messages */
+.cb-msg.bot a {
+  color: var(--on-tertiary-container) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+.cb-msg.bot a:hover {
+  opacity: 0.75;
 }
 .cb-msg.user { background: var(--primary); color: var(--on-primary); align-self: flex-end; }
 .cb-msg.system { align-self: center; font-size: 0.75rem; color: var(--secondary); background: transparent; }
