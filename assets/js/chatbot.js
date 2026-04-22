@@ -4,9 +4,40 @@
    - Falls back to a local scripted flow when the endpoint is unreachable
      so the UI is testable offline.
    - All user-facing strings come from i18n; language changes re-render the
-     quick replies, placeholder, and every displayed bot message. */
+     quick replies, placeholder, and every displayed bot message.
+   - Conversation history is persisted in sessionStorage so it survives
+     page navigation within the same tab. */
 import { CONFIG } from "./config.js";
 import { $, create, sessionId, onReady, waLink, buildPrefillMessage, toast } from "./utils.js";
+
+// ---------- sessionStorage persistence ----------
+const STORAGE_KEY = "cc_chat_state";
+
+function saveState () {
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
+      history:   STATE.history,
+      collected: STATE.collected,
+      step:      STATE.step,
+      lastQuickKeys: STATE.lastQuickKeys,
+      lastHandoff:   STATE.lastHandoff,
+    }));
+  } catch (_) {}
+}
+
+function loadState () {
+  try {
+    const raw = sessionStorage.getItem(STORAGE_KEY);
+    if (!raw) return false;
+    const s = JSON.parse(raw);
+    STATE.history       = s.history       || [];
+    STATE.collected     = s.collected     || {};
+    STATE.step          = s.step          || "greet";
+    STATE.lastQuickKeys = s.lastQuickKeys || [];
+    STATE.lastHandoff   = s.lastHandoff   || null;
+    return STATE.history.length > 0;
+  } catch (_) { return false; }
+}
 
 // Shortcut to the i18n bridge. Falls back gracefully if i18n hasn't loaded yet.
 function T (key, vars) {
@@ -243,6 +274,8 @@ async function handleUser (root, text, hint) {
     STATE.lastQuickKeys = reply.quickKeys || [];
     STATE.lastHandoff = reply.handoff || null;
     renderMessages(root);
+    saveState();
+
     if (reply.quickLabels && reply.quickLabels.length) {
       // Server returned raw localised labels; just render as buttons with no i18n key.
       const quickBox = $(".cb-quick", root);
@@ -256,6 +289,7 @@ async function handleUser (root, text, hint) {
     } else {
       showQuick(root, reply.quickKeys || [], reply.handoff);
     }
+
   }, 400);
 }
 
@@ -269,6 +303,7 @@ function openPanel (root) {
     STATE.lastHandoff = null;
     renderMessages(root);
     showQuick(root, greet.quickKeys);
+    saveState();
   }
 }
 function closePanel (root) {
@@ -315,6 +350,14 @@ function mount () {
 
   // Initial i18n pass on static markup
   relocalise(root);
+
+  // Restore conversation from sessionStorage (survives page navigation)
+  if (loadState()) {
+    renderMessages(root);
+    showQuick(root, STATE.lastQuickKeys, STATE.lastHandoff);
+    // Re-open panel if it was open before navigation
+    openPanel(root);
+  }
 
   // Auto-open when ?chat=1 in URL
   if (new URLSearchParams(location.search).get("chat") === "1") openPanel(root);

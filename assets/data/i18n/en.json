@@ -625,7 +625,8 @@
     "privacyLink": "privacy policy",
     "descAfter": ".",
     "essentialsOnly": "Essentials only",
-    "acceptAll": "Accept all"
+    "acceptAll": "Accept all",
+    "description": "We use a minimum of data to run this site and help you reach us on WhatsApp. Optional analytics are off by default. See our <a href='/legal/privacy/' style='color:var(--on-tertiary-container);text-decoration:underline'>privacy policy</a>."
   },
   "bottomNav": {
     "whatsapp": "WhatsApp",
@@ -654,11 +655,113 @@
   },
   "legal": {
     "heading": "Legal",
-    "imprint": "Imprint",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "cookies": "Cookies",
-    "lastUpdated": "Last updated:"
+    "imprint": {
+      "title": "Imprint (Impressum)",
+      "sections": [
+        {
+          "heading": "Information according to § 5 TMG",
+          "body": "Civic Concierge — Team Becker\nBayernstraße 90\n48429 Rheine\nGermany"
+        },
+        {
+          "heading": "Represented by",
+          "body": "Christina Becker (owner)"
+        },
+        {
+          "heading": "Contact",
+          "body": "Phone: +49 173 322 55 70\nEmail: info@civic-concierge.de"
+        },
+        {
+          "heading": "Register entry",
+          "body": "To be completed after legal entity confirmation."
+        },
+        {
+          "heading": "VAT ID",
+          "body": "DE 000 000 000 (placeholder — insert real VAT ID before launch)."
+        },
+        {
+          "heading": "Responsible for content according to § 18 Abs. 2 MStV",
+          "body": "Christina Becker, Bayernstraße 90, 48429 Rheine."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        {
+          "heading": "Introduction",
+          "body": "Protecting your data is a priority. We process personal data only on the basis of legal regulations (GDPR, BDSG). This policy explains what we collect, why, and for how long."
+        },
+        {
+          "heading": "1. Data we collect",
+          "body": "When you contact us via the website (forms, chatbot, WhatsApp) we collect the information you provide voluntarily: name, phone, email, vehicle details, and any notes. Technical data (browser, IP) is only used in aggregated, anonymised form."
+        },
+        {
+          "heading": "2. Purpose of processing",
+          "body": "Your data is used to prepare and handle your vehicle registration request. We act as an intermediary between you and Kreis Steinfurt."
+        },
+        {
+          "heading": "3. Data retention",
+          "body": "Lead data is stored for the minimum time required to complete the service (typically up to 30 days after delivery). Conversation logs are auto-purged after 30 days."
+        },
+        {
+          "heading": "4. WhatsApp",
+          "body": "When you contact us via WhatsApp, Meta Platforms (WhatsApp) processes your data according to its own policies. Please review them before using this channel."
+        },
+        {
+          "heading": "5. Chatbot",
+          "body": "Our chatbot runs on a self-hosted n8n instance in the EU. Messages are processed solely to respond to your request."
+        },
+        {
+          "heading": "6. Your rights",
+          "body": "You have the right to access, correct, delete, or restrict processing of your data. Contact us at info@civic-concierge.de to exercise these rights."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "sections": [
+        {
+          "heading": "1. Scope of service",
+          "body": "We act as an intermediary between you and Kreis Steinfurt for vehicle registration, re-registration, deregistration, and plate services."
+        },
+        {
+          "heading": "2. Fees",
+          "body": "Our service fee is agreed before we start work. Authority fees are passed through at cost."
+        },
+        {
+          "heading": "3. Cancellation",
+          "body": "You may cancel free of charge until we begin processing at the authority. After that, a partial fee may apply."
+        },
+        {
+          "heading": "4. Liability",
+          "body": "We are liable for damages caused by our negligence to the extent permitted by German law."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "sections": [
+        {
+          "heading": "Essential",
+          "body": "We store a session identifier in your browser so the chatbot can keep track of your conversation. No personal data is stored."
+        },
+        {
+          "heading": "Analytics (optional)",
+          "body": "Only after you accept, we collect anonymised, cookieless metrics via Plausible or Umami to understand which pages are helpful."
+        },
+        {
+          "heading": "Re-open settings",
+          "body": "You can re-open the privacy settings at any time via the 'Privacy settings' link in the footer."
+        }
+      ]
+    },
+    "lastUpdated": "Last updated:",
+    "nav": {
+      "imprint": "Imprint",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    }
   },
   "common": {
     "loading": "Loading…",

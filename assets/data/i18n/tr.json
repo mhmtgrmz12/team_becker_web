@@ -625,7 +625,8 @@
     "privacyLink": "Gizlilik politikamız",
     "descAfter": "na bakın.",
     "essentialsOnly": "Sadece gerekliler",
-    "acceptAll": "Tümünü kabul et"
+    "acceptAll": "Tümünü kabul et",
+    "description": "Bu siteyi işletmek ve WhatsApp üzerinden bize ulaşmanızı sağlamak için minimum düzeyde veri kullanıyoruz. İsteğe bağlı analizler varsayılan olarak kapalıdır. Daha fazla bilgi için <a href='/legal/privacy/' style='color:var(--on-tertiary-container);text-decoration:underline'>gizlilik politikamıza</a> bakın."
   },
   "bottomNav": {
     "whatsapp": "WhatsApp",
@@ -654,11 +655,113 @@
   },
   "legal": {
     "heading": "Hukuki",
-    "imprint": "Impressum",
-    "privacy": "Gizlilik",
-    "terms": "AGB",
-    "cookies": "Çerezler",
-    "lastUpdated": "Son güncelleme:"
+    "imprint": {
+      "title": "Künye",
+      "sections": [
+        {
+          "heading": "§ 5 TMG uyarınca bilgiler",
+          "body": "Civic Concierge — Team Becker\nBayernstraße 90\n48429 Rheine\nAlmanya"
+        },
+        {
+          "heading": "Temsil eden",
+          "body": "Christina Becker (sahip)"
+        },
+        {
+          "heading": "İletişim",
+          "body": "Telefon: +49 173 322 55 70\nE-posta: info@civic-concierge.de"
+        },
+        {
+          "heading": "Sicil kaydı",
+          "body": "Tüzel kişilik onayından sonra tamamlanacaktır."
+        },
+        {
+          "heading": "KDV Kimlik Numarası",
+          "body": "DE 000 000 000 (yer tutucu — yayından önce gerçek KDV numarasıyla değiştirin)."
+        },
+        {
+          "heading": "§ 18 Abs. 2 MStV uyarınca içerikten sorumlu",
+          "body": "Christina Becker, Bayernstraße 90, 48429 Rheine."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası",
+      "sections": [
+        {
+          "heading": "Giriş",
+          "body": "Verilerinizin korunması önceliğimizdir. Kişisel verileri yalnızca yasal düzenlemeler (GDPR, BDSG) çerçevesinde işliyoruz. Bu politika ne topladığımızı, neden ve ne kadar süre sakladığımızı açıklamaktadır."
+        },
+        {
+          "heading": "1. Topladığımız veriler",
+          "body": "Web sitesi üzerinden bize ulaştığınızda (formlar, chatbot, WhatsApp) gönüllü olarak sağladığınız bilgileri topluyoruz: ad, telefon, e-posta, araç detayları ve notlar."
+        },
+        {
+          "heading": "2. İşleme amacı",
+          "body": "Verileriniz araç tescil talebinizi hazırlamak ve yönetmek için kullanılır. Siz ile Kreis Steinfurt arasında aracı olarak hareket ediyoruz."
+        },
+        {
+          "heading": "3. Veri saklama",
+          "body": "Veriler, hizmetin tamamlanması için gereken minimum süre boyunca saklanır (genellikle teslimden sonra 30 güne kadar). Konuşma günlükleri 30 gün sonra otomatik olarak silinir."
+        },
+        {
+          "heading": "4. WhatsApp",
+          "body": "WhatsApp üzerinden bizimle iletişime geçtiğinizde Meta Platforms (WhatsApp) verilerinizi kendi politikalarına göre işler. Lütfen bu kanalı kullanmadan önce inceleyin."
+        },
+        {
+          "heading": "5. Chatbot",
+          "body": "Chatbot'umuz AB'deki kendi barındırdığımız bir n8n örneğinde çalışmaktadır. Mesajlar yalnızca talebinize yanıt vermek için işlenir."
+        },
+        {
+          "heading": "6. Haklarınız",
+          "body": "Verilerinize erişme, düzeltme, silme veya işlemeyi kısıtlama hakkına sahipsiniz. Bu haklarınızı kullanmak için info@civic-concierge.de adresine başvurun."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Hizmet Koşulları",
+      "sections": [
+        {
+          "heading": "1. Hizmet kapsamı",
+          "body": "Araç tescili, yeniden tescil, tescil iptali ve plaka hizmetleri için siz ile Kreis Steinfurt arasında aracı olarak hareket ediyoruz."
+        },
+        {
+          "heading": "2. Ücretler",
+          "body": "Hizmet ücretimiz işe başlamadan önce kararlaştırılır. Resmi kuruma ödenen ücretler maliyet fiyatından aktarılır."
+        },
+        {
+          "heading": "3. İptal",
+          "body": "Resmi kurumda işlem başlatılmadan önce ücretsiz olarak iptal edebilirsiniz. Sonrasında kısmi ücret uygulanabilir."
+        },
+        {
+          "heading": "4. Sorumluluk",
+          "body": "Alman hukukunun izin verdiği ölçüde ihmalimizden kaynaklanan zararlardan sorumlu tutuluruz."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Çerez Politikası",
+      "sections": [
+        {
+          "heading": "Zorunlu",
+          "body": "Chatbot'un konuşmanızı takip edebilmesi için tarayıcınızda bir oturum tanımlayıcısı saklıyoruz. Kişisel veri saklanmamaktadır."
+        },
+        {
+          "heading": "Analitik (isteğe bağlı)",
+          "body": "Yalnızca onayınızdan sonra, hangi sayfaların faydalı olduğunu anlamak için Plausible veya Umami aracılığıyla anonimleştirilmiş, çerez içermeyen metrikler topluyoruz."
+        },
+        {
+          "heading": "Ayarları yeniden açın",
+          "body": "Gizlilik ayarlarını istediğiniz zaman alt bilgideki 'Gizlilik ayarları' bağlantısı üzerinden yeniden açabilirsiniz."
+        }
+      ]
+    },
+    "lastUpdated": "Son güncelleme:",
+    "nav": {
+      "imprint": "Künye",
+      "privacy": "Gizlilik",
+      "terms": "Şartlar",
+      "cookies": "Çerezler"
+    }
   },
   "common": {
     "loading": "Yükleniyor…",

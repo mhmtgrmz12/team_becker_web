@@ -36,10 +36,10 @@
 
     <section class="py-12 px-6" style="background:var(--surface-container-low)">
       <div class="max-w-3xl mx-auto text-sm flex flex-wrap gap-4" style="color:var(--secondary)">
-        <a href="/legal/imprint/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.imprint">Imprint</a>
-        <a href="/legal/privacy/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.privacy">Privacy</a>
-        <a href="/legal/terms/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.terms">Terms</a>
-        <a href="/legal/cookies/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.cookies">Cookies</a>
+        <a href="/legal/imprint/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.nav.imprint">Imprint</a>
+        <a href="/legal/privacy/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.nav.privacy">Privacy</a>
+        <a href="/legal/terms/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.nav.terms">Terms</a>
+        <a href="/legal/cookies/" style="color:var(--primary)" class="font-semibold" data-i18n="legal.nav.cookies">Cookies</a>
       </div>
     </section>
   </main>
@@ -51,16 +51,24 @@
 
   <script type="module" src="/assets/js/app.js"></script>
   <script type="module">
-    import { loadJSON, onReady } from "/assets/js/utils.js";
-    onReady(async () => {
+    import { whenI18nReady } from "/assets/js/utils.js";
+
+    function T(key, fallback) {
+      const fn = window.CCI18n && window.CCI18n.t;
+      if (typeof fn === "function") { const v = fn(key); if (v && v !== key) return v; }
+      return fallback || key;
+    }
+
+    function render() {
       const key = document.body.dataset.legal;
-      const data = await loadJSON("/assets/data/legal.json");
-      const block = data[key];
-      if (!block) return;
-      document.querySelectorAll("[data-legal-title]").forEach(n => n.textContent = block.title);
-      document.querySelectorAll("[data-legal-updated]").forEach(n => n.textContent = data.lastUpdated || "");
+      const block = T(`legal.${key}`, null);
+      if (!block || typeof block !== "object") return;
+      document.querySelectorAll("[data-legal-title]").forEach(n => n.textContent = block.title || "");
+      document.querySelectorAll("[data-legal-updated]").forEach(n => n.textContent = T("legal.lastUpdated", "Last updated:"));
       const body = document.getElementById("legal-body");
-      block.sections.forEach(sec => {
+      if (!body) return;
+      body.innerHTML = "";
+      (block.sections || []).forEach(sec => {
         const el = document.createElement("article");
         el.className = "p-6 rounded-2xl";
         el.style.cssText = "background:var(--surface-container-lowest);box-shadow:var(--shadow-card)";
@@ -74,7 +82,10 @@
         el.appendChild(h); el.appendChild(p);
         body.appendChild(el);
       });
-    });
+    }
+
+    whenI18nReady().then(render);
+    document.addEventListener("language:changed", render);
   </script>
 </body>
 </html>

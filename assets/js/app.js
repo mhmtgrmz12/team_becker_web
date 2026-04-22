@@ -1,6 +1,6 @@
 /* Entry module loaded by every page. */
 import "./config.js";
-import "./include.js";       // injects partials
+import { partialsReady } from "./include.js";  // injects partials, returns a promise
 import { initI18n } from "./i18n.js";
 import "./language-switcher.js";
 import "./consent.js";
@@ -8,8 +8,11 @@ import "./open-now.js";
 import "./chatbot.js";
 import "./analytics.js";
 
-// Initialize i18n (reveals page via i18n-ready class when done)
-initI18n();
+// Wait for all partials (header, footer, etc.) to be in the DOM before
+// starting i18n — this ensures applyTranslations() sees every element.
+partialsReady.then(() => {
+  initI18n();
+});
 
 // Safety fallback: if i18n fails to load within 3s, show the page anyway
 setTimeout(() => {

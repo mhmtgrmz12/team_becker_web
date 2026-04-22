@@ -26,4 +26,5 @@ export async function resolveIncludes (root = document) {
   document.dispatchEvent(new CustomEvent("partials:ready"));
 }
 
-resolveIncludes();
+// Export the promise so app.js can await it before starting i18n
+export const partialsReady = resolveIncludes();

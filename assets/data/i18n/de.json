@@ -625,7 +625,8 @@
     "privacyLink": "Datenschutzerklärung",
     "descAfter": ".",
     "essentialsOnly": "Nur Essenzielle",
-    "acceptAll": "Alle akzeptieren"
+    "acceptAll": "Alle akzeptieren",
+    "description": "Wir verwenden ein Minimum an Daten, um diese Website zu betreiben und Ihnen die Kontaktaufnahme über WhatsApp zu ermöglichen. Optionale Analysen sind standardmäßig deaktiviert. Weitere Informationen finden Sie in unserer <a href='/legal/privacy/' style='color:var(--on-tertiary-container);text-decoration:underline'>Datenschutzerklärung</a>."
   },
   "bottomNav": {
     "whatsapp": "WhatsApp",
@@ -654,11 +655,113 @@
   },
   "legal": {
     "heading": "Rechtliches",
-    "imprint": "Impressum",
-    "privacy": "Datenschutz",
-    "terms": "AGB",
-    "cookies": "Cookies",
-    "lastUpdated": "Zuletzt aktualisiert:"
+    "imprint": {
+      "title": "Impressum",
+      "sections": [
+        {
+          "heading": "Angaben gemäß § 5 TMG",
+          "body": "Civic Concierge — Team Becker\nBayernstraße 90\n48429 Rheine\nDeutschland"
+        },
+        {
+          "heading": "Vertreten durch",
+          "body": "Christina Becker (Inhaberin)"
+        },
+        {
+          "heading": "Kontakt",
+          "body": "Telefon: +49 173 322 55 70\nE-Mail: info@civic-concierge.de"
+        },
+        {
+          "heading": "Registereintrag",
+          "body": "Nach Bestätigung der Rechtsform zu ergänzen."
+        },
+        {
+          "heading": "Umsatzsteuer-ID",
+          "body": "DE 000 000 000 (Platzhalter — bitte vor dem Launch durch echte USt-ID ersetzen)."
+        },
+        {
+          "heading": "Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV",
+          "body": "Christina Becker, Bayernstraße 90, 48429 Rheine."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "sections": [
+        {
+          "heading": "Einleitung",
+          "body": "Der Schutz Ihrer Daten hat für uns höchste Priorität. Wir verarbeiten personenbezogene Daten nur auf Grundlage gesetzlicher Vorschriften (DSGVO, BDSG). Diese Erklärung erläutert, was wir erfassen, warum und wie lange."
+        },
+        {
+          "heading": "1. Erhobene Daten",
+          "body": "Wenn Sie uns über die Website (Formulare, Chatbot, WhatsApp) kontaktieren, erheben wir die von Ihnen freiwillig angegebenen Informationen: Name, Telefon, E-Mail, Fahrzeugdaten und Notizen. Technische Daten (Browser, IP) werden nur aggregiert und anonymisiert verwendet."
+        },
+        {
+          "heading": "2. Verarbeitungszweck",
+          "body": "Ihre Daten werden verwendet, um Ihren Kfz-Zulassungsantrag vorzubereiten und abzuwickeln. Wir agieren als Vermittler zwischen Ihnen und dem Kreis Steinfurt."
+        },
+        {
+          "heading": "3. Datenspeicherung",
+          "body": "Lead-Daten werden für die zur Erbringung der Dienstleistung erforderliche Mindestzeit gespeichert (in der Regel bis zu 30 Tage nach Lieferung). Gesprächsprotokolle werden nach 30 Tagen automatisch gelöscht."
+        },
+        {
+          "heading": "4. WhatsApp",
+          "body": "Bei der Kontaktaufnahme über WhatsApp verarbeitet Meta Platforms (WhatsApp) Ihre Daten gemäß eigenen Richtlinien. Bitte lesen Sie diese vor der Nutzung dieses Kanals."
+        },
+        {
+          "heading": "5. Chatbot",
+          "body": "Unser Chatbot läuft auf einer selbst gehosteten n8n-Instanz in der EU. Nachrichten werden ausschließlich zur Beantwortung Ihrer Anfrage verarbeitet."
+        },
+        {
+          "heading": "6. Ihre Rechte",
+          "body": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer Daten. Kontaktieren Sie uns unter info@civic-concierge.de."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "sections": [
+        {
+          "heading": "1. Leistungsumfang",
+          "body": "Wir handeln als Vermittler zwischen Ihnen und dem Kreis Steinfurt für Kfz-Zulassung, Ummeldung, Abmeldung und Kennzeichendienste."
+        },
+        {
+          "heading": "2. Gebühren",
+          "body": "Unsere Servicegebühr wird vor Beginn der Arbeit vereinbart. Behördengebühren werden zum Selbstkostenpreis weitergegeben."
+        },
+        {
+          "heading": "3. Stornierung",
+          "body": "Sie können kostenlos stornieren, solange wir noch nicht bei der Behörde tätig geworden sind. Danach kann eine anteilige Gebühr anfallen."
+        },
+        {
+          "heading": "4. Haftung",
+          "body": "Wir haften für Schäden, die durch unsere Fahrlässigkeit entstehen, soweit dies nach deutschem Recht zulässig ist."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie",
+      "sections": [
+        {
+          "heading": "Essenziell",
+          "body": "Wir speichern eine Sitzungskennung in Ihrem Browser, damit der Chatbot Ihr Gespräch verfolgen kann. Es werden keine personenbezogenen Daten gespeichert."
+        },
+        {
+          "heading": "Analyse (optional)",
+          "body": "Nur nach Ihrer Zustimmung erheben wir anonymisierte, cookiefreie Metriken über Plausible oder Umami, um zu verstehen, welche Seiten hilfreich sind."
+        },
+        {
+          "heading": "Einstellungen erneut öffnen",
+          "body": "Sie können die Datenschutzeinstellungen jederzeit über den Link 'Datenschutzeinstellungen' im Footer erneut öffnen."
+        }
+      ]
+    },
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "nav": {
+      "imprint": "Impressum",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "cookies": "Cookies"
+    }
   },
   "common": {
     "loading": "Wird geladen…",
